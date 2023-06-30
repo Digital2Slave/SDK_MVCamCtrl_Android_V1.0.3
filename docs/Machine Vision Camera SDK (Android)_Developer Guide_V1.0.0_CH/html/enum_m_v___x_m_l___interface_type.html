@@ -1,0 +1,150 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>工业相机Android SDK开发指南V1.0.0（java）</title> 
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="custom-style.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+	<div style="overflow: hidden;">
+		<div style="height: 57px;min-width: 1039px;background-size: auto 100%;background:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABwgAAAABCAYAAADKO/rAAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAABRSURBVFhH7dUxCoBADEXB5LK5/w1iIaLIrsgWNs50Sf/4WVUd8HOZGd1nCqMbGNMPrNMPrJv1cvz0A3OjfuwPvDPrxf7A7t7IlX7gmX74VsQGguw4S6+UnSYAAAAASUVORK5CYII=');">
+			<img src="titleleft.png" style="float: left;"/>
+			<img src="titleright.png" alt="" style="float: right;" />
+		</div>
+	</div>
+<!-- 制作者 Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>声明</span></a></li>
+      <li><a href="_xE7_xAE_x80_xE4_xBB_x8B.html"><span>简介</span></a></li>
+      <li><a href="modules.html"><span>接口函数</span></a></li>
+      <li class="current"><a href="annotated.html"><span>结构体</span></a></li>
+      <li><a href="_xE5_xB8_xB8_xE8_xA7_x81_xE9_x97_xAE_xE9_xA2_x98.html"><span>常见问题</span></a></li>
+      <li><a href="examples.html"><span>示例</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="hierarchy.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-attribs">Public 属性</a> &#124;
+<a href="enum_m_v___x_m_l___interface_type-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">MV_XML_InterfaceType 枚举类型参考<div class="ingroups"><a class="el" href="group___xE6_x8E_xA5_xE5_x8F_xA3_xE5_x87_xBD_xE6_x95_xB0.html">接口函数</a> &raquo; <a class="el" href="group___xE7_x9B_xB8_xE6_x9C_xBA_xE5_x8A_x9F_xE8_x83_xBD_xE8_xAE_xBE_xE7_xBD_xAE_xE6_x8E_xA5_xE5_x8F_xA3.html">相机功能设置接口</a> &raquo; <a class="el" href="group___xE9_x80_x9A_xE7_x94_xA8_xE6_x8E_xA5_xE5_x8F_xA3.html">通用接口</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:a35160cf69758eb87f0923725a2889d84"><td class="memItemLeft" align="right" valign="top"><a id="a35160cf69758eb87f0923725a2889d84"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enum_m_v___x_m_l___interface_type.html#a35160cf69758eb87f0923725a2889d84">IFT_IValue</a></td></tr>
+<tr class="memdesc:a35160cf69758eb87f0923725a2889d84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Value <br /></td></tr>
+<tr class="separator:a35160cf69758eb87f0923725a2889d84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d803d074c8c5aaaf018e5958e90571b"><td class="memItemLeft" align="right" valign="top"><a id="a7d803d074c8c5aaaf018e5958e90571b"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enum_m_v___x_m_l___interface_type.html#a7d803d074c8c5aaaf018e5958e90571b">IFT_IBase</a></td></tr>
+<tr class="memdesc:a7d803d074c8c5aaaf018e5958e90571b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base <br /></td></tr>
+<tr class="separator:a7d803d074c8c5aaaf018e5958e90571b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7d69b5b046b4491eb4aac373e7e8d32"><td class="memItemLeft" align="right" valign="top"><a id="af7d69b5b046b4491eb4aac373e7e8d32"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enum_m_v___x_m_l___interface_type.html#af7d69b5b046b4491eb4aac373e7e8d32">IFT_IInteger</a></td></tr>
+<tr class="memdesc:af7d69b5b046b4491eb4aac373e7e8d32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Integer <br /></td></tr>
+<tr class="separator:af7d69b5b046b4491eb4aac373e7e8d32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad54074a54fee34452b2fbd02561c1ace"><td class="memItemLeft" align="right" valign="top"><a id="ad54074a54fee34452b2fbd02561c1ace"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enum_m_v___x_m_l___interface_type.html#ad54074a54fee34452b2fbd02561c1ace">IFT_IBoolean</a></td></tr>
+<tr class="memdesc:ad54074a54fee34452b2fbd02561c1ace"><td class="mdescLeft">&#160;</td><td class="mdescRight">Boolean <br /></td></tr>
+<tr class="separator:ad54074a54fee34452b2fbd02561c1ace"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea7bd67e23d44cc66e68b35c870b3e8d"><td class="memItemLeft" align="right" valign="top"><a id="aea7bd67e23d44cc66e68b35c870b3e8d"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enum_m_v___x_m_l___interface_type.html#aea7bd67e23d44cc66e68b35c870b3e8d">IFT_ICommand</a></td></tr>
+<tr class="memdesc:aea7bd67e23d44cc66e68b35c870b3e8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Command <br /></td></tr>
+<tr class="separator:aea7bd67e23d44cc66e68b35c870b3e8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab57eaf7056b20d3ae12132806c482e37"><td class="memItemLeft" align="right" valign="top"><a id="ab57eaf7056b20d3ae12132806c482e37"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enum_m_v___x_m_l___interface_type.html#ab57eaf7056b20d3ae12132806c482e37">IFT_IFloat</a></td></tr>
+<tr class="memdesc:ab57eaf7056b20d3ae12132806c482e37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Float <br /></td></tr>
+<tr class="separator:ab57eaf7056b20d3ae12132806c482e37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a140dfe038f0df29d4e4df29ba219bd27"><td class="memItemLeft" align="right" valign="top"><a id="a140dfe038f0df29d4e4df29ba219bd27"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enum_m_v___x_m_l___interface_type.html#a140dfe038f0df29d4e4df29ba219bd27">IFT_IString</a></td></tr>
+<tr class="memdesc:a140dfe038f0df29d4e4df29ba219bd27"><td class="mdescLeft">&#160;</td><td class="mdescRight">String <br /></td></tr>
+<tr class="separator:a140dfe038f0df29d4e4df29ba219bd27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3157899fffe44510d9b65a1011fb59fa"><td class="memItemLeft" align="right" valign="top"><a id="a3157899fffe44510d9b65a1011fb59fa"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enum_m_v___x_m_l___interface_type.html#a3157899fffe44510d9b65a1011fb59fa">IFT_IRegister</a></td></tr>
+<tr class="memdesc:a3157899fffe44510d9b65a1011fb59fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register <br /></td></tr>
+<tr class="separator:a3157899fffe44510d9b65a1011fb59fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af02bce6b176a4947c9edcaefce0b483f"><td class="memItemLeft" align="right" valign="top"><a id="af02bce6b176a4947c9edcaefce0b483f"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enum_m_v___x_m_l___interface_type.html#af02bce6b176a4947c9edcaefce0b483f">IFT_ICategory</a></td></tr>
+<tr class="memdesc:af02bce6b176a4947c9edcaefce0b483f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Category <br /></td></tr>
+<tr class="separator:af02bce6b176a4947c9edcaefce0b483f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab269449022d0d95b79906e4cc4cc52c9"><td class="memItemLeft" align="right" valign="top"><a id="ab269449022d0d95b79906e4cc4cc52c9"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enum_m_v___x_m_l___interface_type.html#ab269449022d0d95b79906e4cc4cc52c9">IFT_IEnumeration</a></td></tr>
+<tr class="memdesc:ab269449022d0d95b79906e4cc4cc52c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumeration <br /></td></tr>
+<tr class="separator:ab269449022d0d95b79906e4cc4cc52c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9607cda26e2827e092a04e01c800354b"><td class="memItemLeft" align="right" valign="top"><a id="a9607cda26e2827e092a04e01c800354b"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enum_m_v___x_m_l___interface_type.html#a9607cda26e2827e092a04e01c800354b">IFT_IEnumEntry</a></td></tr>
+<tr class="memdesc:a9607cda26e2827e092a04e01c800354b"><td class="mdescLeft">&#160;</td><td class="mdescRight">EnumEntry <br /></td></tr>
+<tr class="separator:a9607cda26e2827e092a04e01c800354b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5bc93479d1c0382214d21738ac9218e7"><td class="memItemLeft" align="right" valign="top"><a id="a5bc93479d1c0382214d21738ac9218e7"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enum_m_v___x_m_l___interface_type.html#a5bc93479d1c0382214d21738ac9218e7">IFT_IPort</a></td></tr>
+<tr class="memdesc:a5bc93479d1c0382214d21738ac9218e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Port <br /></td></tr>
+<tr class="separator:a5bc93479d1c0382214d21738ac9218e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+</div><!-- contents -->
+<!-- start footer part -->
+<div class="footer" style="text-align: right;">
+	<hr/>
+	<small></small>
+</div>
+</body>
+</html>

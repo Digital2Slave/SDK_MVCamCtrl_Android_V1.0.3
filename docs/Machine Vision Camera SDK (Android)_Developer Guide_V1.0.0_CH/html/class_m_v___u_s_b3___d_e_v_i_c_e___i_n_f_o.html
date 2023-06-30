@@ -1,0 +1,174 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>工业相机Android SDK开发指南V1.0.0（java）</title> 
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="custom-style.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+	<div style="overflow: hidden;">
+		<div style="height: 57px;min-width: 1039px;background-size: auto 100%;background:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABwgAAAABCAYAAADKO/rAAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAABRSURBVFhH7dUxCoBADEXB5LK5/w1iIaLIrsgWNs50Sf/4WVUd8HOZGd1nCqMbGNMPrNMPrJv1cvz0A3OjfuwPvDPrxf7A7t7IlX7gmX74VsQGguw4S6+UnSYAAAAASUVORK5CYII=');">
+			<img src="titleleft.png" style="float: left;"/>
+			<img src="titleright.png" alt="" style="float: right;" />
+		</div>
+	</div>
+<!-- 制作者 Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>声明</span></a></li>
+      <li><a href="_xE7_xAE_x80_xE4_xBB_x8B.html"><span>简介</span></a></li>
+      <li><a href="_xE6_x9B_xB4_xE6_x96_xB0_xE8_xAE_xB0_xE5_xBD_x95.html"><span>更新记录</span></a></li>
+      <li><a href="_xE7_xBC_x96_xE7_xA8_x8B_xE5_xBC_x95_xE5_xAF_xBC.html"><span>编程引导</span></a></li>
+      <li><a href="modules.html"><span>接口函数</span></a></li>
+      <li class="current"><a href="annotated.html"><span>结构体</span></a></li>
+      <li><a href="_xE7_x9B_xB8_xE6_x9C_xBA_xE5_x8F_x82_xE6_x95_xB0_xE8_x8A_x82_xE7_x82_xB9_xE8_xA1_xA8.html"><span>相机参数节点表</span></a></li>
+      <li><a href="examples.html"><span>示例</span></a></li>
+      <li><a href="_xE7_x8A_xB6_xE6_x80_x81_xE7_xA0_x81_xE5_xAE_x9A_xE4_xB9_x89.html"><span>状态码定义</span></a></li>
+      <li><a href="_xE5_xB8_xB8_xE8_xA7_x81_xE9_x97_xAE_xE9_xA2_x98.html"><span>常见问题</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="class_m_v___u_s_b3___d_e_v_i_c_e___i_n_f_o-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">MV_USB3_DEVICE_INFO类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>USB3设备信息  
+ <a href="class_m_v___u_s_b3___d_e_v_i_c_e___i_n_f_o.html#details">更多...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a7238b0c8bc9fb0b395ad0f4d21657bee"><td class="memItemLeft" align="right" valign="top"><a id="a7238b0c8bc9fb0b395ad0f4d21657bee"></a>
+public char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_v___u_s_b3___d_e_v_i_c_e___i_n_f_o.html#a7238b0c8bc9fb0b395ad0f4d21657bee">crtlInEndPoint</a></td></tr>
+<tr class="memdesc:a7238b0c8bc9fb0b395ad0f4d21657bee"><td class="mdescLeft">&#160;</td><td class="mdescRight">控制输入端点 <br /></td></tr>
+<tr class="separator:a7238b0c8bc9fb0b395ad0f4d21657bee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6914473c1c3fc471d53e552e4e3ca841"><td class="memItemLeft" align="right" valign="top"><a id="a6914473c1c3fc471d53e552e4e3ca841"></a>
+public char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_v___u_s_b3___d_e_v_i_c_e___i_n_f_o.html#a6914473c1c3fc471d53e552e4e3ca841">crtlOutEndPoint</a></td></tr>
+<tr class="memdesc:a6914473c1c3fc471d53e552e4e3ca841"><td class="mdescLeft">&#160;</td><td class="mdescRight">控制输出端点 <br /></td></tr>
+<tr class="separator:a6914473c1c3fc471d53e552e4e3ca841"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec52efd9db594452a4a70b7ae8613548"><td class="memItemLeft" align="right" valign="top"><a id="aec52efd9db594452a4a70b7ae8613548"></a>
+public char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_v___u_s_b3___d_e_v_i_c_e___i_n_f_o.html#aec52efd9db594452a4a70b7ae8613548">streamEndPoint</a></td></tr>
+<tr class="memdesc:aec52efd9db594452a4a70b7ae8613548"><td class="mdescLeft">&#160;</td><td class="mdescRight">流端点 <br /></td></tr>
+<tr class="separator:aec52efd9db594452a4a70b7ae8613548"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97be11163e5b5f4495478567e1a61b4b"><td class="memItemLeft" align="right" valign="top"><a id="a97be11163e5b5f4495478567e1a61b4b"></a>
+public char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_v___u_s_b3___d_e_v_i_c_e___i_n_f_o.html#a97be11163e5b5f4495478567e1a61b4b">eventEndPoint</a></td></tr>
+<tr class="memdesc:a97be11163e5b5f4495478567e1a61b4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">事件端点 <br /></td></tr>
+<tr class="separator:a97be11163e5b5f4495478567e1a61b4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8dc6494647ce9b66682f1b37b4c9a12"><td class="memItemLeft" align="right" valign="top"><a id="af8dc6494647ce9b66682f1b37b4c9a12"></a>
+public short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_v___u_s_b3___d_e_v_i_c_e___i_n_f_o.html#af8dc6494647ce9b66682f1b37b4c9a12">idVendor</a></td></tr>
+<tr class="memdesc:af8dc6494647ce9b66682f1b37b4c9a12"><td class="mdescLeft">&#160;</td><td class="mdescRight">供应商ID号 <br /></td></tr>
+<tr class="separator:af8dc6494647ce9b66682f1b37b4c9a12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54f80104edbd085b7ceac54e6381e7a2"><td class="memItemLeft" align="right" valign="top"><a id="a54f80104edbd085b7ceac54e6381e7a2"></a>
+public short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_v___u_s_b3___d_e_v_i_c_e___i_n_f_o.html#a54f80104edbd085b7ceac54e6381e7a2">idProduct</a></td></tr>
+<tr class="memdesc:a54f80104edbd085b7ceac54e6381e7a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">产品ID号 <br /></td></tr>
+<tr class="separator:a54f80104edbd085b7ceac54e6381e7a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28e0dfdfcfa159c9fae30da48458fe82"><td class="memItemLeft" align="right" valign="top"><a id="a28e0dfdfcfa159c9fae30da48458fe82"></a>
+public int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_v___u_s_b3___d_e_v_i_c_e___i_n_f_o.html#a28e0dfdfcfa159c9fae30da48458fe82">deviceNumber</a></td></tr>
+<tr class="memdesc:a28e0dfdfcfa159c9fae30da48458fe82"><td class="mdescLeft">&#160;</td><td class="mdescRight">设备序列号 <br /></td></tr>
+<tr class="separator:a28e0dfdfcfa159c9fae30da48458fe82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a049ad5761a99fa1af77e83f1f089df1b"><td class="memItemLeft" align="right" valign="top"><a id="a049ad5761a99fa1af77e83f1f089df1b"></a>
+public String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_v___u_s_b3___d_e_v_i_c_e___i_n_f_o.html#a049ad5761a99fa1af77e83f1f089df1b">deviceGUID</a></td></tr>
+<tr class="memdesc:a049ad5761a99fa1af77e83f1f089df1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">设备GUID号 <br /></td></tr>
+<tr class="separator:a049ad5761a99fa1af77e83f1f089df1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc96e0185b25c4dba3ac5f15cffc5210"><td class="memItemLeft" align="right" valign="top"><a id="acc96e0185b25c4dba3ac5f15cffc5210"></a>
+public String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_v___u_s_b3___d_e_v_i_c_e___i_n_f_o.html#acc96e0185b25c4dba3ac5f15cffc5210">vendorName</a></td></tr>
+<tr class="memdesc:acc96e0185b25c4dba3ac5f15cffc5210"><td class="mdescLeft">&#160;</td><td class="mdescRight">供应商名字 <br /></td></tr>
+<tr class="separator:acc96e0185b25c4dba3ac5f15cffc5210"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8442f8666f352012a85aa067cf93df4"><td class="memItemLeft" align="right" valign="top"><a id="ac8442f8666f352012a85aa067cf93df4"></a>
+public String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_v___u_s_b3___d_e_v_i_c_e___i_n_f_o.html#ac8442f8666f352012a85aa067cf93df4">modelName</a></td></tr>
+<tr class="memdesc:ac8442f8666f352012a85aa067cf93df4"><td class="mdescLeft">&#160;</td><td class="mdescRight">型号名字 <br /></td></tr>
+<tr class="separator:ac8442f8666f352012a85aa067cf93df4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13c3fa65f228e0a93bc25eefe054f433"><td class="memItemLeft" align="right" valign="top"><a id="a13c3fa65f228e0a93bc25eefe054f433"></a>
+public String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_v___u_s_b3___d_e_v_i_c_e___i_n_f_o.html#a13c3fa65f228e0a93bc25eefe054f433">familyName</a></td></tr>
+<tr class="memdesc:a13c3fa65f228e0a93bc25eefe054f433"><td class="mdescLeft">&#160;</td><td class="mdescRight">家族名字 <br /></td></tr>
+<tr class="separator:a13c3fa65f228e0a93bc25eefe054f433"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b9a01f50a786e68ab65f3ba33079d26"><td class="memItemLeft" align="right" valign="top"><a id="a6b9a01f50a786e68ab65f3ba33079d26"></a>
+public String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_v___u_s_b3___d_e_v_i_c_e___i_n_f_o.html#a6b9a01f50a786e68ab65f3ba33079d26">deviceVersion</a></td></tr>
+<tr class="memdesc:a6b9a01f50a786e68ab65f3ba33079d26"><td class="mdescLeft">&#160;</td><td class="mdescRight">设备版本号 <br /></td></tr>
+<tr class="separator:a6b9a01f50a786e68ab65f3ba33079d26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac568233b448c639976fe3280fcc2d0d5"><td class="memItemLeft" align="right" valign="top"><a id="ac568233b448c639976fe3280fcc2d0d5"></a>
+public String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_v___u_s_b3___d_e_v_i_c_e___i_n_f_o.html#ac568233b448c639976fe3280fcc2d0d5">manufacturerName</a></td></tr>
+<tr class="memdesc:ac568233b448c639976fe3280fcc2d0d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">制造商名字 <br /></td></tr>
+<tr class="separator:ac568233b448c639976fe3280fcc2d0d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeecafd7f0254f5bad432f2323b202700"><td class="memItemLeft" align="right" valign="top"><a id="aeecafd7f0254f5bad432f2323b202700"></a>
+public String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_v___u_s_b3___d_e_v_i_c_e___i_n_f_o.html#aeecafd7f0254f5bad432f2323b202700">serialNumber</a></td></tr>
+<tr class="memdesc:aeecafd7f0254f5bad432f2323b202700"><td class="mdescLeft">&#160;</td><td class="mdescRight">序列号 <br /></td></tr>
+<tr class="separator:aeecafd7f0254f5bad432f2323b202700"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac5ebaab488a72e9a7dcb2a5818e33bc"><td class="memItemLeft" align="right" valign="top"><a id="aac5ebaab488a72e9a7dcb2a5818e33bc"></a>
+public String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_v___u_s_b3___d_e_v_i_c_e___i_n_f_o.html#aac5ebaab488a72e9a7dcb2a5818e33bc">userDefinedName</a></td></tr>
+<tr class="memdesc:aac5ebaab488a72e9a7dcb2a5818e33bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">用户自定义名字 <br /></td></tr>
+<tr class="separator:aac5ebaab488a72e9a7dcb2a5818e33bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae15a0342518740a61c224bcf226fc538"><td class="memItemLeft" align="right" valign="top"><a id="ae15a0342518740a61c224bcf226fc538"></a>
+public int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_v___u_s_b3___d_e_v_i_c_e___i_n_f_o.html#ae15a0342518740a61c224bcf226fc538">bcdUSB</a></td></tr>
+<tr class="memdesc:ae15a0342518740a61c224bcf226fc538"><td class="mdescLeft">&#160;</td><td class="mdescRight">支持的USB协议 <br /></td></tr>
+<tr class="separator:ae15a0342518740a61c224bcf226fc538"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>USB3设备信息 </p>
+</div></div><!-- contents -->
+<!-- start footer part -->
+<div class="footer" style="text-align: right;">
+	<hr/>
+	<small></small>
+</div>
+</body>
+</html>

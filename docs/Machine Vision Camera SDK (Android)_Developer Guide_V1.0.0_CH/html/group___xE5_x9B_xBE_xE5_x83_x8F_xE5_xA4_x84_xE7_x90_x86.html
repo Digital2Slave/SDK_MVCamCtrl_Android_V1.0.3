@@ -1,0 +1,396 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>工业相机Android SDK开发指南V1.0.0（java）</title> 
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="custom-style.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+	<div style="overflow: hidden;">
+		<div style="height: 57px;min-width: 1039px;background-size: auto 100%;background:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABwgAAAABCAYAAADKO/rAAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAABRSURBVFhH7dUxCoBADEXB5LK5/w1iIaLIrsgWNs50Sf/4WVUd8HOZGd1nCqMbGNMPrNMPrJv1cvz0A3OjfuwPvDPrxf7A7t7IlX7gmX74VsQGguw4S6+UnSYAAAAASUVORK5CYII=');">
+			<img src="titleleft.png" style="float: left;"/>
+			<img src="titleright.png" alt="" style="float: right;" />
+		</div>
+	</div>
+<!-- 制作者 Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>声明</span></a></li>
+      <li><a href="_xE7_xAE_x80_xE4_xBB_x8B.html"><span>简介</span></a></li>
+      <li><a href="_xE6_x9B_xB4_xE6_x96_xB0_xE8_xAE_xB0_xE5_xBD_x95.html"><span>更新记录</span></a></li>
+      <li><a href="_xE7_xBC_x96_xE7_xA8_x8B_xE5_xBC_x95_xE5_xAF_xBC.html"><span>编程引导</span></a></li>
+      <li class="current"><a href="modules.html"><span>接口函数</span></a></li>
+      <li><a href="annotated.html"><span>结构体</span></a></li>
+      <li><a href="_xE7_x9B_xB8_xE6_x9C_xBA_xE5_x8F_x82_xE6_x95_xB0_xE8_x8A_x82_xE7_x82_xB9_xE8_xA1_xA8.html"><span>相机参数节点表</span></a></li>
+      <li><a href="examples.html"><span>示例</span></a></li>
+      <li><a href="_xE7_x8A_xB6_xE6_x80_x81_xE7_xA0_x81_xE5_xAE_x9A_xE4_xB9_x89.html"><span>状态码定义</span></a></li>
+      <li><a href="_xE5_xB8_xB8_xE8_xA7_x81_xE9_x97_xAE_xE9_xA2_x98.html"><span>常见问题</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#enum-members">枚举</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle">
+<div class="title">图像处理<div class="ingroups"><a class="el" href="group___xE6_x8E_xA5_xE5_x8F_xA3_xE5_x87_xBD_xE6_x95_xB0.html">接口函数</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>包括图像保存和图像格式转换接口。  
+<a href="#details">更多...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+枚举</h2></td></tr>
+<tr class="memitem:ga5435b1ff781839e7fb5d05f1e4d9bb07"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___xE5_x9B_xBE_xE5_x83_x8F_xE5_xA4_x84_xE7_x90_x86.html#ga5435b1ff781839e7fb5d05f1e4d9bb07">MV_SAVE_IAMGE_TYPE</a> { <br />
+&#160;&#160;<a class="el" href="group___xE5_x9B_xBE_xE5_x83_x8F_xE5_xA4_x84_xE7_x90_x86.html#gga5435b1ff781839e7fb5d05f1e4d9bb07a5bfe37840beb201a49b7e6b2771afadc">MV_Image_Bmp</a> =(1), 
+<br />
+&#160;&#160;<a class="el" href="group___xE5_x9B_xBE_xE5_x83_x8F_xE5_xA4_x84_xE7_x90_x86.html#gga5435b1ff781839e7fb5d05f1e4d9bb07addad670943ba300231edd334d3f0d713">MV_Image_Jpeg</a> =(2), 
+<br />
+&#160;&#160;<a class="el" href="group___xE5_x9B_xBE_xE5_x83_x8F_xE5_xA4_x84_xE7_x90_x86.html#gga5435b1ff781839e7fb5d05f1e4d9bb07a603a395bd299ff44bb029284e73f3a15">MV_Image_Png</a> =(3), 
+<br />
+&#160;&#160;<a class="el" href="group___xE5_x9B_xBE_xE5_x83_x8F_xE5_xA4_x84_xE7_x90_x86.html#gga5435b1ff781839e7fb5d05f1e4d9bb07a640cc733f2dd9c2ef9270ea969f14395">MV_Image_Tif</a> =(4)
+<br />
+ }</td></tr>
+<tr class="separator:ga5435b1ff781839e7fb5d05f1e4d9bb07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga94f17d82a2c13785d0085217e9204061"><td class="memItemLeft" align="right" valign="top"><a id="ga94f17d82a2c13785d0085217e9204061"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___xE5_x9B_xBE_xE5_x83_x8F_xE5_xA4_x84_xE7_x90_x86.html#ga94f17d82a2c13785d0085217e9204061">MvGvspPixelType</a> { <br />
+&#160;&#160;<b>PixelType_Gvsp_Undefined</b> =(-1), 
+<br />
+&#160;&#160;<b>PixelType_Gvsp_Mono1p</b> =(MV_GVSP_PIX_MONO | MV_PIXEL_BIT_COUNT(1) | 0x0037), 
+<br />
+&#160;&#160;<b>PixelType_Gvsp_Mono2p</b> =(MV_GVSP_PIX_MONO | MV_PIXEL_BIT_COUNT(2) | 0x0038), 
+<br />
+&#160;&#160;<b>PixelType_Gvsp_Mono4p</b> =(MV_GVSP_PIX_MONO | MV_PIXEL_BIT_COUNT(4) | 0x0039), 
+<br />
+&#160;&#160;<b>PixelType_Gvsp_Mono8</b> =(MV_GVSP_PIX_MONO | MV_PIXEL_BIT_COUNT(8) | 0x0001), 
+<br />
+&#160;&#160;<b>PixelType_Gvsp_Mono8_Signed</b> =(MV_GVSP_PIX_MONO | MV_PIXEL_BIT_COUNT(8) | 0x0002), 
+<br />
+&#160;&#160;<b>PixelType_Gvsp_Mono10</b> =(MV_GVSP_PIX_MONO | MV_PIXEL_BIT_COUNT(16) | 0x0003), 
+<br />
+&#160;&#160;<b>PixelType_Gvsp_Mono10_Packed</b> =(MV_GVSP_PIX_MONO | MV_PIXEL_BIT_COUNT(12) | 0x0004), 
+<br />
+&#160;&#160;<b>PixelType_Gvsp_Mono12</b> =(MV_GVSP_PIX_MONO | MV_PIXEL_BIT_COUNT(16) | 0x0005), 
+<br />
+&#160;&#160;<b>PixelType_Gvsp_Mono12_Packed</b> =(MV_GVSP_PIX_MONO | MV_PIXEL_BIT_COUNT(12) | 0x0006), 
+<br />
+&#160;&#160;<b>PixelType_Gvsp_Mono14</b> =(MV_GVSP_PIX_MONO | MV_PIXEL_BIT_COUNT(16) | 0x0025), 
+<br />
+&#160;&#160;<b>PixelType_Gvsp_Mono16</b> =(MV_GVSP_PIX_MONO | MV_PIXEL_BIT_COUNT(16) | 0x0007), 
+<br />
+&#160;&#160;<b>PixelType_Gvsp_BayerGR8</b> =(MV_GVSP_PIX_MONO | MV_PIXEL_BIT_COUNT(8) | 0x0008), 
+<br />
+&#160;&#160;<b>PixelType_Gvsp_BayerRG8</b> =(MV_GVSP_PIX_MONO | MV_PIXEL_BIT_COUNT(8) | 0x0009), 
+<br />
+&#160;&#160;<b>PixelType_Gvsp_BayerGB8</b> =( MV_GVSP_PIX_MONO | MV_PIXEL_BIT_COUNT(8) | 0x000A), 
+<br />
+&#160;&#160;<b>PixelType_Gvsp_BayerBG8</b> =( MV_GVSP_PIX_MONO | MV_PIXEL_BIT_COUNT(8) | 0x000B), 
+<br />
+&#160;&#160;<b>PixelType_Gvsp_BayerGR10</b> =( MV_GVSP_PIX_MONO | MV_PIXEL_BIT_COUNT(16) | 0x000C), 
+<br />
+&#160;&#160;<b>PixelType_Gvsp_BayerRG10</b> =( MV_GVSP_PIX_MONO | MV_PIXEL_BIT_COUNT(16) | 0x000D), 
+<br />
+&#160;&#160;<b>PixelType_Gvsp_BayerGB10</b> =( MV_GVSP_PIX_MONO | MV_PIXEL_BIT_COUNT(16) | 0x000E), 
+<br />
+&#160;&#160;<b>PixelType_Gvsp_BayerBG10</b> =( MV_GVSP_PIX_MONO | MV_PIXEL_BIT_COUNT(16) | 0x000F), 
+<br />
+&#160;&#160;<b>PixelType_Gvsp_BayerGR12</b> =( MV_GVSP_PIX_MONO | MV_PIXEL_BIT_COUNT(16) | 0x0010), 
+<br />
+&#160;&#160;<b>PixelType_Gvsp_BayerRG12</b> =( MV_GVSP_PIX_MONO | MV_PIXEL_BIT_COUNT(16) | 0x0011), 
+<br />
+&#160;&#160;<b>PixelType_Gvsp_BayerGB12</b> =( MV_GVSP_PIX_MONO | MV_PIXEL_BIT_COUNT(16) | 0x0012), 
+<br />
+&#160;&#160;<b>PixelType_Gvsp_BayerBG12</b> =( MV_GVSP_PIX_MONO | MV_PIXEL_BIT_COUNT(16) | 0x0013), 
+<br />
+&#160;&#160;<b>PixelType_Gvsp_BayerGR10_Packed</b> =( MV_GVSP_PIX_MONO | MV_PIXEL_BIT_COUNT(12) | 0x0026), 
+<br />
+&#160;&#160;<b>PixelType_Gvsp_BayerRG10_Packed</b> =( MV_GVSP_PIX_MONO | MV_PIXEL_BIT_COUNT(12) | 0x0027), 
+<br />
+&#160;&#160;<b>PixelType_Gvsp_BayerGB10_Packed</b> =( MV_GVSP_PIX_MONO | MV_PIXEL_BIT_COUNT(12) | 0x0028), 
+<br />
+&#160;&#160;<b>PixelType_Gvsp_BayerBG10_Packed</b> =( MV_GVSP_PIX_MONO | MV_PIXEL_BIT_COUNT(12) | 0x0029), 
+<br />
+&#160;&#160;<b>PixelType_Gvsp_BayerGR12_Packed</b> =( MV_GVSP_PIX_MONO | MV_PIXEL_BIT_COUNT(12) | 0x002A), 
+<br />
+&#160;&#160;<b>PixelType_Gvsp_BayerRG12_Packed</b> =( MV_GVSP_PIX_MONO | MV_PIXEL_BIT_COUNT(12) | 0x002B), 
+<br />
+&#160;&#160;<b>PixelType_Gvsp_BayerGB12_Packed</b> =( MV_GVSP_PIX_MONO | MV_PIXEL_BIT_COUNT(12) | 0x002C), 
+<br />
+&#160;&#160;<b>PixelType_Gvsp_BayerBG12_Packed</b> =( MV_GVSP_PIX_MONO | MV_PIXEL_BIT_COUNT(12) | 0x002D), 
+<br />
+&#160;&#160;<b>PixelType_Gvsp_BayerGR16</b> =( MV_GVSP_PIX_MONO | MV_PIXEL_BIT_COUNT(16) | 0x002E), 
+<br />
+&#160;&#160;<b>PixelType_Gvsp_BayerRG16</b> =( MV_GVSP_PIX_MONO | MV_PIXEL_BIT_COUNT(16) | 0x002F), 
+<br />
+&#160;&#160;<b>PixelType_Gvsp_BayerGB16</b> =( MV_GVSP_PIX_MONO | MV_PIXEL_BIT_COUNT(16) | 0x0030), 
+<br />
+&#160;&#160;<b>PixelType_Gvsp_BayerBG16</b> =( MV_GVSP_PIX_MONO | MV_PIXEL_BIT_COUNT(16) | 0x0031), 
+<br />
+&#160;&#160;<b>PixelType_Gvsp_RGB8_Packed</b> =(MV_GVSP_PIX_COLOR | MV_PIXEL_BIT_COUNT(24) | 0x0014), 
+<br />
+&#160;&#160;<b>ixelType_Gvsp_BGR8_Packed</b> =(MV_GVSP_PIX_COLOR | MV_PIXEL_BIT_COUNT(24) | 0x0015), 
+<br />
+&#160;&#160;<b>PixelType_Gvsp_RGBA8_Packed</b> =( MV_GVSP_PIX_COLOR | MV_PIXEL_BIT_COUNT(32) | 0x0016), 
+<br />
+&#160;&#160;<b>PixelType_Gvsp_BGRA8_Packed</b> =( MV_GVSP_PIX_COLOR | MV_PIXEL_BIT_COUNT(32) | 0x0017), 
+<br />
+&#160;&#160;<b>PixelType_Gvsp_RGB10_Packed</b> =( MV_GVSP_PIX_COLOR | MV_PIXEL_BIT_COUNT(48) | 0x0018), 
+<br />
+&#160;&#160;<b>PixelType_Gvsp_BGR10_Packed</b> =( MV_GVSP_PIX_COLOR | MV_PIXEL_BIT_COUNT(48) | 0x0019), 
+<br />
+&#160;&#160;<b>PixelType_Gvsp_RGB12_Packed</b> =( MV_GVSP_PIX_COLOR | MV_PIXEL_BIT_COUNT(48) | 0x001A), 
+<br />
+&#160;&#160;<b>PixelType_Gvsp_BGR12_Packed</b> =( MV_GVSP_PIX_COLOR | MV_PIXEL_BIT_COUNT(48) | 0x001B), 
+<br />
+&#160;&#160;<b>PixelType_Gvsp_RGB16_Packed</b> =( MV_GVSP_PIX_COLOR | MV_PIXEL_BIT_COUNT(48) | 0x0033), 
+<br />
+&#160;&#160;<b>PixelType_Gvsp_RGB10V1_Packed</b> =( MV_GVSP_PIX_COLOR | MV_PIXEL_BIT_COUNT(32) | 0x001C), 
+<br />
+&#160;&#160;<b>PixelType_Gvsp_RGB10V2_Packed</b> =( MV_GVSP_PIX_COLOR | MV_PIXEL_BIT_COUNT(32) | 0x001D), 
+<br />
+&#160;&#160;<b>PixelType_Gvsp_RGB12V1_Packed</b> =( MV_GVSP_PIX_COLOR | MV_PIXEL_BIT_COUNT(36) | 0X0034), 
+<br />
+&#160;&#160;<b>PixelType_Gvsp_RGB565_Packed</b> =( MV_GVSP_PIX_COLOR | MV_PIXEL_BIT_COUNT(16) | 0x0035), 
+<br />
+&#160;&#160;<b>PixelType_Gvsp_BGR565_Packed</b> =( MV_GVSP_PIX_COLOR | MV_PIXEL_BIT_COUNT(16) | 0X0036), 
+<br />
+&#160;&#160;<b>PixelType_Gvsp_YUV411_Packed</b> =(MV_GVSP_PIX_COLOR | MV_PIXEL_BIT_COUNT(12) | 0x001E), 
+<br />
+&#160;&#160;<b>PixelType_Gvsp_YUV422_Packed</b> =(MV_GVSP_PIX_COLOR | MV_PIXEL_BIT_COUNT(16) | 0x001F), 
+<br />
+&#160;&#160;<b>PixelType_Gvsp_YUV422_YUYV_Packed</b> =( MV_GVSP_PIX_COLOR | MV_PIXEL_BIT_COUNT(16) | 0x0032), 
+<br />
+&#160;&#160;<b>PixelType_Gvsp_YUV444_Packed</b> =( MV_GVSP_PIX_COLOR | MV_PIXEL_BIT_COUNT(24) | 0x0020), 
+<br />
+&#160;&#160;<b>PixelType_Gvsp_YCBCR8_CBYCR</b> =( MV_GVSP_PIX_COLOR | MV_PIXEL_BIT_COUNT(24) | 0x003A), 
+<br />
+&#160;&#160;<b>PixelType_Gvsp_YCBCR422_8</b> =( MV_GVSP_PIX_COLOR | MV_PIXEL_BIT_COUNT(16) | 0x003B), 
+<br />
+&#160;&#160;<b>PixelType_Gvsp_YCBCR422_8_CBYCRY</b> =( MV_GVSP_PIX_COLOR | MV_PIXEL_BIT_COUNT(16) | 0x0043), 
+<br />
+&#160;&#160;<b>ixelType_Gvsp_YCBCR411_8_CBYYCRYY</b> =( MV_GVSP_PIX_COLOR | MV_PIXEL_BIT_COUNT(12) | 0x003C), 
+<br />
+&#160;&#160;<b>PixelType_Gvsp_YCBCR601_8_CBYCR</b> =( MV_GVSP_PIX_COLOR | MV_PIXEL_BIT_COUNT(24) | 0x003D), 
+<br />
+&#160;&#160;<b>PixelType_Gvsp_YCBCR601_422_8</b> =(MV_GVSP_PIX_COLOR | MV_PIXEL_BIT_COUNT(16) | 0x003E), 
+<br />
+&#160;&#160;<b>PixelType_Gvsp_YCBCR601_422_8_CBYCRY</b> =( MV_GVSP_PIX_COLOR | MV_PIXEL_BIT_COUNT(16) | 0x0044), 
+<br />
+&#160;&#160;<b>PixelType_Gvsp_YCBCR601_411_8_CBYYCRYY</b> =( MV_GVSP_PIX_COLOR | MV_PIXEL_BIT_COUNT(12) | 0x003F), 
+<br />
+&#160;&#160;<b>PixelType_Gvsp_YCBCR709_8_CBYCR</b> =( MV_GVSP_PIX_COLOR | MV_PIXEL_BIT_COUNT(24) | 0x0040), 
+<br />
+&#160;&#160;<b>PixelType_Gvsp_YCBCR709_422_8</b> =( MV_GVSP_PIX_COLOR | MV_PIXEL_BIT_COUNT(16) | 0x0041), 
+<br />
+&#160;&#160;<b>PixelType_Gvsp_YCBCR709_422_8_CBYCRY</b> =( MV_GVSP_PIX_COLOR | MV_PIXEL_BIT_COUNT(16) | 0x0045), 
+<br />
+&#160;&#160;<b>PixelType_Gvsp_YCBCR709_411_8_CBYYCRYY</b> =( MV_GVSP_PIX_COLOR | MV_PIXEL_BIT_COUNT(12) | 0x0042), 
+<br />
+&#160;&#160;<b>PixelType_Gvsp_RGB8_Planar</b> =(MV_GVSP_PIX_COLOR | MV_PIXEL_BIT_COUNT(24) | 0x0021), 
+<br />
+&#160;&#160;<b>PixelType_Gvsp_RGB10_Planar</b> =(MV_GVSP_PIX_COLOR | MV_PIXEL_BIT_COUNT(48) | 0x0022), 
+<br />
+&#160;&#160;<b>PixelType_Gvsp_RGB12_Planar</b> =( MV_GVSP_PIX_COLOR | MV_PIXEL_BIT_COUNT(48) | 0x0023), 
+<br />
+&#160;&#160;<b>PixelType_Gvsp_RGB16_Planar</b> =( MV_GVSP_PIX_COLOR | MV_PIXEL_BIT_COUNT(48) | 0x0024), 
+<br />
+&#160;&#160;<b>PixelType_Gvsp_Jpeg</b> =(MV_GVSP_PIX_CUSTOM | MV_PIXEL_BIT_COUNT(24)| 0x0001), 
+<br />
+&#160;&#160;<b>PixelType_Gvsp_Coord3D_ABC32f</b> =(MV_GVSP_PIX_COLOR| MV_PIXEL_BIT_COUNT(96) | 0x00C0), 
+<br />
+&#160;&#160;<b>PixelType_Gvsp_Coord3D_ABC32f_Planar</b> =(MV_GVSP_PIX_COLOR | MV_PIXEL_BIT_COUNT(96) | 0x00C1), 
+<br />
+&#160;&#160;<b>PixelType_Gvsp_Coord3D_AC32f</b> =(MV_GVSP_PIX_COLOR | MV_PIXEL_BIT_COUNT(40)| 0x00C2), 
+<br />
+&#160;&#160;<b>PixelType_Gvsp_COORD3D_DEPTH_PLUS_MASK</b> =(0x82000000 | MV_PIXEL_BIT_COUNT(28) | 0x0001)
+<br />
+ }</td></tr>
+<tr class="memdesc:ga94f17d82a2c13785d0085217e9204061"><td class="mdescLeft">&#160;</td><td class="mdescRight">图像格式枚举量 <br /></td></tr>
+<tr class="separator:ga94f17d82a2c13785d0085217e9204061"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:ga1fe9e6e6ff70a7602137c7c9ee8a3490"><td class="memItemLeft" align="right" valign="top">public static native int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___xE5_x9B_xBE_xE5_x83_x8F_xE5_xA4_x84_xE7_x90_x86.html#ga1fe9e6e6ff70a7602137c7c9ee8a3490">MV_CC_ConvertPixelType</a> (Handle handle, <a class="el" href="class_m_v___c_c___p_i_x_e_l___c_o_n_v_e_r_t___p_a_r_a_m.html">MV_CC_PIXEL_CONVERT_PARAM</a> cvtParam)</td></tr>
+<tr class="memdesc:ga1fe9e6e6ff70a7602137c7c9ee8a3490"><td class="mdescLeft">&#160;</td><td class="mdescRight">像素格式转换  <a href="#ga1fe9e6e6ff70a7602137c7c9ee8a3490">更多...</a><br /></td></tr>
+<tr class="separator:ga1fe9e6e6ff70a7602137c7c9ee8a3490"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf69b23a105d03c0529bcdde3defce061"><td class="memItemLeft" align="right" valign="top">public static native int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___xE5_x9B_xBE_xE5_x83_x8F_xE5_xA4_x84_xE7_x90_x86.html#gaf69b23a105d03c0529bcdde3defce061">MV_CC_SaveImage</a> (<a class="el" href="class_m_v___s_a_v_e___i_m_a_g_e___p_a_r_a_m.html">MV_SAVE_IMAGE_PARAM</a> saveParam,)</td></tr>
+<tr class="memdesc:gaf69b23a105d03c0529bcdde3defce061"><td class="mdescLeft">&#160;</td><td class="mdescRight">保存图片  <a href="#gaf69b23a105d03c0529bcdde3defce061">更多...</a><br /></td></tr>
+<tr class="separator:gaf69b23a105d03c0529bcdde3defce061"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<p>包括图像保存和图像格式转换接口。 </p>
+<p>保存图片格式枚举量 </p>
+<h2 class="groupheader">枚举类型说明</h2>
+<a id="ga5435b1ff781839e7fb5d05f1e4d9bb07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5435b1ff781839e7fb5d05f1e4d9bb07">&#9670;&nbsp;</a></span>MV_SAVE_IAMGE_TYPE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group___xE5_x9B_xBE_xE5_x83_x8F_xE5_xA4_x84_xE7_x90_x86.html#ga5435b1ff781839e7fb5d05f1e4d9bb07">MV_SAVE_IAMGE_TYPE</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="gga5435b1ff781839e7fb5d05f1e4d9bb07a5bfe37840beb201a49b7e6b2771afadc"></a>MV_Image_Bmp&#160;</td><td class="fielddoc"><p>BMP图像格式 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga5435b1ff781839e7fb5d05f1e4d9bb07addad670943ba300231edd334d3f0d713"></a>MV_Image_Jpeg&#160;</td><td class="fielddoc"><p>JPEG图像格式 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga5435b1ff781839e7fb5d05f1e4d9bb07a603a395bd299ff44bb029284e73f3a15"></a>MV_Image_Png&#160;</td><td class="fielddoc"><p>PNG图像格式 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga5435b1ff781839e7fb5d05f1e4d9bb07a640cc733f2dd9c2ef9270ea969f14395"></a>MV_Image_Tif&#160;</td><td class="fielddoc"><p>TIF图像格式 </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a id="ga1fe9e6e6ff70a7602137c7c9ee8a3490"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1fe9e6e6ff70a7602137c7c9ee8a3490">&#9670;&nbsp;</a></span>MV_CC_ConvertPixelType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">public static native int MV_CC_ConvertPixelType </td>
+          <td>(</td>
+          <td class="paramtype">Handle&#160;</td>
+          <td class="paramname"><em>handle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_m_v___c_c___p_i_x_e_l___c_o_n_v_e_r_t___p_a_r_a_m.html">MV_CC_PIXEL_CONVERT_PARAM</a>&#160;</td>
+          <td class="paramname"><em>cvtParam</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>像素格式转换 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">handle</td><td>[IN] 设备句柄 </td></tr>
+    <tr><td class="paramname">cvtParam</td><td>[IN][OUT] 像素格式转换参数结构体 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功，返回<a class="el" href="_xE7_x8A_xB6_xE6_x80_x81_xE7_xA0_x81_xE5_xAE_x9A_xE4_xB9_x89.html">MV_OK</a>；失败，返回<a class="el" href="_xE7_x8A_xB6_xE6_x80_x81_xE7_xA0_x81_xE5_xAE_x9A_xE4_xB9_x89.html">错误码</a> 。 </dd></dl>
+<dl class="section remark"><dt>备注</dt><dd><b>&#160;&bull;&#160;</b>通过将接口可以将从设备采集到的原始图像数据转换成用户所需的像素格式并存放在指定内存中。该接口调用无接口顺序要求，有图像源数据就可以进行转换，可以先调用<a class="el" href="group___xE5_x9B_xBE_xE5_x83_x8F_xE9_x87_x87_xE9_x9B_x86.html">图像采集</a> 接口，获取一帧图像数据，然后再通过该接口转换格式。如果相机当前采集图像是JPEG压缩的格式，则不支持调用该接口进行显示。 <br />
+ <b>&#160;&bull;&#160;</b> 目前支持转换的输入输出像素格式如下表所示： <br />
+<img src="123.jpg" align="middle" alt="" class="inline"/>
+<br />
+ <b>&#160;&bull;&#160;</b>接口所在类：MvCameraControl <br />
+</dd></dl>
+<dl class="section examples"><dt>示例</dt><dd><a class="el" href="_image_process_activity_8java-example.html#a21">ImageProcessActivity.java</a>.</dd>
+</dl>
+
+</div>
+</div>
+<a id="gaf69b23a105d03c0529bcdde3defce061"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf69b23a105d03c0529bcdde3defce061">&#9670;&nbsp;</a></span>MV_CC_SaveImage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">public static native int MV_CC_SaveImage </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_m_v___s_a_v_e___i_m_a_g_e___p_a_r_a_m.html">MV_SAVE_IMAGE_PARAM</a>&#160;</td>
+          <td class="paramname"><em>saveParam</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>保存图片 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">saveParam</td><td>[IN] 保存图片参数结构体 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功，返回<a class="el" href="_xE7_x8A_xB6_xE6_x80_x81_xE7_xA0_x81_xE5_xAE_x9A_xE4_xB9_x89.html">MV_OK</a>；失败，返回<a class="el" href="_xE7_x8A_xB6_xE6_x80_x81_xE7_xA0_x81_xE5_xAE_x9A_xE4_xB9_x89.html">错误码</a> 。 </dd></dl>
+<dl class="section remark"><dt>备注</dt><dd>接口所在类：MvCameraControl <br />
+</dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<div class="footer" style="text-align: right;">
+	<hr/>
+	<small></small>
+</div>
+</body>
+</html>

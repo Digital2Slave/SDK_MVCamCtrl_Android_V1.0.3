@@ -1,0 +1,1 @@
+include ':App', ':GrabImageCallBack', ':BaseModule', ':GrabImage', ':GrabMultipleCamera', ':GetBitmap', ':Reconnect', ':SetParam', ':ImageProcess', ':TriggerImage', ':TriggerImageCallback', ':SetIp', ':Event'

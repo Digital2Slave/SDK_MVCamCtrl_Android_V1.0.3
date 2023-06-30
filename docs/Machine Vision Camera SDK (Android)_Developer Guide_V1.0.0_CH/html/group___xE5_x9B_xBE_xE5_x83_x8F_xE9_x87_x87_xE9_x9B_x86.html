@@ -1,0 +1,380 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>工业相机Android SDK开发指南V1.0.0（java）</title> 
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="custom-style.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+	<div style="overflow: hidden;">
+		<div style="height: 57px;min-width: 1039px;background-size: auto 100%;background:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABwgAAAABCAYAAADKO/rAAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAABRSURBVFhH7dUxCoBADEXB5LK5/w1iIaLIrsgWNs50Sf/4WVUd8HOZGd1nCqMbGNMPrNMPrJv1cvz0A3OjfuwPvDPrxf7A7t7IlX7gmX74VsQGguw4S6+UnSYAAAAASUVORK5CYII=');">
+			<img src="titleleft.png" style="float: left;"/>
+			<img src="titleright.png" alt="" style="float: right;" />
+		</div>
+	</div>
+<!-- 制作者 Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>声明</span></a></li>
+      <li><a href="_xE7_xAE_x80_xE4_xBB_x8B.html"><span>简介</span></a></li>
+      <li><a href="_xE6_x9B_xB4_xE6_x96_xB0_xE8_xAE_xB0_xE5_xBD_x95.html"><span>更新记录</span></a></li>
+      <li><a href="_xE7_xBC_x96_xE7_xA8_x8B_xE5_xBC_x95_xE5_xAF_xBC.html"><span>编程引导</span></a></li>
+      <li class="current"><a href="modules.html"><span>接口函数</span></a></li>
+      <li><a href="annotated.html"><span>结构体</span></a></li>
+      <li><a href="_xE7_x9B_xB8_xE6_x9C_xBA_xE5_x8F_x82_xE6_x95_xB0_xE8_x8A_x82_xE7_x82_xB9_xE8_xA1_xA8.html"><span>相机参数节点表</span></a></li>
+      <li><a href="examples.html"><span>示例</span></a></li>
+      <li><a href="_xE7_x8A_xB6_xE6_x80_x81_xE7_xA0_x81_xE5_xAE_x9A_xE4_xB9_x89.html"><span>状态码定义</span></a></li>
+      <li><a href="_xE5_xB8_xB8_xE8_xA7_x81_xE9_x97_xAE_xE9_xA2_x98.html"><span>常见问题</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle">
+<div class="title">图像采集<div class="ingroups"><a class="el" href="group___xE6_x8E_xA5_xE5_x8F_xA3_xE5_x87_xBD_xE6_x95_xB0.html">接口函数</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>包含图像获取（回调取图、主动取图）、开始采集和结束采集接口等。  
+<a href="#details">更多...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:ga52ef975ad47c0ad8ea71480c64e71d80"><td class="memItemLeft" align="right" valign="top">public static native int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___xE5_x9B_xBE_xE5_x83_x8F_xE9_x87_x87_xE9_x9B_x86.html#ga52ef975ad47c0ad8ea71480c64e71d80">MV_CC_RegisterImageCallBack</a> (Handle handle, ImageCallback callback)</td></tr>
+<tr class="memdesc:ga52ef975ad47c0ad8ea71480c64e71d80"><td class="mdescLeft">&#160;</td><td class="mdescRight">注册图像数据回调  <a href="#ga52ef975ad47c0ad8ea71480c64e71d80">更多...</a><br /></td></tr>
+<tr class="separator:ga52ef975ad47c0ad8ea71480c64e71d80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5ee1c63aac34f3d8ea0ea5c2f5f734f2"><td class="memItemLeft" align="right" valign="top">public static native int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___xE5_x9B_xBE_xE5_x83_x8F_xE9_x87_x87_xE9_x9B_x86.html#ga5ee1c63aac34f3d8ea0ea5c2f5f734f2">MV_CC_StartGrabbing</a> (Handle handle)</td></tr>
+<tr class="memdesc:ga5ee1c63aac34f3d8ea0ea5c2f5f734f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">开启抓图  <a href="#ga5ee1c63aac34f3d8ea0ea5c2f5f734f2">更多...</a><br /></td></tr>
+<tr class="separator:ga5ee1c63aac34f3d8ea0ea5c2f5f734f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga951784eace474e8a5049c911966c381f"><td class="memItemLeft" align="right" valign="top">public static native int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___xE5_x9B_xBE_xE5_x83_x8F_xE9_x87_x87_xE9_x9B_x86.html#ga951784eace474e8a5049c911966c381f">MV_CC_StopGrabbing</a> (Handle handle)</td></tr>
+<tr class="memdesc:ga951784eace474e8a5049c911966c381f"><td class="mdescLeft">&#160;</td><td class="mdescRight">停止抓图  <a href="#ga951784eace474e8a5049c911966c381f">更多...</a><br /></td></tr>
+<tr class="separator:ga951784eace474e8a5049c911966c381f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae1a51a885f885902d8783e1237556e48"><td class="memItemLeft" align="right" valign="top">public static native int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___xE5_x9B_xBE_xE5_x83_x8F_xE9_x87_x87_xE9_x9B_x86.html#gae1a51a885f885902d8783e1237556e48">MV_CC_GetOneFrameTimeout</a> (Handle handle, byte[] pData, <a class="el" href="class_m_v___f_r_a_m_e___o_u_t___i_n_f_o.html">MV_FRAME_OUT_INFO</a> frameInfo, int nMsec)</td></tr>
+<tr class="memdesc:gae1a51a885f885902d8783e1237556e48"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取一帧图像数据  <a href="#gae1a51a885f885902d8783e1237556e48">更多...</a><br /></td></tr>
+<tr class="separator:gae1a51a885f885902d8783e1237556e48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaba79fc6858614601cbd712219c3a675c"><td class="memItemLeft" align="right" valign="top">public static native int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___xE5_x9B_xBE_xE5_x83_x8F_xE9_x87_x87_xE9_x9B_x86.html#gaba79fc6858614601cbd712219c3a675c">MV_CC_GetBitmapTimeout</a> (Handle handle, byte[] pData, <a class="el" href="class_m_v___f_r_a_m_e___o_u_t___i_n_f_o.html">MV_FRAME_OUT_INFO</a> frameInfo, int nMsec)</td></tr>
+<tr class="memdesc:gaba79fc6858614601cbd712219c3a675c"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取一帧Bitmap格式图像数据  <a href="#gaba79fc6858614601cbd712219c3a675c">更多...</a><br /></td></tr>
+<tr class="separator:gaba79fc6858614601cbd712219c3a675c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<p>包含图像获取（回调取图、主动取图）、开始采集和结束采集接口等。 </p>
+<h2 class="groupheader">函数说明</h2>
+<a id="gaba79fc6858614601cbd712219c3a675c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaba79fc6858614601cbd712219c3a675c">&#9670;&nbsp;</a></span>MV_CC_GetBitmapTimeout()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">public static native int MV_CC_GetBitmapTimeout </td>
+          <td>(</td>
+          <td class="paramtype">Handle&#160;</td>
+          <td class="paramname"><em>handle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">byte []&#160;</td>
+          <td class="paramname"><em>pData</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_m_v___f_r_a_m_e___o_u_t___i_n_f_o.html">MV_FRAME_OUT_INFO</a>&#160;</td>
+          <td class="paramname"><em>frameInfo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nMsec</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取一帧Bitmap格式图像数据 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">handle</td><td>[IN] 设备句柄 </td></tr>
+    <tr><td class="paramname">data</td><td>[OUT] 输出数据缓存 </td></tr>
+    <tr><td class="paramname">frameInfo</td><td>[OUT] 当前一帧图像的信息 </td></tr>
+    <tr><td class="paramname">msec</td><td>[IN] 超时时间 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功，返回<a class="el" href="_xE7_x8A_xB6_xE6_x80_x81_xE7_xA0_x81_xE5_xAE_x9A_xE4_xB9_x89.html">MV_OK</a>；失败，返回<a class="el" href="_xE7_x8A_xB6_xE6_x80_x81_xE7_xA0_x81_xE5_xAE_x9A_xE4_xB9_x89.html">错误码</a> 。 </dd></dl>
+<dl class="section remark"><dt>备注</dt><dd><b>&#160;&bull;&#160;</b>调用该接口获取图像数据帧之前需要先调用 <a class="el" href="group___xE5_x9B_xBE_xE5_x83_x8F_xE9_x87_x87_xE9_x9B_x86.html#ga5ee1c63aac34f3d8ea0ea5c2f5f734f2" title="开启抓图">MV_CC_StartGrabbing()</a> 启动图像采集。该接口为主动式获取帧数据，上层应用程序需要根据帧率，控制好调用该接口的频率。该接口支持设置超时时间，SDK内部等待直到有数据时返回，可以增加取流平稳性，适合用于对平稳性要求较高的场合。<br />
+ <b>&#160;&bull;&#160;</b>该接口对于U3V、GIGE设备均可支持。<br />
+ <b>&#160;&bull;&#160;</b>接口所在类：MvCameraControl <br />
+</dd></dl>
+<dl class="section examples"><dt>示例</dt><dd><a class="el" href="_get_bitmap_activity_8java-example.html#a24">GetBitmapActivity.java</a>.</dd>
+</dl>
+
+</div>
+</div>
+<a id="gae1a51a885f885902d8783e1237556e48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae1a51a885f885902d8783e1237556e48">&#9670;&nbsp;</a></span>MV_CC_GetOneFrameTimeout()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">public static native int MV_CC_GetOneFrameTimeout </td>
+          <td>(</td>
+          <td class="paramtype">Handle&#160;</td>
+          <td class="paramname"><em>handle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">byte []&#160;</td>
+          <td class="paramname"><em>pData</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_m_v___f_r_a_m_e___o_u_t___i_n_f_o.html">MV_FRAME_OUT_INFO</a>&#160;</td>
+          <td class="paramname"><em>frameInfo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nMsec</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取一帧图像数据 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">handle</td><td>[IN] 设备句柄 </td></tr>
+    <tr><td class="paramname">data</td><td>[OUT] 输出数据缓存 </td></tr>
+    <tr><td class="paramname">frameInfo</td><td>[OUT] 当前一帧图像的信息 </td></tr>
+    <tr><td class="paramname">msec</td><td>[IN] 超时时间 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功，返回<a class="el" href="_xE7_x8A_xB6_xE6_x80_x81_xE7_xA0_x81_xE5_xAE_x9A_xE4_xB9_x89.html">MV_OK</a>；失败，返回<a class="el" href="_xE7_x8A_xB6_xE6_x80_x81_xE7_xA0_x81_xE5_xAE_x9A_xE4_xB9_x89.html">错误码</a> 。 </dd></dl>
+<dl class="section remark"><dt>备注</dt><dd><b>&#160;&bull;&#160;</b>调用该接口获取图像数据帧之前需要先调用 <a class="el" href="group___xE5_x9B_xBE_xE5_x83_x8F_xE9_x87_x87_xE9_x9B_x86.html#ga5ee1c63aac34f3d8ea0ea5c2f5f734f2" title="开启抓图">MV_CC_StartGrabbing()</a> 启动图像采集。该接口为主动式获取帧数据，上层应用程序需要根据帧率，控制好调用该接口的频率。该接口支持设置超时时间，SDK内部等待直到有数据时返回，可以增加取流平稳性，适合用于对平稳性要求较高的场合。<br />
+ <b>&#160;&bull;&#160;</b>该接口对于U3V、GIGE设备均可支持。<br />
+ <b>&#160;&bull;&#160;</b>接口所在类：MvCameraControl <br />
+</dd></dl>
+<dl class="section examples"><dt>示例</dt><dd><a class="el" href="_grab_image_activity_8java-example.html#a15">GrabImageActivity.java</a>, <a class="el" href="_grab_multiple_camera_activity_8java-example.html#a22">GrabMultipleCameraActivity.java</a> , 以及 <a class="el" href="_trigger_image_activity_8java-example.html#a25">TriggerImageActivity.java</a>.</dd>
+</dl>
+
+</div>
+</div>
+<a id="ga52ef975ad47c0ad8ea71480c64e71d80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga52ef975ad47c0ad8ea71480c64e71d80">&#9670;&nbsp;</a></span>MV_CC_RegisterImageCallBack()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">public static native int MV_CC_RegisterImageCallBack </td>
+          <td>(</td>
+          <td class="paramtype">Handle&#160;</td>
+          <td class="paramname"><em>handle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ImageCallback&#160;</td>
+          <td class="paramname"><em>callback</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>注册图像数据回调 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">handle</td><td>[IN] 设备句柄 </td></tr>
+    <tr><td class="paramname">callback</td><td>[IN] 回调函数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功，返回<a class="el" href="_xE7_x8A_xB6_xE6_x80_x81_xE7_xA0_x81_xE5_xAE_x9A_xE4_xB9_x89.html">MV_OK</a>；失败，返回<a class="el" href="_xE7_x8A_xB6_xE6_x80_x81_xE7_xA0_x81_xE5_xAE_x9A_xE4_xB9_x89.html">错误码</a> 。 </dd></dl>
+<dl class="section remark"><dt>备注</dt><dd><b>&#160;&bull;&#160;</b>在打开相机以后使用。 <br />
+ <b>&#160;&bull;&#160;</b>接口所在类：MvCameraControl <br />
+</dd></dl>
+<dl class="section examples"><dt>示例</dt><dd><a class="el" href="_grab_image_call_back_activity_8java-example.html#a18">GrabImageCallBackActivity.java</a>, <a class="el" href="_reconnect_activity_8java-example.html#a20">ReconnectActivity.java</a> , 以及 <a class="el" href="_trigger_image_call_activity_8java-example.html#a20">TriggerImageCallActivity.java</a>.</dd>
+</dl>
+
+</div>
+</div>
+<a id="ga5ee1c63aac34f3d8ea0ea5c2f5f734f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5ee1c63aac34f3d8ea0ea5c2f5f734f2">&#9670;&nbsp;</a></span>MV_CC_StartGrabbing()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">public static native int MV_CC_StartGrabbing </td>
+          <td>(</td>
+          <td class="paramtype">Handle&#160;</td>
+          <td class="paramname"><em>handle</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>开启抓图 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">handle</td><td>[IN] 设备句柄 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功，返回<a class="el" href="_xE7_x8A_xB6_xE6_x80_x81_xE7_xA0_x81_xE5_xAE_x9A_xE4_xB9_x89.html">MV_OK</a>；失败，返回<a class="el" href="_xE7_x8A_xB6_xE6_x80_x81_xE7_xA0_x81_xE5_xAE_x9A_xE4_xB9_x89.html">错误码</a> 。 </dd></dl>
+<dl class="section remark"><dt>备注</dt><dd><b>&#160;&bull;&#160;</b>接口所在类：MvCameraControl <br />
+</dd></dl>
+<dl class="section examples"><dt>示例</dt><dd><a class="el" href="_event_activity_8java-example.html#a21">EventActivity.java</a>, <a class="el" href="_get_bitmap_activity_8java-example.html#a23">GetBitmapActivity.java</a>, <a class="el" href="_grab_image_activity_8java-example.html#a13">GrabImageActivity.java</a>, <a class="el" href="_grab_image_call_back_activity_8java-example.html#a20">GrabImageCallBackActivity.java</a>, <a class="el" href="_grab_multiple_camera_activity_8java-example.html#a18">GrabMultipleCameraActivity.java</a>, <a class="el" href="_reconnect_activity_8java-example.html#a22">ReconnectActivity.java</a>, <a class="el" href="_trigger_image_activity_8java-example.html#a23">TriggerImageActivity.java</a> , 以及 <a class="el" href="_trigger_image_call_activity_8java-example.html#a22">TriggerImageCallActivity.java</a>.</dd>
+</dl>
+
+</div>
+</div>
+<a id="ga951784eace474e8a5049c911966c381f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga951784eace474e8a5049c911966c381f">&#9670;&nbsp;</a></span>MV_CC_StopGrabbing()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">public static native int MV_CC_StopGrabbing </td>
+          <td>(</td>
+          <td class="paramtype">Handle&#160;</td>
+          <td class="paramname"><em>handle</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>停止抓图 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">handle</td><td>[IN] 设备句柄 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功，返回<a class="el" href="_xE7_x8A_xB6_xE6_x80_x81_xE7_xA0_x81_xE5_xAE_x9A_xE4_xB9_x89.html">MV_OK</a>；失败，返回<a class="el" href="_xE7_x8A_xB6_xE6_x80_x81_xE7_xA0_x81_xE5_xAE_x9A_xE4_xB9_x89.html">错误码</a> 。 </dd></dl>
+<dl class="section remark"><dt>备注</dt><dd><b>&#160;&bull;&#160;</b>接口所在类：MvCameraControl <br />
+</dd></dl>
+<dl class="section examples"><dt>示例</dt><dd><a class="el" href="_event_activity_8java-example.html#a22">EventActivity.java</a>, <a class="el" href="_get_bitmap_activity_8java-example.html#a14">GetBitmapActivity.java</a>, <a class="el" href="_grab_image_activity_8java-example.html#a5">GrabImageActivity.java</a>, <a class="el" href="_grab_image_call_back_activity_8java-example.html#a21">GrabImageCallBackActivity.java</a>, <a class="el" href="_grab_multiple_camera_activity_8java-example.html#a19">GrabMultipleCameraActivity.java</a>, <a class="el" href="_reconnect_activity_8java-example.html#a23">ReconnectActivity.java</a>, <a class="el" href="_trigger_image_activity_8java-example.html#a13">TriggerImageActivity.java</a> , 以及 <a class="el" href="_trigger_image_call_activity_8java-example.html#a23">TriggerImageCallActivity.java</a>.</dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<div class="footer" style="text-align: right;">
+	<hr/>
+	<small></small>
+</div>
+</body>
+</html>

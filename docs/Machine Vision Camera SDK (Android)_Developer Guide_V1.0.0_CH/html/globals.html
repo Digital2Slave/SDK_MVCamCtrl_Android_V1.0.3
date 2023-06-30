@@ -1,0 +1,563 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>工业相机Android SDK开发指南V1.0.0（java）</title> 
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="custom-style.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+	<div style="overflow: hidden;">
+		<div style="height: 57px;min-width: 1039px;background-size: auto 100%;background:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABwgAAAABCAYAAADKO/rAAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAABRSURBVFhH7dUxCoBADEXB5LK5/w1iIaLIrsgWNs50Sf/4WVUd8HOZGd1nCqMbGNMPrNMPrJv1cvz0A3OjfuwPvDPrxf7A7t7IlX7gmX74VsQGguw4S6+UnSYAAAAASUVORK5CYII=');">
+			<img src="titleleft.png" style="float: left;"/>
+			<img src="titleright.png" alt="" style="float: right;" />
+		</div>
+	</div>
+<!-- 制作者 Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>声明</span></a></li>
+      <li><a href="_xE7_xAE_x80_xE4_xBB_x8B.html"><span>简介</span></a></li>
+      <li><a href="modules.html"><span>接口函数</span></a></li>
+      <li><a href="annotated.html"><span>结构体</span></a></li>
+      <li><a href="_xE5_xB8_xB8_xE8_xA7_x81_xE9_x97_xAE_xE9_xA2_x98.html"><span>常见问题</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li><a href="examples.html"><span>示例</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li class="current"><a href="globals.html"><span>全局定义</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow3" class="tabs2">
+    <ul class="tablist">
+      <li class="current"><a href="globals.html"><span>全部</span></a></li>
+      <li><a href="globals_func.html"><span>函数</span></a></li>
+      <li><a href="globals_vars.html"><span>变量</span></a></li>
+      <li><a href="globals_enum.html"><span>枚举</span></a></li>
+      <li><a href="globals_eval.html"><span>枚举值</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow4" class="tabs3">
+    <ul class="tablist">
+      <li><a href="#index_c"><span>c</span></a></li>
+      <li><a href="#index_i"><span>i</span></a></li>
+      <li><a href="#index_m"><span>m</span></a></li>
+      <li class="current"><a href="#index_p"><span>p</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="contents">
+<div class="textblock">这里列出了所有函数,变量,宏,枚举和类型定义等,并附带其所属的文件:</div>
+
+<h3><a id="index_c"></a>- c -</h3><ul>
+<li>CameraEventCallBack
+: <a class="el" href="group___xE5_x9B_x9E_xE8_xB0_x83_xE5_x87_xBD_xE6_x95_xB0.html#ga2a0fc9ec72d06852f0289150c4b94a54">API&amp;STU.h</a>
+</li>
+<li>CameraExceptionCallBack
+: <a class="el" href="group___xE5_x9B_x9E_xE8_xB0_x83_xE5_x87_xBD_xE6_x95_xB0.html#ga50e74582c858f06989e7c1133a7be0e5">API&amp;STU.h</a>
+</li>
+<li>CameraImageCallBack
+: <a class="el" href="group___xE5_x9B_x9E_xE8_xB0_x83_xE5_x87_xBD_xE6_x95_xB0.html#gad8559ccfcfe48b541d40b440a63ef641">API&amp;STU.h</a>
+</li>
+</ul>
+
+
+<h3><a id="index_i"></a>- i -</h3><ul>
+<li>IFT_IBase
+: <a class="el" href="group___xE9_x80_x9A_xE7_x94_xA8_xE6_x8E_xA5_xE5_x8F_xA3.html#ggac5fe0d4a17e276647881ac53a9304be1a661e276103268356fbffa7561b0261b7">stu.h</a>
+</li>
+<li>IFT_IBoolean
+: <a class="el" href="group___xE9_x80_x9A_xE7_x94_xA8_xE6_x8E_xA5_xE5_x8F_xA3.html#ggac5fe0d4a17e276647881ac53a9304be1ad7f3fd94736fd65e67daa67166ee7598">stu.h</a>
+</li>
+<li>IFT_ICategory
+: <a class="el" href="group___xE9_x80_x9A_xE7_x94_xA8_xE6_x8E_xA5_xE5_x8F_xA3.html#ggac5fe0d4a17e276647881ac53a9304be1a1da2c079038f8370db0d2083fe15469c">stu.h</a>
+</li>
+<li>IFT_ICommand
+: <a class="el" href="group___xE9_x80_x9A_xE7_x94_xA8_xE6_x8E_xA5_xE5_x8F_xA3.html#ggac5fe0d4a17e276647881ac53a9304be1a50089d672a55bab2d2998a2dd6cbd83e">stu.h</a>
+</li>
+<li>IFT_IEnumEntry
+: <a class="el" href="group___xE9_x80_x9A_xE7_x94_xA8_xE6_x8E_xA5_xE5_x8F_xA3.html#ggac5fe0d4a17e276647881ac53a9304be1a87dc966c3b98763e96197b77053df386">stu.h</a>
+</li>
+<li>IFT_IEnumeration
+: <a class="el" href="group___xE9_x80_x9A_xE7_x94_xA8_xE6_x8E_xA5_xE5_x8F_xA3.html#ggac5fe0d4a17e276647881ac53a9304be1a9fdfa597ddd736a86678ec282b943851">stu.h</a>
+</li>
+<li>IFT_IFloat
+: <a class="el" href="group___xE9_x80_x9A_xE7_x94_xA8_xE6_x8E_xA5_xE5_x8F_xA3.html#ggac5fe0d4a17e276647881ac53a9304be1a26689018ca41a56e4fe50c07dbd1e59e">stu.h</a>
+</li>
+<li>IFT_IInteger
+: <a class="el" href="group___xE9_x80_x9A_xE7_x94_xA8_xE6_x8E_xA5_xE5_x8F_xA3.html#ggac5fe0d4a17e276647881ac53a9304be1a11af4ed7397e2ba88466b4fef6efd81e">stu.h</a>
+</li>
+<li>IFT_IPort
+: <a class="el" href="group___xE9_x80_x9A_xE7_x94_xA8_xE6_x8E_xA5_xE5_x8F_xA3.html#ggac5fe0d4a17e276647881ac53a9304be1a3d095db5831bab1411169ac74fbf3739">stu.h</a>
+</li>
+<li>IFT_IRegister
+: <a class="el" href="group___xE9_x80_x9A_xE7_x94_xA8_xE6_x8E_xA5_xE5_x8F_xA3.html#ggac5fe0d4a17e276647881ac53a9304be1ace1d2f07e7d4034cec3f3fe4d68463c8">stu.h</a>
+</li>
+<li>IFT_IString
+: <a class="el" href="group___xE9_x80_x9A_xE7_x94_xA8_xE6_x8E_xA5_xE5_x8F_xA3.html#ggac5fe0d4a17e276647881ac53a9304be1aeedd8c51cdb2c0a88b8bbec94281c932">stu.h</a>
+</li>
+<li>IFT_IValue
+: <a class="el" href="group___xE9_x80_x9A_xE7_x94_xA8_xE6_x8E_xA5_xE5_x8F_xA3.html#ggac5fe0d4a17e276647881ac53a9304be1a8942ce3e5bc163ff6d9a4476ccb7c1aa">stu.h</a>
+</li>
+<li>ixelType_Gvsp_BGR8_Packed
+: <a class="el" href="group___xE5_x9B_xBE_xE5_x83_x8F_xE5_xA4_x84_xE7_x90_x86.html#gga94f17d82a2c13785d0085217e9204061a821feeccb422a765823626dd7be282f1">stu.h</a>
+</li>
+<li>ixelType_Gvsp_YCBCR411_8_CBYYCRYY
+: <a class="el" href="group___xE5_x9B_xBE_xE5_x83_x8F_xE5_xA4_x84_xE7_x90_x86.html#gga94f17d82a2c13785d0085217e9204061a6856905081a15f911638f542e4c416c7">stu.h</a>
+</li>
+</ul>
+
+
+<h3><a id="index_m"></a>- m -</h3><ul>
+<li>MV_CC_CloseDevice()
+: <a class="el" href="group___xE7_x9B_xB8_xE6_x9C_xBA_xE5_x88_x9D_xE5_xA7_x8B_xE5_x8C_x96_xE5_x8F_x8A_xE9_x94_x80_xE6_xAF_x81.html#ga9200ad9b866b2fc9b8cae94fbba56fde">API&amp;STU.h</a>
+</li>
+<li>MV_CC_ConvertPixelType()
+: <a class="el" href="group___xE5_x9B_xBE_xE5_x83_x8F_xE5_xA4_x84_xE7_x90_x86.html#ga1fe9e6e6ff70a7602137c7c9ee8a3490">API&amp;STU.h</a>
+</li>
+<li>MV_CC_CreateHandle()
+: <a class="el" href="group___xE7_x9B_xB8_xE6_x9C_xBA_xE5_x88_x9D_xE5_xA7_x8B_xE5_x8C_x96_xE5_x8F_x8A_xE9_x94_x80_xE6_xAF_x81.html#gae94fdee0967a330a197b783c781e36fb">API&amp;STU.h</a>
+</li>
+<li>MV_CC_DestroyHandle()
+: <a class="el" href="group___xE7_x9B_xB8_xE6_x9C_xBA_xE5_x88_x9D_xE5_xA7_x8B_xE5_x8C_x96_xE5_x8F_x8A_xE9_x94_x80_xE6_xAF_x81.html#ga8385105a0abb3a23dc2728ce980656ba">API&amp;STU.h</a>
+</li>
+<li>MV_CC_EnumDevices()
+: <a class="el" href="group___xE7_x9B_xB8_xE6_x9C_xBA_xE5_x88_x9D_xE5_xA7_x8B_xE5_x8C_x96_xE5_x8F_x8A_xE9_x94_x80_xE6_xAF_x81.html#ga2e162b1972c75982ff1c52e1c5d34a4e">API&amp;STU.h</a>
+</li>
+<li>MV_CC_EnumerateTls()
+: <a class="el" href="group___xE7_x9B_xB8_xE6_x9C_xBA_xE5_x88_x9D_xE5_xA7_x8B_xE5_x8C_x96_xE5_x8F_x8A_xE9_x94_x80_xE6_xAF_x81.html#gaf7f9beb44d38890b8c67d7157f9542a5">API&amp;STU.h</a>
+</li>
+<li>MV_CC_FeatureLoad()
+: <a class="el" href="group___xE9_x80_x9A_xE7_x94_xA8_xE6_x8E_xA5_xE5_x8F_xA3.html#ga113396ad4abbd9df507dd10fc5e27075">API&amp;STU.h</a>
+</li>
+<li>MV_CC_FeatureSave()
+: <a class="el" href="group___xE9_x80_x9A_xE7_x94_xA8_xE6_x8E_xA5_xE5_x8F_xA3.html#ga31ae3c1b37ac5878c6e838c1510cf449">API&amp;STU.h</a>
+</li>
+<li>MV_CC_FileAccessRead()
+: <a class="el" href="group___xE9_x80_x9A_xE7_x94_xA8_xE6_x8E_xA5_xE5_x8F_xA3.html#gac7aa565b6c89698554c762ad821f709a">API&amp;STU.h</a>
+</li>
+<li>MV_CC_FileAccessWrite()
+: <a class="el" href="group___xE9_x80_x9A_xE7_x94_xA8_xE6_x8E_xA5_xE5_x8F_xA3.html#ga678d9394f893bc89bc3802b6cc17a4c4">API&amp;STU.h</a>
+</li>
+<li>MV_CC_GetAllMatchInfo()
+: <a class="el" href="group___xE9_x80_x9A_xE7_x94_xA8_xE6_x8E_xA5_xE5_x8F_xA3.html#gac311edb482bb14e0440fd927a3128f50">API&amp;STU.h</a>
+</li>
+<li>MV_CC_GetBitmapTimeout()
+: <a class="el" href="group___xE5_x9B_xBE_xE5_x83_x8F_xE9_x87_x87_xE9_x9B_x86.html#gaba79fc6858614601cbd712219c3a675c">API&amp;STU.h</a>
+</li>
+<li>MV_CC_GetBoolValue()
+: <a class="el" href="group___xE7_x9B_xB8_xE6_x9C_xBA_xE5_x8F_x82_xE6_x95_xB0_xE9_x80_x9A_xE7_x94_xA8_xE9_x85_x8D_xE7_xBD_xAE_xE6_x8E_xA5_xE5_x8F_xA3.html#gaa4e01cf2051baa14eb9e5bc5f75de74b">API&amp;STU.h</a>
+</li>
+<li>MV_CC_GetEnumValue()
+: <a class="el" href="group___xE7_x9B_xB8_xE6_x9C_xBA_xE5_x8F_x82_xE6_x95_xB0_xE9_x80_x9A_xE7_x94_xA8_xE9_x85_x8D_xE7_xBD_xAE_xE6_x8E_xA5_xE5_x8F_xA3.html#gad9dbf0c868b34740790238ce4a3cf3bb">API&amp;STU.h</a>
+</li>
+<li>MV_CC_GetFileAccessProgress()
+: <a class="el" href="group___xE9_x80_x9A_xE7_x94_xA8_xE6_x8E_xA5_xE5_x8F_xA3.html#gaaa0988e23491100d4c49903f7c107afe">API&amp;STU.h</a>
+</li>
+<li>MV_CC_GetFloatValue()
+: <a class="el" href="group___xE7_x9B_xB8_xE6_x9C_xBA_xE5_x8F_x82_xE6_x95_xB0_xE9_x80_x9A_xE7_x94_xA8_xE9_x85_x8D_xE7_xBD_xAE_xE6_x8E_xA5_xE5_x8F_xA3.html#gaf694d5c6d4e22ecff36f9aca9a8ef8ac">API&amp;STU.h</a>
+</li>
+<li>MV_CC_GetIntValue()
+: <a class="el" href="group___xE7_x9B_xB8_xE6_x9C_xBA_xE5_x8F_x82_xE6_x95_xB0_xE9_x80_x9A_xE7_x94_xA8_xE9_x85_x8D_xE7_xBD_xAE_xE6_x8E_xA5_xE5_x8F_xA3.html#ga44cb71a1f783fef852b51c1405560ce1">API&amp;STU.h</a>
+</li>
+<li>MV_CC_GetOneFrameTimeout()
+: <a class="el" href="group___xE5_x9B_xBE_xE5_x83_x8F_xE9_x87_x87_xE9_x9B_x86.html#gae1a51a885f885902d8783e1237556e48">API&amp;STU.h</a>
+</li>
+<li>MV_CC_GetOptimalPacketSize()
+: <a class="el" href="group___gig_e_xE6_x8E_xA5_xE5_x8F_xA3_xE5_x87_xBD_xE6_x95_xB0.html#ga86ef17ec299b0ff442a063132ced4e6b">API&amp;STU.h</a>
+</li>
+<li>MV_CC_GetSDKVersion()
+: <a class="el" href="group___s_d_k_xE7_x89_x88_xE6_x9C_xAC_xE4_xBF_xA1_xE6_x81_xAF.html#ga24e71d75987f010c0e1aa24174d0884f">API&amp;STU.h</a>
+</li>
+<li>MV_CC_GetStringValue()
+: <a class="el" href="group___xE7_x9B_xB8_xE6_x9C_xBA_xE5_x8F_x82_xE6_x95_xB0_xE9_x80_x9A_xE7_x94_xA8_xE9_x85_x8D_xE7_xBD_xAE_xE6_x8E_xA5_xE5_x8F_xA3.html#ga321d5a0c60025a1c1b9f12ccf1abe905">API&amp;STU.h</a>
+</li>
+<li>MV_CC_IsDeviceAccessible()
+: <a class="el" href="group___xE7_x9B_xB8_xE6_x9C_xBA_xE5_x88_x9D_xE5_xA7_x8B_xE5_x8C_x96_xE5_x8F_x8A_xE9_x94_x80_xE6_xAF_x81.html#ga4a31e750b74113962d27cbda2d5df085">API&amp;STU.h</a>
+</li>
+<li>MV_CC_OpenDevice()
+: <a class="el" href="group___xE7_x9B_xB8_xE6_x9C_xBA_xE5_x88_x9D_xE5_xA7_x8B_xE5_x8C_x96_xE5_x8F_x8A_xE9_x94_x80_xE6_xAF_x81.html#ga4e982ac1afd05dec95710ac2adcb6c6a">API&amp;STU.h</a>
+</li>
+<li>MV_CC_RegisterEventCallBack()
+: <a class="el" href="group___xE9_x80_x9A_xE7_x94_xA8_xE6_x8E_xA5_xE5_x8F_xA3.html#gaefc9935a7ae3939ef6e982a4a95104c7">API&amp;STU.h</a>
+</li>
+<li>MV_CC_RegisterExceptionCallBack()
+: <a class="el" href="group___xE9_x80_x9A_xE7_x94_xA8_xE6_x8E_xA5_xE5_x8F_xA3.html#gae8d098b664632d4ccfb2b220ba351b90">API&amp;STU.h</a>
+</li>
+<li>MV_CC_RegisterImageCallBack()
+: <a class="el" href="group___xE5_x9B_xBE_xE5_x83_x8F_xE9_x87_x87_xE9_x9B_x86.html#ga52ef975ad47c0ad8ea71480c64e71d80">API&amp;STU.h</a>
+</li>
+<li>MV_CC_SaveImage()
+: <a class="el" href="group___xE5_x9B_xBE_xE5_x83_x8F_xE5_xA4_x84_xE7_x90_x86.html#gaf69b23a105d03c0529bcdde3defce061">API&amp;STU.h</a>
+</li>
+<li>MV_CC_SetBoolValue()
+: <a class="el" href="group___xE7_x9B_xB8_xE6_x9C_xBA_xE5_x8F_x82_xE6_x95_xB0_xE9_x80_x9A_xE7_x94_xA8_xE9_x85_x8D_xE7_xBD_xAE_xE6_x8E_xA5_xE5_x8F_xA3.html#gac44d08a8835616c96207ab3ed9e8aa6a">API&amp;STU.h</a>
+</li>
+<li>MV_CC_SetCommandValue()
+: <a class="el" href="group___xE7_x9B_xB8_xE6_x9C_xBA_xE5_x8F_x82_xE6_x95_xB0_xE9_x80_x9A_xE7_x94_xA8_xE9_x85_x8D_xE7_xBD_xAE_xE6_x8E_xA5_xE5_x8F_xA3.html#ga0908fb60cf4b40a560646811629def5a">API&amp;STU.h</a>
+</li>
+<li>MV_CC_SetEnumValue()
+: <a class="el" href="group___xE7_x9B_xB8_xE6_x9C_xBA_xE5_x8F_x82_xE6_x95_xB0_xE9_x80_x9A_xE7_x94_xA8_xE9_x85_x8D_xE7_xBD_xAE_xE6_x8E_xA5_xE5_x8F_xA3.html#gaf2903aaa7b087a50e83cb513ca1a5b02">API&amp;STU.h</a>
+</li>
+<li>MV_CC_SetFloatValue()
+: <a class="el" href="group___xE7_x9B_xB8_xE6_x9C_xBA_xE5_x8F_x82_xE6_x95_xB0_xE9_x80_x9A_xE7_x94_xA8_xE9_x85_x8D_xE7_xBD_xAE_xE6_x8E_xA5_xE5_x8F_xA3.html#gaeabd5f3ae401fcf3e25fd7eae5bf003b">API&amp;STU.h</a>
+</li>
+<li>MV_CC_SetImageNodeNum()
+: <a class="el" href="group___xE9_x80_x9A_xE7_x94_xA8_xE6_x8E_xA5_xE5_x8F_xA3.html#ga964429f691d21115eae8142f678c9615">API&amp;STU.h</a>
+</li>
+<li>MV_CC_SetIntValueEx()
+: <a class="el" href="group___xE7_x9B_xB8_xE6_x9C_xBA_xE5_x8F_x82_xE6_x95_xB0_xE9_x80_x9A_xE7_x94_xA8_xE9_x85_x8D_xE7_xBD_xAE_xE6_x8E_xA5_xE5_x8F_xA3.html#gabfa723de640150baadb6aee2474ba76c">API&amp;STU.h</a>
+</li>
+<li>MV_CC_SetStringValue()
+: <a class="el" href="group___xE7_x9B_xB8_xE6_x9C_xBA_xE5_x8F_x82_xE6_x95_xB0_xE9_x80_x9A_xE7_x94_xA8_xE9_x85_x8D_xE7_xBD_xAE_xE6_x8E_xA5_xE5_x8F_xA3.html#gaa5b065405bc41a13732ec98ff1058ef0">API&amp;STU.h</a>
+</li>
+<li>MV_CC_StartGrabbing()
+: <a class="el" href="group___xE5_x9B_xBE_xE5_x83_x8F_xE9_x87_x87_xE9_x9B_x86.html#ga5ee1c63aac34f3d8ea0ea5c2f5f734f2">API&amp;STU.h</a>
+</li>
+<li>MV_CC_StopGrabbing()
+: <a class="el" href="group___xE5_x9B_xBE_xE5_x83_x8F_xE9_x87_x87_xE9_x9B_x86.html#ga951784eace474e8a5049c911966c381f">API&amp;STU.h</a>
+</li>
+<li>MV_GIGE_ForceIp()
+: <a class="el" href="group___gig_e_xE6_x8E_xA5_xE5_x8F_xA3_xE5_x87_xBD_xE6_x95_xB0.html#gabf8fb4b208fe48aa8605c6cbf6fb0a8c">API&amp;STU.h</a>
+</li>
+<li>MV_GIGE_GetGvspTimeout()
+: <a class="el" href="group___gig_e_xE6_x8E_xA5_xE5_x8F_xA3_xE5_x87_xBD_xE6_x95_xB0.html#ga3d798cbfdd7f33c2634ea4d2ce0669b9">API&amp;STU.h</a>
+</li>
+<li>MV_GIGE_GetNetTransInfo()
+: <a class="el" href="group___gig_e_xE6_x8E_xA5_xE5_x8F_xA3_xE5_x87_xBD_xE6_x95_xB0.html#gaa1d58b582d08476301c4227f6839f4a1">API&amp;STU.h</a>
+</li>
+<li>MV_GIGE_GetResendMaxRetryTimes()
+: <a class="el" href="group___gig_e_xE6_x8E_xA5_xE5_x8F_xA3_xE5_x87_xBD_xE6_x95_xB0.html#ga6bb43138e4d6fc9135cafee83d60f77b">API&amp;STU.h</a>
+</li>
+<li>MV_GIGE_GetResendTimeInterval()
+: <a class="el" href="group___gig_e_xE6_x8E_xA5_xE5_x8F_xA3_xE5_x87_xBD_xE6_x95_xB0.html#gafa91189dff0765aeac1fd7345f04045e">API&amp;STU.h</a>
+</li>
+<li>MV_GIGE_SetGvspTimeout()
+: <a class="el" href="group___gig_e_xE6_x8E_xA5_xE5_x8F_xA3_xE5_x87_xBD_xE6_x95_xB0.html#ga2d5ce69d165f79141cbb5c90a6fa8ba2">API&amp;STU.h</a>
+</li>
+<li>MV_GIGE_SetIpConfig()
+: <a class="el" href="group___gig_e_xE6_x8E_xA5_xE5_x8F_xA3_xE5_x87_xBD_xE6_x95_xB0.html#ga44913eb96ff211862a2fcf5b45615f70">API&amp;STU.h</a>
+</li>
+<li>MV_GIGE_SetResend()
+: <a class="el" href="group___gig_e_xE6_x8E_xA5_xE5_x8F_xA3_xE5_x87_xBD_xE6_x95_xB0.html#gae535c2732c1fc931e249b154c1b6d0ef">API&amp;STU.h</a>
+</li>
+<li>MV_GIGE_SetResendMaxRetryTimes()
+: <a class="el" href="group___gig_e_xE6_x8E_xA5_xE5_x8F_xA3_xE5_x87_xBD_xE6_x95_xB0.html#ga844cf744d9320b99ac5ecbcefad11690">API&amp;STU.h</a>
+</li>
+<li>MV_GIGE_SetResendTimeInterval()
+: <a class="el" href="group___gig_e_xE6_x8E_xA5_xE5_x8F_xA3_xE5_x87_xBD_xE6_x95_xB0.html#gae4ab67a631379ef56603a7d6658dc82a">API&amp;STU.h</a>
+</li>
+<li>MV_Image_Bmp
+: <a class="el" href="group___xE5_x9B_xBE_xE5_x83_x8F_xE5_xA4_x84_xE7_x90_x86.html#gga5435b1ff781839e7fb5d05f1e4d9bb07a5bfe37840beb201a49b7e6b2771afadc">stu.h</a>
+</li>
+<li>MV_Image_Jpeg
+: <a class="el" href="group___xE5_x9B_xBE_xE5_x83_x8F_xE5_xA4_x84_xE7_x90_x86.html#gga5435b1ff781839e7fb5d05f1e4d9bb07addad670943ba300231edd334d3f0d713">stu.h</a>
+</li>
+<li>MV_Image_Png
+: <a class="el" href="group___xE5_x9B_xBE_xE5_x83_x8F_xE5_xA4_x84_xE7_x90_x86.html#gga5435b1ff781839e7fb5d05f1e4d9bb07a603a395bd299ff44bb029284e73f3a15">stu.h</a>
+</li>
+<li>MV_Image_Tif
+: <a class="el" href="group___xE5_x9B_xBE_xE5_x83_x8F_xE5_xA4_x84_xE7_x90_x86.html#gga5435b1ff781839e7fb5d05f1e4d9bb07a640cc733f2dd9c2ef9270ea969f14395">stu.h</a>
+</li>
+<li>MV_IP_CFG_DHCP
+: <a class="el" href="group___gig_e_xE6_x8E_xA5_xE5_x8F_xA3_xE5_x87_xBD_xE6_x95_xB0.html#gga9c9a531f2eb2de9af7c643dbf0c8a334ac9473629826955c622783872a77795f5">stu.h</a>
+</li>
+<li>MV_IP_CFG_LLA
+: <a class="el" href="group___gig_e_xE6_x8E_xA5_xE5_x8F_xA3_xE5_x87_xBD_xE6_x95_xB0.html#gga9c9a531f2eb2de9af7c643dbf0c8a334afd6262dda81d1c72732302718bd458a1">stu.h</a>
+</li>
+<li>MV_IP_CFG_STATIC
+: <a class="el" href="group___gig_e_xE6_x8E_xA5_xE5_x8F_xA3_xE5_x87_xBD_xE6_x95_xB0.html#gga9c9a531f2eb2de9af7c643dbf0c8a334a232689827978ae526656084a45828877">stu.h</a>
+</li>
+<li>MV_SAVE_IAMGE_TYPE
+: <a class="el" href="group___xE5_x9B_xBE_xE5_x83_x8F_xE5_xA4_x84_xE7_x90_x86.html#ga5435b1ff781839e7fb5d05f1e4d9bb07">stu.h</a>
+</li>
+<li>MV_XML_GetGenICamXML()
+: <a class="el" href="group___x_m_l_xE8_xA7_xA3_xE6_x9E_x90.html#gaf0871aa7076ab6343d09fda29889db9a">API&amp;STU.h</a>
+</li>
+<li>MV_XML_GetNodeInterfaceType()
+: <a class="el" href="group___xE9_x80_x9A_xE7_x94_xA8_xE6_x8E_xA5_xE5_x8F_xA3.html#gab74db62e66730431312fb02daad6f3e0">API&amp;STU.h</a>
+</li>
+<li>MV_XML_InterfaceType
+: <a class="el" href="group___xE9_x80_x9A_xE7_x94_xA8_xE6_x8E_xA5_xE5_x8F_xA3.html#gac5fe0d4a17e276647881ac53a9304be1">stu.h</a>
+</li>
+<li>MVCC_IP_CONFIG
+: <a class="el" href="group___gig_e_xE6_x8E_xA5_xE5_x8F_xA3_xE5_x87_xBD_xE6_x95_xB0.html#ga9c9a531f2eb2de9af7c643dbf0c8a334">stu.h</a>
+</li>
+<li>MvGvspPixelType
+: <a class="el" href="group___xE5_x9B_xBE_xE5_x83_x8F_xE5_xA4_x84_xE7_x90_x86.html#ga94f17d82a2c13785d0085217e9204061">stu.h</a>
+</li>
+</ul>
+
+
+<h3><a id="index_p"></a>- p -</h3><ul>
+<li>PixelType_Gvsp_BayerBG10
+: <a class="el" href="group___xE5_x9B_xBE_xE5_x83_x8F_xE5_xA4_x84_xE7_x90_x86.html#gga94f17d82a2c13785d0085217e9204061af3c33cf48f28f0c2d767d1b3ea2bc325">stu.h</a>
+</li>
+<li>PixelType_Gvsp_BayerBG10_Packed
+: <a class="el" href="group___xE5_x9B_xBE_xE5_x83_x8F_xE5_xA4_x84_xE7_x90_x86.html#gga94f17d82a2c13785d0085217e9204061ac78095853ec3ea83caf61596a08a2310">stu.h</a>
+</li>
+<li>PixelType_Gvsp_BayerBG12
+: <a class="el" href="group___xE5_x9B_xBE_xE5_x83_x8F_xE5_xA4_x84_xE7_x90_x86.html#gga94f17d82a2c13785d0085217e9204061a0512fedb3546bfa11ac03651d0e7e7cc">stu.h</a>
+</li>
+<li>PixelType_Gvsp_BayerBG12_Packed
+: <a class="el" href="group___xE5_x9B_xBE_xE5_x83_x8F_xE5_xA4_x84_xE7_x90_x86.html#gga94f17d82a2c13785d0085217e9204061ae3c9dc9cb419b1c586f899a73fca838a">stu.h</a>
+</li>
+<li>PixelType_Gvsp_BayerBG16
+: <a class="el" href="group___xE5_x9B_xBE_xE5_x83_x8F_xE5_xA4_x84_xE7_x90_x86.html#gga94f17d82a2c13785d0085217e9204061a1abbc04d0e0f31ca98f8a5a77d3445bf">stu.h</a>
+</li>
+<li>PixelType_Gvsp_BayerBG8
+: <a class="el" href="group___xE5_x9B_xBE_xE5_x83_x8F_xE5_xA4_x84_xE7_x90_x86.html#gga94f17d82a2c13785d0085217e9204061ad904e984c810d30d1b98f128cbd1f699">stu.h</a>
+</li>
+<li>PixelType_Gvsp_BayerGB10
+: <a class="el" href="group___xE5_x9B_xBE_xE5_x83_x8F_xE5_xA4_x84_xE7_x90_x86.html#gga94f17d82a2c13785d0085217e9204061a3efe5de712213ac5df9f8aa153c90f47">stu.h</a>
+</li>
+<li>PixelType_Gvsp_BayerGB10_Packed
+: <a class="el" href="group___xE5_x9B_xBE_xE5_x83_x8F_xE5_xA4_x84_xE7_x90_x86.html#gga94f17d82a2c13785d0085217e9204061a9ea47b1d030372dedf47f60a402d46b3">stu.h</a>
+</li>
+<li>PixelType_Gvsp_BayerGB12
+: <a class="el" href="group___xE5_x9B_xBE_xE5_x83_x8F_xE5_xA4_x84_xE7_x90_x86.html#gga94f17d82a2c13785d0085217e9204061acdd3625d931ea58da93a22377d303951">stu.h</a>
+</li>
+<li>PixelType_Gvsp_BayerGB12_Packed
+: <a class="el" href="group___xE5_x9B_xBE_xE5_x83_x8F_xE5_xA4_x84_xE7_x90_x86.html#gga94f17d82a2c13785d0085217e9204061a385de007591c04e254e78a6b3c9c408f">stu.h</a>
+</li>
+<li>PixelType_Gvsp_BayerGB16
+: <a class="el" href="group___xE5_x9B_xBE_xE5_x83_x8F_xE5_xA4_x84_xE7_x90_x86.html#gga94f17d82a2c13785d0085217e9204061a4230e82f589adc39cc2d74271dc2df98">stu.h</a>
+</li>
+<li>PixelType_Gvsp_BayerGB8
+: <a class="el" href="group___xE5_x9B_xBE_xE5_x83_x8F_xE5_xA4_x84_xE7_x90_x86.html#gga94f17d82a2c13785d0085217e9204061a46249ad9d01bbe1751b3492e07487e13">stu.h</a>
+</li>
+<li>PixelType_Gvsp_BayerGR10
+: <a class="el" href="group___xE5_x9B_xBE_xE5_x83_x8F_xE5_xA4_x84_xE7_x90_x86.html#gga94f17d82a2c13785d0085217e9204061a0bc06f64589b6bc39d7c2840c4e87444">stu.h</a>
+</li>
+<li>PixelType_Gvsp_BayerGR10_Packed
+: <a class="el" href="group___xE5_x9B_xBE_xE5_x83_x8F_xE5_xA4_x84_xE7_x90_x86.html#gga94f17d82a2c13785d0085217e9204061a72eef16528018033b44b15d860cb2cd0">stu.h</a>
+</li>
+<li>PixelType_Gvsp_BayerGR12
+: <a class="el" href="group___xE5_x9B_xBE_xE5_x83_x8F_xE5_xA4_x84_xE7_x90_x86.html#gga94f17d82a2c13785d0085217e9204061ab660f3feb4a9b044ec61dc38cf665703">stu.h</a>
+</li>
+<li>PixelType_Gvsp_BayerGR12_Packed
+: <a class="el" href="group___xE5_x9B_xBE_xE5_x83_x8F_xE5_xA4_x84_xE7_x90_x86.html#gga94f17d82a2c13785d0085217e9204061a8f245fd6a5f157bd1896ac8bfd01a235">stu.h</a>
+</li>
+<li>PixelType_Gvsp_BayerGR16
+: <a class="el" href="group___xE5_x9B_xBE_xE5_x83_x8F_xE5_xA4_x84_xE7_x90_x86.html#gga94f17d82a2c13785d0085217e9204061a7ba56fb5000bfd63de2fab500b3b1912">stu.h</a>
+</li>
+<li>PixelType_Gvsp_BayerGR8
+: <a class="el" href="group___xE5_x9B_xBE_xE5_x83_x8F_xE5_xA4_x84_xE7_x90_x86.html#gga94f17d82a2c13785d0085217e9204061aeba40ce4eff1c9c4efe2819e707cb910">stu.h</a>
+</li>
+<li>PixelType_Gvsp_BayerRG10
+: <a class="el" href="group___xE5_x9B_xBE_xE5_x83_x8F_xE5_xA4_x84_xE7_x90_x86.html#gga94f17d82a2c13785d0085217e9204061a2943f865d5ada6be09e2da91eed89600">stu.h</a>
+</li>
+<li>PixelType_Gvsp_BayerRG10_Packed
+: <a class="el" href="group___xE5_x9B_xBE_xE5_x83_x8F_xE5_xA4_x84_xE7_x90_x86.html#gga94f17d82a2c13785d0085217e9204061a52932e5a3ee54e3f35c04a1ae004bdff">stu.h</a>
+</li>
+<li>PixelType_Gvsp_BayerRG12
+: <a class="el" href="group___xE5_x9B_xBE_xE5_x83_x8F_xE5_xA4_x84_xE7_x90_x86.html#gga94f17d82a2c13785d0085217e9204061a81f01df7c6cc7055966d9ac04a4dda31">stu.h</a>
+</li>
+<li>PixelType_Gvsp_BayerRG12_Packed
+: <a class="el" href="group___xE5_x9B_xBE_xE5_x83_x8F_xE5_xA4_x84_xE7_x90_x86.html#gga94f17d82a2c13785d0085217e9204061a0b8e41be79a223619600bc209ec2b263">stu.h</a>
+</li>
+<li>PixelType_Gvsp_BayerRG16
+: <a class="el" href="group___xE5_x9B_xBE_xE5_x83_x8F_xE5_xA4_x84_xE7_x90_x86.html#gga94f17d82a2c13785d0085217e9204061a819fd1a4ceb090499276d2ffb8e7df40">stu.h</a>
+</li>
+<li>PixelType_Gvsp_BayerRG8
+: <a class="el" href="group___xE5_x9B_xBE_xE5_x83_x8F_xE5_xA4_x84_xE7_x90_x86.html#gga94f17d82a2c13785d0085217e9204061afa7b9c69a7771ef6d377ff2963980260">stu.h</a>
+</li>
+<li>PixelType_Gvsp_BGR10_Packed
+: <a class="el" href="group___xE5_x9B_xBE_xE5_x83_x8F_xE5_xA4_x84_xE7_x90_x86.html#gga94f17d82a2c13785d0085217e9204061aa81c322b2eb595da74e71abb00effa4b">stu.h</a>
+</li>
+<li>PixelType_Gvsp_BGR12_Packed
+: <a class="el" href="group___xE5_x9B_xBE_xE5_x83_x8F_xE5_xA4_x84_xE7_x90_x86.html#gga94f17d82a2c13785d0085217e9204061a0ee7589bdc29c56c27b2c22fdde25b75">stu.h</a>
+</li>
+<li>PixelType_Gvsp_BGR565_Packed
+: <a class="el" href="group___xE5_x9B_xBE_xE5_x83_x8F_xE5_xA4_x84_xE7_x90_x86.html#gga94f17d82a2c13785d0085217e9204061a7981181521dc98cdf6535702357ba93f">stu.h</a>
+</li>
+<li>PixelType_Gvsp_BGRA8_Packed
+: <a class="el" href="group___xE5_x9B_xBE_xE5_x83_x8F_xE5_xA4_x84_xE7_x90_x86.html#gga94f17d82a2c13785d0085217e9204061a14f148ec5443308e24b09fa28b6c4348">stu.h</a>
+</li>
+<li>PixelType_Gvsp_Coord3D_ABC32f
+: <a class="el" href="group___xE5_x9B_xBE_xE5_x83_x8F_xE5_xA4_x84_xE7_x90_x86.html#gga94f17d82a2c13785d0085217e9204061a746951a563f862f2c12b112c48ff0e9e">stu.h</a>
+</li>
+<li>PixelType_Gvsp_Coord3D_ABC32f_Planar
+: <a class="el" href="group___xE5_x9B_xBE_xE5_x83_x8F_xE5_xA4_x84_xE7_x90_x86.html#gga94f17d82a2c13785d0085217e9204061a0c832276079594cde651d45f2649fad9">stu.h</a>
+</li>
+<li>PixelType_Gvsp_Coord3D_AC32f
+: <a class="el" href="group___xE5_x9B_xBE_xE5_x83_x8F_xE5_xA4_x84_xE7_x90_x86.html#gga94f17d82a2c13785d0085217e9204061a723ff156a1f532f6494c0ae8700bc549">stu.h</a>
+</li>
+<li>PixelType_Gvsp_COORD3D_DEPTH_PLUS_MASK
+: <a class="el" href="group___xE5_x9B_xBE_xE5_x83_x8F_xE5_xA4_x84_xE7_x90_x86.html#gga94f17d82a2c13785d0085217e9204061a4a71ae5d7b0cc97523e44c18bf577338">stu.h</a>
+</li>
+<li>PixelType_Gvsp_Jpeg
+: <a class="el" href="group___xE5_x9B_xBE_xE5_x83_x8F_xE5_xA4_x84_xE7_x90_x86.html#gga94f17d82a2c13785d0085217e9204061a4bad008735b0efcfda43f892600e9032">stu.h</a>
+</li>
+<li>PixelType_Gvsp_Mono10
+: <a class="el" href="group___xE5_x9B_xBE_xE5_x83_x8F_xE5_xA4_x84_xE7_x90_x86.html#gga94f17d82a2c13785d0085217e9204061abef6088ac018ae2ed1dddfbbfbc47e99">stu.h</a>
+</li>
+<li>PixelType_Gvsp_Mono10_Packed
+: <a class="el" href="group___xE5_x9B_xBE_xE5_x83_x8F_xE5_xA4_x84_xE7_x90_x86.html#gga94f17d82a2c13785d0085217e9204061a0d1a2ec21519c7a0a15fd9c1bbc3beb3">stu.h</a>
+</li>
+<li>PixelType_Gvsp_Mono12
+: <a class="el" href="group___xE5_x9B_xBE_xE5_x83_x8F_xE5_xA4_x84_xE7_x90_x86.html#gga94f17d82a2c13785d0085217e9204061a357186f1eb90d12ad1d60a5a199a3917">stu.h</a>
+</li>
+<li>PixelType_Gvsp_Mono12_Packed
+: <a class="el" href="group___xE5_x9B_xBE_xE5_x83_x8F_xE5_xA4_x84_xE7_x90_x86.html#gga94f17d82a2c13785d0085217e9204061a501e6461b3b0ff468e7261bf03fd9dd6">stu.h</a>
+</li>
+<li>PixelType_Gvsp_Mono14
+: <a class="el" href="group___xE5_x9B_xBE_xE5_x83_x8F_xE5_xA4_x84_xE7_x90_x86.html#gga94f17d82a2c13785d0085217e9204061ac55a750100ec70a5e75f5c7f477bd044">stu.h</a>
+</li>
+<li>PixelType_Gvsp_Mono16
+: <a class="el" href="group___xE5_x9B_xBE_xE5_x83_x8F_xE5_xA4_x84_xE7_x90_x86.html#gga94f17d82a2c13785d0085217e9204061af2c1949f8711d492c88073a5962d2467">stu.h</a>
+</li>
+<li>PixelType_Gvsp_Mono1p
+: <a class="el" href="group___xE5_x9B_xBE_xE5_x83_x8F_xE5_xA4_x84_xE7_x90_x86.html#gga94f17d82a2c13785d0085217e9204061ab04aaee5aed194d3196a028aefc67830">stu.h</a>
+</li>
+<li>PixelType_Gvsp_Mono2p
+: <a class="el" href="group___xE5_x9B_xBE_xE5_x83_x8F_xE5_xA4_x84_xE7_x90_x86.html#gga94f17d82a2c13785d0085217e9204061acd8f6b4acdaeb4b257cedbaaa13cba87">stu.h</a>
+</li>
+<li>PixelType_Gvsp_Mono4p
+: <a class="el" href="group___xE5_x9B_xBE_xE5_x83_x8F_xE5_xA4_x84_xE7_x90_x86.html#gga94f17d82a2c13785d0085217e9204061a10ff54828ea49966a6ba0b2f045b8cdd">stu.h</a>
+</li>
+<li>PixelType_Gvsp_Mono8
+: <a class="el" href="group___xE5_x9B_xBE_xE5_x83_x8F_xE5_xA4_x84_xE7_x90_x86.html#gga94f17d82a2c13785d0085217e9204061a8ab7e06d406a60fae1ee90ba74273e7a">stu.h</a>
+</li>
+<li>PixelType_Gvsp_Mono8_Signed
+: <a class="el" href="group___xE5_x9B_xBE_xE5_x83_x8F_xE5_xA4_x84_xE7_x90_x86.html#gga94f17d82a2c13785d0085217e9204061ac253dc943b0c42c43db93dd32f481ccd">stu.h</a>
+</li>
+<li>PixelType_Gvsp_RGB10_Packed
+: <a class="el" href="group___xE5_x9B_xBE_xE5_x83_x8F_xE5_xA4_x84_xE7_x90_x86.html#gga94f17d82a2c13785d0085217e9204061aaa93956c45e9f591dd5b7f90e998cb0d">stu.h</a>
+</li>
+<li>PixelType_Gvsp_RGB10_Planar
+: <a class="el" href="group___xE5_x9B_xBE_xE5_x83_x8F_xE5_xA4_x84_xE7_x90_x86.html#gga94f17d82a2c13785d0085217e9204061ab97a332ae79e7dbbfa058a05cff975be">stu.h</a>
+</li>
+<li>PixelType_Gvsp_RGB10V1_Packed
+: <a class="el" href="group___xE5_x9B_xBE_xE5_x83_x8F_xE5_xA4_x84_xE7_x90_x86.html#gga94f17d82a2c13785d0085217e9204061abc636d74ee6399fdeade79a16eff37b4">stu.h</a>
+</li>
+<li>PixelType_Gvsp_RGB10V2_Packed
+: <a class="el" href="group___xE5_x9B_xBE_xE5_x83_x8F_xE5_xA4_x84_xE7_x90_x86.html#gga94f17d82a2c13785d0085217e9204061a8cf7947998899f4b9c330f02739d52e1">stu.h</a>
+</li>
+<li>PixelType_Gvsp_RGB12_Packed
+: <a class="el" href="group___xE5_x9B_xBE_xE5_x83_x8F_xE5_xA4_x84_xE7_x90_x86.html#gga94f17d82a2c13785d0085217e9204061a5f8d9409ba26bfd2897384eebaf54b57">stu.h</a>
+</li>
+<li>PixelType_Gvsp_RGB12_Planar
+: <a class="el" href="group___xE5_x9B_xBE_xE5_x83_x8F_xE5_xA4_x84_xE7_x90_x86.html#gga94f17d82a2c13785d0085217e9204061a6562c976d91aeec56da11f07e3d84f4e">stu.h</a>
+</li>
+<li>PixelType_Gvsp_RGB12V1_Packed
+: <a class="el" href="group___xE5_x9B_xBE_xE5_x83_x8F_xE5_xA4_x84_xE7_x90_x86.html#gga94f17d82a2c13785d0085217e9204061a7b4f384b92413caa950b01f67abaaa2f">stu.h</a>
+</li>
+<li>PixelType_Gvsp_RGB16_Packed
+: <a class="el" href="group___xE5_x9B_xBE_xE5_x83_x8F_xE5_xA4_x84_xE7_x90_x86.html#gga94f17d82a2c13785d0085217e9204061a96464f2919de654322d601dc8955578f">stu.h</a>
+</li>
+<li>PixelType_Gvsp_RGB16_Planar
+: <a class="el" href="group___xE5_x9B_xBE_xE5_x83_x8F_xE5_xA4_x84_xE7_x90_x86.html#gga94f17d82a2c13785d0085217e9204061a0a6238303b2d52f4a760c353543ef170">stu.h</a>
+</li>
+<li>PixelType_Gvsp_RGB565_Packed
+: <a class="el" href="group___xE5_x9B_xBE_xE5_x83_x8F_xE5_xA4_x84_xE7_x90_x86.html#gga94f17d82a2c13785d0085217e9204061a281f3d5238fb60896e3329ad7f871e16">stu.h</a>
+</li>
+<li>PixelType_Gvsp_RGB8_Packed
+: <a class="el" href="group___xE5_x9B_xBE_xE5_x83_x8F_xE5_xA4_x84_xE7_x90_x86.html#gga94f17d82a2c13785d0085217e9204061a4781513f690167d0552c7ec207210fb0">stu.h</a>
+</li>
+<li>PixelType_Gvsp_RGB8_Planar
+: <a class="el" href="group___xE5_x9B_xBE_xE5_x83_x8F_xE5_xA4_x84_xE7_x90_x86.html#gga94f17d82a2c13785d0085217e9204061ab384eed3dbc07505829a0e4483b52453">stu.h</a>
+</li>
+<li>PixelType_Gvsp_RGBA8_Packed
+: <a class="el" href="group___xE5_x9B_xBE_xE5_x83_x8F_xE5_xA4_x84_xE7_x90_x86.html#gga94f17d82a2c13785d0085217e9204061af86a84caacfbfcba48b5cf126115a0f5">stu.h</a>
+</li>
+<li>PixelType_Gvsp_Undefined
+: <a class="el" href="group___xE5_x9B_xBE_xE5_x83_x8F_xE5_xA4_x84_xE7_x90_x86.html#gga94f17d82a2c13785d0085217e9204061afef1e1dea9049aef0e87298eb7891374">stu.h</a>
+</li>
+<li>PixelType_Gvsp_YCBCR422_8
+: <a class="el" href="group___xE5_x9B_xBE_xE5_x83_x8F_xE5_xA4_x84_xE7_x90_x86.html#gga94f17d82a2c13785d0085217e9204061a3524f5155a6b30c25e1708f5afe964db">stu.h</a>
+</li>
+<li>PixelType_Gvsp_YCBCR422_8_CBYCRY
+: <a class="el" href="group___xE5_x9B_xBE_xE5_x83_x8F_xE5_xA4_x84_xE7_x90_x86.html#gga94f17d82a2c13785d0085217e9204061a9b72bf24c8e89e8d9d493b89f0095176">stu.h</a>
+</li>
+<li>PixelType_Gvsp_YCBCR601_411_8_CBYYCRYY
+: <a class="el" href="group___xE5_x9B_xBE_xE5_x83_x8F_xE5_xA4_x84_xE7_x90_x86.html#gga94f17d82a2c13785d0085217e9204061a5cd98db7b859db7be397121f0c060407">stu.h</a>
+</li>
+<li>PixelType_Gvsp_YCBCR601_422_8
+: <a class="el" href="group___xE5_x9B_xBE_xE5_x83_x8F_xE5_xA4_x84_xE7_x90_x86.html#gga94f17d82a2c13785d0085217e9204061a167e4a3c93de285f12a18ebbcd46fd6e">stu.h</a>
+</li>
+<li>PixelType_Gvsp_YCBCR601_422_8_CBYCRY
+: <a class="el" href="group___xE5_x9B_xBE_xE5_x83_x8F_xE5_xA4_x84_xE7_x90_x86.html#gga94f17d82a2c13785d0085217e9204061a105b6e12abce989c9e6ffd73a0cfb583">stu.h</a>
+</li>
+<li>PixelType_Gvsp_YCBCR601_8_CBYCR
+: <a class="el" href="group___xE5_x9B_xBE_xE5_x83_x8F_xE5_xA4_x84_xE7_x90_x86.html#gga94f17d82a2c13785d0085217e9204061a363c5b58ef0319b2e2d276e51c8aa9e5">stu.h</a>
+</li>
+<li>PixelType_Gvsp_YCBCR709_411_8_CBYYCRYY
+: <a class="el" href="group___xE5_x9B_xBE_xE5_x83_x8F_xE5_xA4_x84_xE7_x90_x86.html#gga94f17d82a2c13785d0085217e9204061afb169984f5d080de3afa82d2e1ca30ac">stu.h</a>
+</li>
+<li>PixelType_Gvsp_YCBCR709_422_8
+: <a class="el" href="group___xE5_x9B_xBE_xE5_x83_x8F_xE5_xA4_x84_xE7_x90_x86.html#gga94f17d82a2c13785d0085217e9204061a97edec0bdfd64c45c81c88f7b17fdca8">stu.h</a>
+</li>
+<li>PixelType_Gvsp_YCBCR709_422_8_CBYCRY
+: <a class="el" href="group___xE5_x9B_xBE_xE5_x83_x8F_xE5_xA4_x84_xE7_x90_x86.html#gga94f17d82a2c13785d0085217e9204061a4b4562487400a31438a949fecdacb967">stu.h</a>
+</li>
+<li>PixelType_Gvsp_YCBCR709_8_CBYCR
+: <a class="el" href="group___xE5_x9B_xBE_xE5_x83_x8F_xE5_xA4_x84_xE7_x90_x86.html#gga94f17d82a2c13785d0085217e9204061ab75bdd146e85a9fa07150b140e42e1b9">stu.h</a>
+</li>
+<li>PixelType_Gvsp_YCBCR8_CBYCR
+: <a class="el" href="group___xE5_x9B_xBE_xE5_x83_x8F_xE5_xA4_x84_xE7_x90_x86.html#gga94f17d82a2c13785d0085217e9204061a9e1efdbfd9eb93a2d52d39a98878b9c3">stu.h</a>
+</li>
+<li>PixelType_Gvsp_YUV411_Packed
+: <a class="el" href="group___xE5_x9B_xBE_xE5_x83_x8F_xE5_xA4_x84_xE7_x90_x86.html#gga94f17d82a2c13785d0085217e9204061a889307f0747acb6128d54d041b0bbfc6">stu.h</a>
+</li>
+<li>PixelType_Gvsp_YUV422_Packed
+: <a class="el" href="group___xE5_x9B_xBE_xE5_x83_x8F_xE5_xA4_x84_xE7_x90_x86.html#gga94f17d82a2c13785d0085217e9204061a6ba2f4fb26ccb1d973ab7aa60217317b">stu.h</a>
+</li>
+<li>PixelType_Gvsp_YUV422_YUYV_Packed
+: <a class="el" href="group___xE5_x9B_xBE_xE5_x83_x8F_xE5_xA4_x84_xE7_x90_x86.html#gga94f17d82a2c13785d0085217e9204061a4421a9fa5bed22935a66a75bf3cc3405">stu.h</a>
+</li>
+<li>PixelType_Gvsp_YUV444_Packed
+: <a class="el" href="group___xE5_x9B_xBE_xE5_x83_x8F_xE5_xA4_x84_xE7_x90_x86.html#gga94f17d82a2c13785d0085217e9204061a0480d517f27bc32f1ae0041255d543b4">stu.h</a>
+</li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<div class="footer" style="text-align: right;">
+	<hr/>
+	<small></small>
+</div>
+</body>
+</html>

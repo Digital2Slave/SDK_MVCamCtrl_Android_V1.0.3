@@ -1,0 +1,144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>工业相机Android SDK开发指南V1.0.0（java）</title> 
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="custom-style.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+	<div style="overflow: hidden;">
+		<div style="height: 57px;min-width: 1039px;background-size: auto 100%;background:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABwgAAAABCAYAAADKO/rAAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAABRSURBVFhH7dUxCoBADEXB5LK5/w1iIaLIrsgWNs50Sf/4WVUd8HOZGd1nCqMbGNMPrNMPrJv1cvz0A3OjfuwPvDPrxf7A7t7IlX7gmX74VsQGguw4S6+UnSYAAAAASUVORK5CYII=');">
+			<img src="titleleft.png" style="float: left;"/>
+			<img src="titleright.png" alt="" style="float: right;" />
+		</div>
+	</div>
+<!-- 制作者 Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>声明</span></a></li>
+      <li><a href="_xE7_xAE_x80_xE4_xBB_x8B.html"><span>简介</span></a></li>
+      <li><a href="_xE6_x9B_xB4_xE6_x96_xB0_xE8_xAE_xB0_xE5_xBD_x95.html"><span>更新记录</span></a></li>
+      <li><a href="_xE7_xBC_x96_xE7_xA8_x8B_xE5_xBC_x95_xE5_xAF_xBC.html"><span>编程引导</span></a></li>
+      <li><a href="modules.html"><span>接口函数</span></a></li>
+      <li><a href="annotated.html"><span>结构体</span></a></li>
+      <li><a href="_xE7_x9B_xB8_xE6_x9C_xBA_xE5_x8F_x82_xE6_x95_xB0_xE8_x8A_x82_xE7_x82_xB9_xE8_xA1_xA8.html"><span>相机参数节点表</span></a></li>
+      <li><a href="examples.html"><span>示例</span></a></li>
+      <li><a href="_xE7_x8A_xB6_xE6_x80_x81_xE7_xA0_x81_xE5_xAE_x9A_xE4_xB9_x89.html"><span>状态码定义</span></a></li>
+      <li class="current"><a href="_xE5_xB8_xB8_xE8_xA7_x81_xE9_x97_xAE_xE9_xA2_x98.html"><span>常见问题</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="PageDoc"><div class="contents">
+<div class="textblock"><div class="header" style="margin-left:-12px;margin-top:-10px;margin-right:-8px;"> <div class="headertitle"> <div class="title">常见问题</div> </div></div><div class="header" style="margin-left:-12px;margin-top:-10px;margin-right:-8px;"></div> <p>本章节介绍了Android SDK中的常见问题，阐述其原因以及解决方法。</p>
+<h2>Question1 U口相机开始取流无图像</h2>
+<p><b>原因</b></p>
+<p>由于USB缓存太小导致的U口相机丢帧，或者大分辨率相机取流失败。</p>
+<p><b>解决方法</b></p>
+<p>通过ADB 修改USB缓存，操作如下：</p>
+<ol>
+<li>
+<p class="startli">查看USB 缓存命令。 </p><div class="fragment"><div class="line">adb shell</div><div class="line">cat /sys/module/usbcore/parameters/usbfs_memory_mb</div></div><!-- fragment --> <p class="interli">设置USB缓存</p>
+<div class="fragment"><div class="line">adb shell</div><div class="line">su</div><div class="line">echo 500 &gt; /sys/module/usbcore/parameters/usbfs_memory_mb</div></div><!-- fragment -->  <div id="hikvision"> <br />
+ </div><div id="hikvision"><img src="FAQ1.png" width="45%" alt="" class="inline"/>
+</div><div id="hikvision"> </div> </li>
+<li>
+<div class="fragment"><div class="line">adb root</div><div class="line">adb push pc上文件路径 /data/</div><div class="line">adb shell</div><div class="line">su</div><div class="line">cd data/</div><div class="line">chmod 777 set_usbfs_memory_size.sh</div><div class="line">sh set_usbfs_memory_size.sh</div></div><!-- fragment -->  <div id="hikvision"> <br />
+ </div><div id="hikvision"><img src="FAQ2.png" width="60%" alt="" class="inline"/>
+</div><div id="hikvision"> </div> </li>
+</ol>
+<p>&#160;</p>
+<h2>Question2 网口相机开始取流后图像异常或者Android 设备卡死</h2>
+<p><b>原因</b></p>
+<p>Android 设备不支持巨帧，相机开启巨帧可能导致一些低性能的Android设备卡死。</p>
+<p><b>解决方法</b></p>
+<p>将相机SCPS 设置为1500，示例代码如下：</p>
+<div class="fragment"><div class="line"><span class="keywordtype">int</span> nPacketSize = MvCameraControl.MV_CC_GetOptimalPacketSize(handle)͖</div><div class="line"><span class="keywordflow">if</span>(nPacketSize &gt; 0){</div><div class="line">  nRet = MvCameraControl.MV_CC_SetIntValue(handle,<span class="stringliteral">&quot;GevSCPSPacketSize&quot;</span>,nPacketSize);</div><div class="line">   <span class="keywordflow">if</span>(nRet!=MV_OK){</div><div class="line">     showLog(<span class="stringliteral">&quot;Warning:Set Packet Size fail nRet&quot;</span>+Integer.toHexString(nRet));</div><div class="line">      <span class="keywordflow">return</span>;</div><div class="line">    }</div><div class="line">}<span class="keywordflow">else</span>{</div><div class="line">  showLog(<span class="stringliteral">&quot;Warning:Get Packet Size fail nRet&quot;</span>+Integer.toHexString(nPacketSize));</div><div class="line">}</div></div><!-- fragment --><p>&#160;</p>
+<h2>Question3 Android设备无法枚举到U口相机</h2>
+<p><b>原因</b></p>
+<p>由于USB没有权限导致的Android 设备无法枚举到相机。</p>
+<p><b>解决方法</b></p>
+<p>通过ADB修改USB权限。</p>
+<p>查看USB 设备权限命令：</p>
+<div class="fragment"><div class="line">adb shell</div><div class="line">cd /dev/bus/usb</div><div class="line">ls –l</div></div><!-- fragment --> <div id="hikvision"> <br />
+ </div><div id="hikvision">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<img src="FAQ5.png" width="30%" alt="" class="inline"/>
+</div><div id="hikvision"></div><div id="hikvision"></div><p>修改USB权限</p>
+<div class="fragment"><div class="line">adb shell</div><div class="line">cd /dev/bus/usb</div><div class="line">su</div><div class="line">chmod 777 –R .<span class="comment">/*</span></div><div class="line"><span class="comment">ls –l</span></div></div><!-- fragment --> <div id="hikvision"> <br />
+ </div><div id="hikvision">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<img src="FAQ6.png" width="30%" alt="" class="inline"/>
+</div><div id="hikvision"></div><div id="hikvision"></div> <p>&#160;</p>
+<h2>Question4 大分辨率相机丢包严重，或者接多个网口相机时丢包严重。</h2>
+<p><b>原因</b></p>
+<p>可能由于socket缓存太小导致的大分辨率相机丢包，或者接多个网口相机时丢包严重。</p>
+<p><b>解决方法</b></p>
+<p>通过ADB修改socket 缓存。</p>
+<ol>
+<li>
+<p class="startli">查看socket 缓存 </p><div class="fragment"><div class="line">adb shell</div><div class="line">cat /proc/sys/net/core/wmem_max</div></div><!-- fragment --> <div id="hikvision"> <br />
+ </div><div id="hikvision"><img src="FAQ7.png" width="35%" alt="" class="inline"/>
+</div><div id="hikvision"> </div> <p class="interli">修改socket 缓存</p>
+<div class="fragment"><div class="line">adb shell</div><div class="line">su</div><div class="line">echo 10485760 &gt; /proc/sys/net/core/wmem_max</div></div><!-- fragment --> <div id="hikvision"> <br />
+ </div><div id="hikvision"><img src="FAQ8.png" width="35%" alt="" class="inline"/>
+</div><div id="hikvision"> </div> </li>
+<li>
+<p class="startli">Adb 命令如下： </p><div class="fragment"><div class="line">adb push pc文件路径 /data</div><div class="line">adb shell</div><div class="line">su</div><div class="line">cd data/</div><div class="line">chmod 777 set_socket_buffer_size.sh</div><div class="line">sh set_socket_buffer_size.sh</div></div><!-- fragment -->  <div id="hikvision"> <br />
+ </div><div id="hikvision"><img src="FAQ9.png" width="60%" alt="" class="inline"/>
+</div><div id="hikvision"> </div></li>
+</ol>
+<div id="hikvision">&#160;</div><div id="hikvision"> <h2>Question5 U口相机取流过程中断流</h2>
+</div><div id="hikvision"> </div><div id="hikvision"><b>原因</b></div><div id="hikvision"> </div><div id="hikvision">由于相机取流数据量比较大，可能系统ddr频率默认开启的比较小，导致系统读写响应不过来。</div><div id="hikvision"> </div><div id="hikvision"><b>解决方法</b></div><div id="hikvision"> </div><div id="hikvision">系统rom默认ddr 频率开大，具体修改方法询问芯片厂商。</div><div id="hikvision"> </div> </div></div><!-- PageDoc -->
+</div><!-- contents -->
+<!-- start footer part -->
+<div class="footer" style="text-align: right;">
+	<hr/>
+	<small></small>
+</div>
+</body>
+</html>

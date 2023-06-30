@@ -1,0 +1,796 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>工业相机Android SDK开发指南V1.0.0（java）</title> 
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="custom-style.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+	<div style="overflow: hidden;">
+		<div style="height: 57px;min-width: 1039px;background-size: auto 100%;background:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABwgAAAABCAYAAADKO/rAAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAABRSURBVFhH7dUxCoBADEXB5LK5/w1iIaLIrsgWNs50Sf/4WVUd8HOZGd1nCqMbGNMPrNMPrJv1cvz0A3OjfuwPvDPrxf7A7t7IlX7gmX74VsQGguw4S6+UnSYAAAAASUVORK5CYII=');">
+			<img src="titleleft.png" style="float: left;"/>
+			<img src="titleright.png" alt="" style="float: right;" />
+		</div>
+	</div>
+<!-- 制作者 Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>声明</span></a></li>
+      <li><a href="_xE7_xAE_x80_xE4_xBB_x8B.html"><span>简介</span></a></li>
+      <li><a href="_xE6_x9B_xB4_xE6_x96_xB0_xE8_xAE_xB0_xE5_xBD_x95.html"><span>更新记录</span></a></li>
+      <li><a href="_xE7_xBC_x96_xE7_xA8_x8B_xE5_xBC_x95_xE5_xAF_xBC.html"><span>编程引导</span></a></li>
+      <li class="current"><a href="modules.html"><span>接口函数</span></a></li>
+      <li><a href="annotated.html"><span>结构体</span></a></li>
+      <li><a href="_xE7_x9B_xB8_xE6_x9C_xBA_xE5_x8F_x82_xE6_x95_xB0_xE8_x8A_x82_xE7_x82_xB9_xE8_xA1_xA8.html"><span>相机参数节点表</span></a></li>
+      <li><a href="examples.html"><span>示例</span></a></li>
+      <li><a href="_xE7_x8A_xB6_xE6_x80_x81_xE7_xA0_x81_xE5_xAE_x9A_xE4_xB9_x89.html"><span>状态码定义</span></a></li>
+      <li><a href="_xE5_xB8_xB8_xE8_xA7_x81_xE9_x97_xAE_xE9_xA2_x98.html"><span>常见问题</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#enum-members">枚举</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle">
+<div class="title">GigE接口函数<div class="ingroups"><a class="el" href="group___xE6_x8E_xA5_xE5_x8F_xA3_xE5_x87_xBD_xE6_x95_xB0.html">接口函数</a> &raquo; <a class="el" href="group___xE7_x9B_xB8_xE6_x9C_xBA_xE5_x8A_x9F_xE8_x83_xBD_xE8_xAE_xBE_xE7_xBD_xAE_xE6_x8E_xA5_xE5_x8F_xA3.html">相机功能设置接口</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>GigEVision 设备独有的接口，包含相机IP设置、网络传输模式设置和重传包属性等接口。  
+<a href="#details">更多...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+枚举</h2></td></tr>
+<tr class="memitem:ga9c9a531f2eb2de9af7c643dbf0c8a334"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___gig_e_xE6_x8E_xA5_xE5_x8F_xA3_xE5_x87_xBD_xE6_x95_xB0.html#ga9c9a531f2eb2de9af7c643dbf0c8a334">MVCC_IP_CONFIG</a> { <br />
+&#160;&#160;<a class="el" href="group___gig_e_xE6_x8E_xA5_xE5_x8F_xA3_xE5_x87_xBD_xE6_x95_xB0.html#gga9c9a531f2eb2de9af7c643dbf0c8a334a232689827978ae526656084a45828877">MV_IP_CFG_STATIC</a> =(0x05000000), 
+<br />
+&#160;&#160;<a class="el" href="group___gig_e_xE6_x8E_xA5_xE5_x8F_xA3_xE5_x87_xBD_xE6_x95_xB0.html#gga9c9a531f2eb2de9af7c643dbf0c8a334ac9473629826955c622783872a77795f5">MV_IP_CFG_DHCP</a> =(0x06000000), 
+<br />
+&#160;&#160;<a class="el" href="group___gig_e_xE6_x8E_xA5_xE5_x8F_xA3_xE5_x87_xBD_xE6_x95_xB0.html#gga9c9a531f2eb2de9af7c643dbf0c8a334afd6262dda81d1c72732302718bd458a1">MV_IP_CFG_LLA</a> =(0x04000000)
+<br />
+ }</td></tr>
+<tr class="separator:ga9c9a531f2eb2de9af7c643dbf0c8a334"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:ga86ef17ec299b0ff442a063132ced4e6b"><td class="memItemLeft" align="right" valign="top">public static native int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___gig_e_xE6_x8E_xA5_xE5_x8F_xA3_xE5_x87_xBD_xE6_x95_xB0.html#ga86ef17ec299b0ff442a063132ced4e6b">MV_CC_GetOptimalPacketSize</a> (Handle handle)</td></tr>
+<tr class="memdesc:ga86ef17ec299b0ff442a063132ced4e6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取网路最佳包大小（目前只支持GigE相机）  <a href="#ga86ef17ec299b0ff442a063132ced4e6b">更多...</a><br /></td></tr>
+<tr class="separator:ga86ef17ec299b0ff442a063132ced4e6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae535c2732c1fc931e249b154c1b6d0ef"><td class="memItemLeft" align="right" valign="top">public static native int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___gig_e_xE6_x8E_xA5_xE5_x8F_xA3_xE5_x87_xBD_xE6_x95_xB0.html#gae535c2732c1fc931e249b154c1b6d0ef">MV_GIGE_SetResend</a> (Handle handle, int bEnable, int nMaxResendPercent, int nResendTimeout)</td></tr>
+<tr class="memdesc:gae535c2732c1fc931e249b154c1b6d0ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置是否打开重发包支持，及重发包设置  <a href="#gae535c2732c1fc931e249b154c1b6d0ef">更多...</a><br /></td></tr>
+<tr class="separator:gae535c2732c1fc931e249b154c1b6d0ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga16ea9c3e16e2d5853db48d444a123bad"><td class="memItemLeft" align="right" valign="top">public static native int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___gig_e_xE6_x8E_xA5_xE5_x8F_xA3_xE5_x87_xBD_xE6_x95_xB0.html#ga16ea9c3e16e2d5853db48d444a123bad">MV_GIGE_SetResend</a> (Handle handle, int bEnable)</td></tr>
+<tr class="memdesc:ga16ea9c3e16e2d5853db48d444a123bad"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置是否打开重发包支持，及重发包设置  <a href="#ga16ea9c3e16e2d5853db48d444a123bad">更多...</a><br /></td></tr>
+<tr class="separator:ga16ea9c3e16e2d5853db48d444a123bad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga844cf744d9320b99ac5ecbcefad11690"><td class="memItemLeft" align="right" valign="top">public static native int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___gig_e_xE6_x8E_xA5_xE5_x8F_xA3_xE5_x87_xBD_xE6_x95_xB0.html#ga844cf744d9320b99ac5ecbcefad11690">MV_GIGE_SetResendMaxRetryTimes</a> (Handle handle, int nRetryTimes)</td></tr>
+<tr class="memdesc:ga844cf744d9320b99ac5ecbcefad11690"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置重传命令最大重发次数  <a href="#ga844cf744d9320b99ac5ecbcefad11690">更多...</a><br /></td></tr>
+<tr class="separator:ga844cf744d9320b99ac5ecbcefad11690"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6bb43138e4d6fc9135cafee83d60f77b"><td class="memItemLeft" align="right" valign="top">public static native int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___gig_e_xE6_x8E_xA5_xE5_x8F_xA3_xE5_x87_xBD_xE6_x95_xB0.html#ga6bb43138e4d6fc9135cafee83d60f77b">MV_GIGE_GetResendMaxRetryTimes</a> (Handle handle, Integer nRetryTimes)</td></tr>
+<tr class="memdesc:ga6bb43138e4d6fc9135cafee83d60f77b"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取重传命令最大重发次数  <a href="#ga6bb43138e4d6fc9135cafee83d60f77b">更多...</a><br /></td></tr>
+<tr class="separator:ga6bb43138e4d6fc9135cafee83d60f77b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafa91189dff0765aeac1fd7345f04045e"><td class="memItemLeft" align="right" valign="top">public static native int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___gig_e_xE6_x8E_xA5_xE5_x8F_xA3_xE5_x87_xBD_xE6_x95_xB0.html#gafa91189dff0765aeac1fd7345f04045e">MV_GIGE_GetResendTimeInterval</a> (Handle handle, Integer nRetryTimes)</td></tr>
+<tr class="memdesc:gafa91189dff0765aeac1fd7345f04045e"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取重传包命令重传时  <a href="#gafa91189dff0765aeac1fd7345f04045e">更多...</a><br /></td></tr>
+<tr class="separator:gafa91189dff0765aeac1fd7345f04045e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae4ab67a631379ef56603a7d6658dc82a"><td class="memItemLeft" align="right" valign="top">public static native int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___gig_e_xE6_x8E_xA5_xE5_x8F_xA3_xE5_x87_xBD_xE6_x95_xB0.html#gae4ab67a631379ef56603a7d6658dc82a">MV_GIGE_SetResendTimeInterval</a> (Handle handle, int nMsec)</td></tr>
+<tr class="memdesc:gae4ab67a631379ef56603a7d6658dc82a"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置重传包命令重传时间间  <a href="#gae4ab67a631379ef56603a7d6658dc82a">更多...</a><br /></td></tr>
+<tr class="separator:gae4ab67a631379ef56603a7d6658dc82a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2d5ce69d165f79141cbb5c90a6fa8ba2"><td class="memItemLeft" align="right" valign="top">public static native int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___gig_e_xE6_x8E_xA5_xE5_x8F_xA3_xE5_x87_xBD_xE6_x95_xB0.html#ga2d5ce69d165f79141cbb5c90a6fa8ba2">MV_GIGE_SetGvspTimeout</a> (Handle handle, int nMsec)</td></tr>
+<tr class="memdesc:ga2d5ce69d165f79141cbb5c90a6fa8ba2"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置流数据的收包超时时间，帧接收缓存等待一帧数据的最大时间。  <a href="#ga2d5ce69d165f79141cbb5c90a6fa8ba2">更多...</a><br /></td></tr>
+<tr class="separator:ga2d5ce69d165f79141cbb5c90a6fa8ba2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3d798cbfdd7f33c2634ea4d2ce0669b9"><td class="memItemLeft" align="right" valign="top">public static native int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___gig_e_xE6_x8E_xA5_xE5_x8F_xA3_xE5_x87_xBD_xE6_x95_xB0.html#ga3d798cbfdd7f33c2634ea4d2ce0669b9">MV_GIGE_GetGvspTimeout</a> (Handle handle, Integer nMsec)</td></tr>
+<tr class="memdesc:ga3d798cbfdd7f33c2634ea4d2ce0669b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取流数据的收包超时时间，帧接收缓存等待一帧数据的最大时间。  <a href="#ga3d798cbfdd7f33c2634ea4d2ce0669b9">更多...</a><br /></td></tr>
+<tr class="separator:ga3d798cbfdd7f33c2634ea4d2ce0669b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa1d58b582d08476301c4227f6839f4a1"><td class="memItemLeft" align="right" valign="top">public static native int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___gig_e_xE6_x8E_xA5_xE5_x8F_xA3_xE5_x87_xBD_xE6_x95_xB0.html#gaa1d58b582d08476301c4227f6839f4a1">MV_GIGE_GetNetTransInfo</a> (Handle handle, <a class="el" href="class_m_v___n_e_t_t_r_a_n_s___i_n_f_o.html">MV_NETTRANS_INFO</a> info)</td></tr>
+<tr class="memdesc:gaa1d58b582d08476301c4227f6839f4a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取网络传输信息  <a href="#gaa1d58b582d08476301c4227f6839f4a1">更多...</a><br /></td></tr>
+<tr class="separator:gaa1d58b582d08476301c4227f6839f4a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabf8fb4b208fe48aa8605c6cbf6fb0a8c"><td class="memItemLeft" align="right" valign="top">public static native int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___gig_e_xE6_x8E_xA5_xE5_x8F_xA3_xE5_x87_xBD_xE6_x95_xB0.html#gabf8fb4b208fe48aa8605c6cbf6fb0a8c">MV_GIGE_ForceIp</a> (Handle handle, int nIP, int nSubNetMask, int nDefaultGateWay)</td></tr>
+<tr class="memdesc:gabf8fb4b208fe48aa8605c6cbf6fb0a8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">强制IP  <a href="#gabf8fb4b208fe48aa8605c6cbf6fb0a8c">更多...</a><br /></td></tr>
+<tr class="separator:gabf8fb4b208fe48aa8605c6cbf6fb0a8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga44913eb96ff211862a2fcf5b45615f70"><td class="memItemLeft" align="right" valign="top">public static native int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___gig_e_xE6_x8E_xA5_xE5_x8F_xA3_xE5_x87_xBD_xE6_x95_xB0.html#ga44913eb96ff211862a2fcf5b45615f70">MV_GIGE_SetIpConfig</a> (Handle handle, <a class="el" href="group___gig_e_xE6_x8E_xA5_xE5_x8F_xA3_xE5_x87_xBD_xE6_x95_xB0.html#ga9c9a531f2eb2de9af7c643dbf0c8a334">MVCC_IP_CONFIG</a> enType)</td></tr>
+<tr class="memdesc:ga44913eb96ff211862a2fcf5b45615f70"><td class="mdescLeft">&#160;</td><td class="mdescRight">配置IP方式  <a href="#ga44913eb96ff211862a2fcf5b45615f70">更多...</a><br /></td></tr>
+<tr class="separator:ga44913eb96ff211862a2fcf5b45615f70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<p>GigEVision 设备独有的接口，包含相机IP设置、网络传输模式设置和重传包属性等接口。 </p>
+<p>网络模式枚举量 </p>
+<h2 class="groupheader">枚举类型说明</h2>
+<a id="ga9c9a531f2eb2de9af7c643dbf0c8a334"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9c9a531f2eb2de9af7c643dbf0c8a334">&#9670;&nbsp;</a></span>MVCC_IP_CONFIG</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group___gig_e_xE6_x8E_xA5_xE5_x8F_xA3_xE5_x87_xBD_xE6_x95_xB0.html#ga9c9a531f2eb2de9af7c643dbf0c8a334">MVCC_IP_CONFIG</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="gga9c9a531f2eb2de9af7c643dbf0c8a334a232689827978ae526656084a45828877"></a>MV_IP_CFG_STATIC&#160;</td><td class="fielddoc"><p>静态IP </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga9c9a531f2eb2de9af7c643dbf0c8a334ac9473629826955c622783872a77795f5"></a>MV_IP_CFG_DHCP&#160;</td><td class="fielddoc"><p>动态IP </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga9c9a531f2eb2de9af7c643dbf0c8a334afd6262dda81d1c72732302718bd458a1"></a>MV_IP_CFG_LLA&#160;</td><td class="fielddoc"><p>LLA </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a id="ga86ef17ec299b0ff442a063132ced4e6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga86ef17ec299b0ff442a063132ced4e6b">&#9670;&nbsp;</a></span>MV_CC_GetOptimalPacketSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">public static native int MV_CC_GetOptimalPacketSize </td>
+          <td>(</td>
+          <td class="paramtype">Handle&#160;</td>
+          <td class="paramname"><em>handle</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取网路最佳包大小（目前只支持GigE相机） </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">handle</td><td>[IN] 设备句柄 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>最佳packetsize </dd></dl>
+<dl class="section remark"><dt>备注</dt><dd><b>&#160;&bull;&#160;</b>获取最佳的packet size，对应GigEVision设备是SCPS，对应U3V设备是每次从驱动读取的包大小，该大小即网络上传输一个包的大小。该接口需要在 <a class="el" href="group___xE7_x9B_xB8_xE6_x9C_xBA_xE5_x88_x9D_xE5_xA7_x8B_xE5_x8C_x96_xE5_x8F_x8A_xE9_x94_x80_xE6_xAF_x81.html#ga4e982ac1afd05dec95710ac2adcb6c6a" title="打开设备">MV_CC_OpenDevice()</a> 之后、 <a class="el" href="group___xE5_x9B_xBE_xE5_x83_x8F_xE9_x87_x87_xE9_x9B_x86.html#ga5ee1c63aac34f3d8ea0ea5c2f5f734f2" title="开启抓图">MV_CC_StartGrabbing()</a> 之前调用。 <br />
+ <b>&#160;&bull;&#160;</b>接口所在类：MvCameraControl <br />
+</dd></dl>
+<dl class="section examples"><dt>示例</dt><dd><a class="el" href="_event_activity_8java-example.html#a15">EventActivity.java</a>, <a class="el" href="_get_bitmap_activity_8java-example.html#a19">GetBitmapActivity.java</a>, <a class="el" href="_grab_image_activity_8java-example.html#a11">GrabImageActivity.java</a>, <a class="el" href="_grab_image_call_back_activity_8java-example.html#a15">GrabImageCallBackActivity.java</a>, <a class="el" href="_reconnect_activity_8java-example.html#a17">ReconnectActivity.java</a>, <a class="el" href="_trigger_image_activity_8java-example.html#a18">TriggerImageActivity.java</a> , 以及 <a class="el" href="_trigger_image_call_activity_8java-example.html#a16">TriggerImageCallActivity.java</a>.</dd>
+</dl>
+
+</div>
+</div>
+<a id="gabf8fb4b208fe48aa8605c6cbf6fb0a8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gabf8fb4b208fe48aa8605c6cbf6fb0a8c">&#9670;&nbsp;</a></span>MV_GIGE_ForceIp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">public static native int MV_GIGE_ForceIp </td>
+          <td>(</td>
+          <td class="paramtype">Handle&#160;</td>
+          <td class="paramname"><em>handle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nIP</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nSubNetMask</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nDefaultGateWay</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>强制IP </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">handle</td><td>[IN] 设备句柄 </td></tr>
+    <tr><td class="paramname">iP</td><td>[IN] 设置的IP </td></tr>
+    <tr><td class="paramname">subNetMask</td><td>[IN] 子网掩码 </td></tr>
+    <tr><td class="paramname">defaultGateWay</td><td>[IN] 默认网关 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功，返回<a class="el" href="_xE7_x8A_xB6_xE6_x80_x81_xE7_xA0_x81_xE5_xAE_x9A_xE4_xB9_x89.html">MV_OK</a>；失败，返回<a class="el" href="_xE7_x8A_xB6_xE6_x80_x81_xE7_xA0_x81_xE5_xAE_x9A_xE4_xB9_x89.html">错误码</a> 。 </dd></dl>
+<dl class="section remark"><dt>备注</dt><dd><b>&#160;&bull;&#160;</b>强制设置相机网络参数（包括IP、子网掩码、默认网关），强制设置之后将需要重新创建设备句柄，仅GigEVision相机支持。<br />
+ <b>&#160;&bull;&#160;</b>如果设备为DHCP的状态，调用该接口强制设置相机网络参数之后设备将会重启。 <b>&#160;&bull;&#160;</b>接口所在类：MvCameraControl <br />
+</dd></dl>
+<dl class="section examples"><dt>示例</dt><dd><a class="el" href="_set_ip_activity_8java-example.html#a14">SetIpActivity.java</a>.</dd>
+</dl>
+
+</div>
+</div>
+<a id="ga3d798cbfdd7f33c2634ea4d2ce0669b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3d798cbfdd7f33c2634ea4d2ce0669b9">&#9670;&nbsp;</a></span>MV_GIGE_GetGvspTimeout()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">public static native int MV_GIGE_GetGvspTimeout </td>
+          <td>(</td>
+          <td class="paramtype">Handle&#160;</td>
+          <td class="paramname"><em>handle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Integer&#160;</td>
+          <td class="paramname"><em>nMsec</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取流数据的收包超时时间，帧接收缓存等待一帧数据的最大时间。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">handle</td><td>[IN] 设备句柄 </td></tr>
+    <tr><td class="paramname">msec</td><td>[IN] 获取流数据的收包超时时间 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功，返回<a class="el" href="_xE7_x8A_xB6_xE6_x80_x81_xE7_xA0_x81_xE5_xAE_x9A_xE4_xB9_x89.html">MV_OK</a>；失败，返回<a class="el" href="_xE7_x8A_xB6_xE6_x80_x81_xE7_xA0_x81_xE5_xAE_x9A_xE4_xB9_x89.html">错误码</a> 。 </dd></dl>
+<dl class="section remark"><dt>备注</dt><dd><b>&#160;&bull;&#160;</b>范围0-0xffffffff<br />
+ <b>&#160;&bull;&#160;</b>接口所在类：MvCameraControl <br />
+</dd></dl>
+
+</div>
+</div>
+<a id="gaa1d58b582d08476301c4227f6839f4a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa1d58b582d08476301c4227f6839f4a1">&#9670;&nbsp;</a></span>MV_GIGE_GetNetTransInfo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">public static native int MV_GIGE_GetNetTransInfo </td>
+          <td>(</td>
+          <td class="paramtype">Handle&#160;</td>
+          <td class="paramname"><em>handle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_m_v___n_e_t_t_r_a_n_s___i_n_f_o.html">MV_NETTRANS_INFO</a>&#160;</td>
+          <td class="paramname"><em>info</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取网络传输信息 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">handle</td><td>[IN] 设备句柄 </td></tr>
+    <tr><td class="paramname">info</td><td>[IN] 信息结构体 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功，返回<a class="el" href="_xE7_x8A_xB6_xE6_x80_x81_xE7_xA0_x81_xE5_xAE_x9A_xE4_xB9_x89.html">MV_OK</a>；失败，返回<a class="el" href="_xE7_x8A_xB6_xE6_x80_x81_xE7_xA0_x81_xE5_xAE_x9A_xE4_xB9_x89.html">错误码</a> 。 </dd></dl>
+<dl class="section remark"><dt>备注</dt><dd><b>&#160;&bull;&#160;</b>通过该接口可以获取网络传输相关信息，包括已接收数据大小、丢帧数量等，在 <a class="el" href="group___xE5_x9B_xBE_xE5_x83_x8F_xE9_x87_x87_xE9_x9B_x86.html#ga5ee1c63aac34f3d8ea0ea5c2f5f734f2" title="开启抓图">MV_CC_StartGrabbing()</a> 开启采集之后调用。仅GigEVision相机支持。<br />
+ <b>&#160;&bull;&#160;</b>接口所在类：MvCameraControl <br />
+</dd></dl>
+
+</div>
+</div>
+<a id="ga6bb43138e4d6fc9135cafee83d60f77b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6bb43138e4d6fc9135cafee83d60f77b">&#9670;&nbsp;</a></span>MV_GIGE_GetResendMaxRetryTimes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">public static native int MV_GIGE_GetResendMaxRetryTimes </td>
+          <td>(</td>
+          <td class="paramtype">Handle&#160;</td>
+          <td class="paramname"><em>handle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Integer&#160;</td>
+          <td class="paramname"><em>nRetryTimes</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取重传命令最大重发次数 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">handle</td><td>[IN] 设备句柄 </td></tr>
+    <tr><td class="paramname">retryTimes</td><td>[IN] 重传命令最大重发次数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功，返回<a class="el" href="_xE7_x8A_xB6_xE6_x80_x81_xE7_xA0_x81_xE5_xAE_x9A_xE4_xB9_x89.html">MV_OK</a>；失败，返回<a class="el" href="_xE7_x8A_xB6_xE6_x80_x81_xE7_xA0_x81_xE5_xAE_x9A_xE4_xB9_x89.html">错误码</a> 。 </dd></dl>
+<dl class="section remark"><dt>备注</dt><dd><b>&#160;&bull;&#160;</b>nRetryTimes表示重发包1+ nRetryTimes次，0xFFFFFFFF表示无限重发<br />
+ <b>&#160;&bull;&#160;</b>接口所在类：MvCameraControl <br />
+</dd></dl>
+
+</div>
+</div>
+<a id="gafa91189dff0765aeac1fd7345f04045e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gafa91189dff0765aeac1fd7345f04045e">&#9670;&nbsp;</a></span>MV_GIGE_GetResendTimeInterval()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">public static native int MV_GIGE_GetResendTimeInterval </td>
+          <td>(</td>
+          <td class="paramtype">Handle&#160;</td>
+          <td class="paramname"><em>handle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Integer&#160;</td>
+          <td class="paramname"><em>nRetryTimes</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取重传包命令重传时 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">handle</td><td>[IN] 设备句柄 </td></tr>
+    <tr><td class="paramname">retryTimes</td><td>[IN] 重传包命令重传时间 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功，返回<a class="el" href="_xE7_x8A_xB6_xE6_x80_x81_xE7_xA0_x81_xE5_xAE_x9A_xE4_xB9_x89.html">MV_OK</a>；失败，返回<a class="el" href="_xE7_x8A_xB6_xE6_x80_x81_xE7_xA0_x81_xE5_xAE_x9A_xE4_xB9_x89.html">错误码</a> 。 </dd></dl>
+<dl class="section remark"><dt>备注</dt><dd><b>&#160;&bull;&#160;</b>范围0-0xffffffff<br />
+ <b>&#160;&bull;&#160;</b>接口所在类：MvCameraControl <br />
+</dd></dl>
+
+</div>
+</div>
+<a id="ga2d5ce69d165f79141cbb5c90a6fa8ba2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2d5ce69d165f79141cbb5c90a6fa8ba2">&#9670;&nbsp;</a></span>MV_GIGE_SetGvspTimeout()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">public static native int MV_GIGE_SetGvspTimeout </td>
+          <td>(</td>
+          <td class="paramtype">Handle&#160;</td>
+          <td class="paramname"><em>handle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nMsec</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>设置流数据的收包超时时间，帧接收缓存等待一帧数据的最大时间。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">handle</td><td>[IN] 设备句柄 </td></tr>
+    <tr><td class="paramname">msec</td><td>[IN] 流数据的收包超时时间，帧接收缓存等待一帧数据的最大时间，超过超时时间后认为一帧接收完 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功，返回<a class="el" href="_xE7_x8A_xB6_xE6_x80_x81_xE7_xA0_x81_xE5_xAE_x9A_xE4_xB9_x89.html">MV_OK</a>；失败，返回<a class="el" href="_xE7_x8A_xB6_xE6_x80_x81_xE7_xA0_x81_xE5_xAE_x9A_xE4_xB9_x89.html">错误码</a> 。 </dd></dl>
+<dl class="section remark"><dt>备注</dt><dd><b>&#160;&bull;&#160;</b>范围0-0xffffffff<br />
+ <b>&#160;&bull;&#160;</b>接口所在类：MvCameraControl <br />
+</dd></dl>
+
+</div>
+</div>
+<a id="ga44913eb96ff211862a2fcf5b45615f70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga44913eb96ff211862a2fcf5b45615f70">&#9670;&nbsp;</a></span>MV_GIGE_SetIpConfig()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">public static native int MV_GIGE_SetIpConfig </td>
+          <td>(</td>
+          <td class="paramtype">Handle&#160;</td>
+          <td class="paramname"><em>handle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___gig_e_xE6_x8E_xA5_xE5_x8F_xA3_xE5_x87_xBD_xE6_x95_xB0.html#ga9c9a531f2eb2de9af7c643dbf0c8a334">MVCC_IP_CONFIG</a>&#160;</td>
+          <td class="paramname"><em>enType</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>配置IP方式 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">handle</td><td>[IN] 设备句柄 </td></tr>
+    <tr><td class="paramname">enType</td><td>[IN] IP类型 <table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadCenter">宏定义  </th><th class="markdownTableHeadCenter">宏定义值  </th><th class="markdownTableHeadCenter">含义   </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyCenter">MV_IP_CFG_STATIC  </td><td class="markdownTableBodyCenter">0x05000000  </td><td class="markdownTableBodyCenter">固定IP地址模式   </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyCenter">MV_IP_CFG_DHCP  </td><td class="markdownTableBodyCenter">0x06000000  </td><td class="markdownTableBodyCenter">DHCP自动获取IP模式   </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyCenter">MV_IP_CFG_LLA  </td><td class="markdownTableBodyCenter">0x04000000  </td><td class="markdownTableBodyCenter">LLA(Link-local address)，链路本地地址   </td></tr>
+</table>
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功，返回<a class="el" href="_xE7_x8A_xB6_xE6_x80_x81_xE7_xA0_x81_xE5_xAE_x9A_xE4_xB9_x89.html">MV_OK</a>；失败，返回<a class="el" href="_xE7_x8A_xB6_xE6_x80_x81_xE7_xA0_x81_xE5_xAE_x9A_xE4_xB9_x89.html">错误码</a> 。 </dd></dl>
+<dl class="section remark"><dt>备注</dt><dd><b>&#160;&bull;&#160;</b>发送命令设置相机的IP方式，如DHCP、LLA等，仅GigEVision相机支持。<br />
+ <b>&#160;&bull;&#160;</b>接口所在类：MvCameraControl <br />
+</dd></dl>
+
+</div>
+</div>
+<a id="gae535c2732c1fc931e249b154c1b6d0ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae535c2732c1fc931e249b154c1b6d0ef">&#9670;&nbsp;</a></span>MV_GIGE_SetResend() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">public static native int MV_GIGE_SetResend </td>
+          <td>(</td>
+          <td class="paramtype">Handle&#160;</td>
+          <td class="paramname"><em>handle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>bEnable</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nMaxResendPercent</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nResendTimeout</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>设置是否打开重发包支持，及重发包设置 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">handle</td><td>[IN] 设备句柄 </td></tr>
+    <tr><td class="paramname">enable</td><td>[IN] 是否支持重发包 </td></tr>
+    <tr><td class="paramname">maxResendPercent</td><td>[IN] 最大重发比 </td></tr>
+    <tr><td class="paramname">resendTimeout</td><td>[IN] 重发超时时间 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功，返回<a class="el" href="_xE7_x8A_xB6_xE6_x80_x81_xE7_xA0_x81_xE5_xAE_x9A_xE4_xB9_x89.html">MV_OK</a>；失败，返回<a class="el" href="_xE7_x8A_xB6_xE6_x80_x81_xE7_xA0_x81_xE5_xAE_x9A_xE4_xB9_x89.html">错误码</a> 。 </dd></dl>
+<dl class="section remark"><dt>备注</dt><dd><b>&#160;&bull;&#160;</b>打开设备之后调用该接口可以设置重发包属性，仅GigEVision相机支持。 <br />
+ <b>&#160;&bull;&#160;</b>接口所在类：MvCameraControl <br />
+</dd></dl>
+
+</div>
+</div>
+<a id="ga16ea9c3e16e2d5853db48d444a123bad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga16ea9c3e16e2d5853db48d444a123bad">&#9670;&nbsp;</a></span>MV_GIGE_SetResend() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">public static native int MV_GIGE_SetResend </td>
+          <td>(</td>
+          <td class="paramtype">Handle&#160;</td>
+          <td class="paramname"><em>handle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>bEnable</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>设置是否打开重发包支持，及重发包设置 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">handle</td><td>[IN] 设备句柄 </td></tr>
+    <tr><td class="paramname">enable</td><td>[IN] 是否支持重发包 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功，返回<a class="el" href="_xE7_x8A_xB6_xE6_x80_x81_xE7_xA0_x81_xE5_xAE_x9A_xE4_xB9_x89.html">MV_OK</a>；失败，返回<a class="el" href="_xE7_x8A_xB6_xE6_x80_x81_xE7_xA0_x81_xE5_xAE_x9A_xE4_xB9_x89.html">错误码</a> 。 </dd></dl>
+<dl class="section remark"><dt>备注</dt><dd><b>&#160;&bull;&#160;</b>打开设备之后调用该接口可以设置重发包属性，仅GigEVision相机支持。 <br />
+ <b>&#160;&bull;&#160;</b>接口所在类：MvCameraControl <br />
+</dd></dl>
+
+</div>
+</div>
+<a id="ga844cf744d9320b99ac5ecbcefad11690"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga844cf744d9320b99ac5ecbcefad11690">&#9670;&nbsp;</a></span>MV_GIGE_SetResendMaxRetryTimes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">public static native int MV_GIGE_SetResendMaxRetryTimes </td>
+          <td>(</td>
+          <td class="paramtype">Handle&#160;</td>
+          <td class="paramname"><em>handle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nRetryTimes</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>设置重传命令最大重发次数 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">handle</td><td>[IN] 设备句柄 </td></tr>
+    <tr><td class="paramname">retryTimes</td><td>[IN] 重传命令最大重发次数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功，返回<a class="el" href="_xE7_x8A_xB6_xE6_x80_x81_xE7_xA0_x81_xE5_xAE_x9A_xE4_xB9_x89.html">MV_OK</a>；失败，返回<a class="el" href="_xE7_x8A_xB6_xE6_x80_x81_xE7_xA0_x81_xE5_xAE_x9A_xE4_xB9_x89.html">错误码</a> 。 </dd></dl>
+<dl class="section remark"><dt>备注</dt><dd><b>&#160;&bull;&#160;</b>nRetryTimes表示重发包1+ nRetryTimes次，0xFFFFFFFF表示无限重发<br />
+ <b>&#160;&bull;&#160;</b>接口所在类：MvCameraControl <br />
+</dd></dl>
+
+</div>
+</div>
+<a id="gae4ab67a631379ef56603a7d6658dc82a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae4ab67a631379ef56603a7d6658dc82a">&#9670;&nbsp;</a></span>MV_GIGE_SetResendTimeInterval()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">public static native int MV_GIGE_SetResendTimeInterval </td>
+          <td>(</td>
+          <td class="paramtype">Handle&#160;</td>
+          <td class="paramname"><em>handle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nMsec</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>设置重传包命令重传时间间 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">handle</td><td>[IN] 设备句柄 </td></tr>
+    <tr><td class="paramname">msec</td><td>[IN] 重传包命令重传时间间隔 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功，返回<a class="el" href="_xE7_x8A_xB6_xE6_x80_x81_xE7_xA0_x81_xE5_xAE_x9A_xE4_xB9_x89.html">MV_OK</a>；失败，返回<a class="el" href="_xE7_x8A_xB6_xE6_x80_x81_xE7_xA0_x81_xE5_xAE_x9A_xE4_xB9_x89.html">错误码</a> 。 </dd></dl>
+<dl class="section remark"><dt>备注</dt><dd><b>&#160;&bull;&#160;</b>范围0-0xffffffff<br />
+ <b>&#160;&bull;&#160;</b>接口所在类：MvCameraControl <br />
+</dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<div class="footer" style="text-align: right;">
+	<hr/>
+	<small></small>
+</div>
+</body>
+</html>

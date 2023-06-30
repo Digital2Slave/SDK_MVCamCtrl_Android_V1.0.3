@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="5dp"
+    tools:context="com.example.grabimagecallback.GrabImageCallBackActivity">
+
+    <com.jaredrummler.materialspinner.MaterialSpinner
+        android:id="@+id/spinner"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+    <Button
+        android:id="@+id/enumDevicesBt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_selector"
+        android:text="枚举设备"
+        android:layout_marginTop="5dp"
+        android:textColor="#ffffff" />
+
+    <Button
+        android:id="@+id/openDeviceBt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_selector"
+        android:text="打开设备"
+        android:layout_marginTop="5dp"
+        android:textColor="#ffffff" />
+
+    <Button
+        android:id="@+id/closeDeviceBt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_selector"
+        android:text="关闭设备"
+        android:layout_marginTop="5dp"
+        android:textColor="#ffffff" />
+
+    <include layout="@layout/item_logview"/>
+</LinearLayout>

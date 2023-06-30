@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>工业相机Android SDK开发指南V1.0.0（java）</title> 
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="custom-style.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+	<div style="overflow: hidden;">
+		<div style="height: 57px;min-width: 1039px;background-size: auto 100%;background:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABwgAAAABCAYAAADKO/rAAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAABRSURBVFhH7dUxCoBADEXB5LK5/w1iIaLIrsgWNs50Sf/4WVUd8HOZGd1nCqMbGNMPrNMPrJv1cvz0A3OjfuwPvDPrxf7A7t7IlX7gmX74VsQGguw4S6+UnSYAAAAASUVORK5CYII=');">
+			<img src="titleleft.png" style="float: left;"/>
+			<img src="titleright.png" alt="" style="float: right;" />
+		</div>
+	</div>
+<!-- 制作者 Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>声明</span></a></li>
+      <li><a href="_xE7_xAE_x80_xE4_xBB_x8B.html"><span>简介</span></a></li>
+      <li><a href="_xE6_x9B_xB4_xE6_x96_xB0_xE8_xAE_xB0_xE5_xBD_x95.html"><span>更新记录</span></a></li>
+      <li><a href="_xE7_xBC_x96_xE7_xA8_x8B_xE5_xBC_x95_xE5_xAF_xBC.html"><span>编程引导</span></a></li>
+      <li><a href="modules.html"><span>接口函数</span></a></li>
+      <li class="current"><a href="annotated.html"><span>结构体</span></a></li>
+      <li><a href="_xE7_x9B_xB8_xE6_x9C_xBA_xE5_x8F_x82_xE6_x95_xB0_xE8_x8A_x82_xE7_x82_xB9_xE8_xA1_xA8.html"><span>相机参数节点表</span></a></li>
+      <li><a href="examples.html"><span>示例</span></a></li>
+      <li><a href="_xE7_x8A_xB6_xE6_x80_x81_xE7_xA0_x81_xE5_xAE_x9A_xE4_xB9_x89.html"><span>状态码定义</span></a></li>
+      <li><a href="_xE5_xB8_xB8_xE8_xA7_x81_xE9_x97_xAE_xE9_xA2_x98.html"><span>常见问题</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="class_m_v___c_c___d_e_v_i_c_e___i_n_f_o-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">MV_CC_DEVICE_INFO类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>相机信息统一结构体  
+ <a href="class_m_v___c_c___d_e_v_i_c_e___i_n_f_o.html#details">更多...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a8fb26ddd27c5a7bd1cd20f52ecc6931e"><td class="memItemLeft" align="right" valign="top"><a id="a8fb26ddd27c5a7bd1cd20f52ecc6931e"></a>
+public short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_v___c_c___d_e_v_i_c_e___i_n_f_o.html#a8fb26ddd27c5a7bd1cd20f52ecc6931e">majorVer</a></td></tr>
+<tr class="memdesc:a8fb26ddd27c5a7bd1cd20f52ecc6931e"><td class="mdescLeft">&#160;</td><td class="mdescRight">主版本号 <br /></td></tr>
+<tr class="separator:a8fb26ddd27c5a7bd1cd20f52ecc6931e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5af471f3fcbf21bd9935126140be2970"><td class="memItemLeft" align="right" valign="top"><a id="a5af471f3fcbf21bd9935126140be2970"></a>
+public short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_v___c_c___d_e_v_i_c_e___i_n_f_o.html#a5af471f3fcbf21bd9935126140be2970">minorVer</a></td></tr>
+<tr class="memdesc:a5af471f3fcbf21bd9935126140be2970"><td class="mdescLeft">&#160;</td><td class="mdescRight">子版本号 <br /></td></tr>
+<tr class="separator:a5af471f3fcbf21bd9935126140be2970"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a550005426acde66cbcec97cc1c9d158e"><td class="memItemLeft" align="right" valign="top"><a id="a550005426acde66cbcec97cc1c9d158e"></a>
+public int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_v___c_c___d_e_v_i_c_e___i_n_f_o.html#a550005426acde66cbcec97cc1c9d158e">macAddrHigh</a></td></tr>
+<tr class="memdesc:a550005426acde66cbcec97cc1c9d158e"><td class="mdescLeft">&#160;</td><td class="mdescRight">MAC地址高位 <br /></td></tr>
+<tr class="separator:a550005426acde66cbcec97cc1c9d158e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d980547f968caf9f80e6bee9529af62"><td class="memItemLeft" align="right" valign="top"><a id="a5d980547f968caf9f80e6bee9529af62"></a>
+public int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_v___c_c___d_e_v_i_c_e___i_n_f_o.html#a5d980547f968caf9f80e6bee9529af62">macAddrLow</a></td></tr>
+<tr class="memdesc:a5d980547f968caf9f80e6bee9529af62"><td class="mdescLeft">&#160;</td><td class="mdescRight">MAC地址低位 <br /></td></tr>
+<tr class="separator:a5d980547f968caf9f80e6bee9529af62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa71ee7ba15027f3b970fe6c5e31cfd3b"><td class="memItemLeft" align="right" valign="top"><a id="aa71ee7ba15027f3b970fe6c5e31cfd3b"></a>
+public int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_v___c_c___d_e_v_i_c_e___i_n_f_o.html#aa71ee7ba15027f3b970fe6c5e31cfd3b">transportLayerType</a></td></tr>
+<tr class="memdesc:aa71ee7ba15027f3b970fe6c5e31cfd3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">传输层类型 <br /></td></tr>
+<tr class="separator:aa71ee7ba15027f3b970fe6c5e31cfd3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95fb496433fc5be9ef0325aaad50f9e9"><td class="memItemLeft" align="right" valign="top"><a id="a95fb496433fc5be9ef0325aaad50f9e9"></a>
+public <a class="el" href="class_m_v___g_i_g_e___d_e_v_i_c_e___i_n_f_o.html">MV_GIGE_DEVICE_INFO</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_v___c_c___d_e_v_i_c_e___i_n_f_o.html#a95fb496433fc5be9ef0325aaad50f9e9">gigEInfo</a></td></tr>
+<tr class="memdesc:a95fb496433fc5be9ef0325aaad50f9e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">GigE 设备信息 <br /></td></tr>
+<tr class="separator:a95fb496433fc5be9ef0325aaad50f9e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba240a4857195fcd22b91a76d2f6fb12"><td class="memItemLeft" align="right" valign="top"><a id="aba240a4857195fcd22b91a76d2f6fb12"></a>
+public <a class="el" href="class_m_v___u_s_b3___d_e_v_i_c_e___i_n_f_o.html">MV_USB3_DEVICE_INFO</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_v___c_c___d_e_v_i_c_e___i_n_f_o.html#aba240a4857195fcd22b91a76d2f6fb12">usb3VInfo</a></td></tr>
+<tr class="memdesc:aba240a4857195fcd22b91a76d2f6fb12"><td class="mdescLeft">&#160;</td><td class="mdescRight">USB设备信息 <br /></td></tr>
+<tr class="separator:aba240a4857195fcd22b91a76d2f6fb12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>相机信息统一结构体 </p>
+<dl class="section examples"><dt>示例</dt><dd><a class="el" href="_event_activity_8java-example.html#_a0">EventActivity.java</a>, <a class="el" href="_get_bitmap_activity_8java-example.html#_a0">GetBitmapActivity.java</a>, <a class="el" href="_grab_image_activity_8java-example.html#_a0">GrabImageActivity.java</a>, <a class="el" href="_grab_image_call_back_activity_8java-example.html#_a0">GrabImageCallBackActivity.java</a>, <a class="el" href="_grab_multiple_camera_activity_8java-example.html#_a0">GrabMultipleCameraActivity.java</a>, <a class="el" href="_image_process_activity_8java-example.html#_a0">ImageProcessActivity.java</a>, <a class="el" href="_reconnect_activity_8java-example.html#_a0">ReconnectActivity.java</a>, <a class="el" href="_set_ip_activity_8java-example.html#_a0">SetIpActivity.java</a>, <a class="el" href="_set_param_activity_8java-example.html#_a0">SetParamActivity.java</a>, <a class="el" href="_trigger_image_activity_8java-example.html#_a0">TriggerImageActivity.java</a> , 以及 <a class="el" href="_trigger_image_call_activity_8java-example.html#_a0">TriggerImageCallActivity.java</a>.</dd>
+</dl>
+</div></div><!-- contents -->
+<!-- start footer part -->
+<div class="footer" style="text-align: right;">
+	<hr/>
+	<small></small>
+</div>
+</body>
+</html>

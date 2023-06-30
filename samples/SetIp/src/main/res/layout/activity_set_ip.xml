@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="5dp"
+    android:orientation="vertical">
+
+    <com.jaredrummler.materialspinner.MaterialSpinner
+        android:id="@+id/spinner"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+    <Button
+        android:id="@+id/enumDevicesBt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/button_selector"
+        android:text="枚举设备"
+        android:textColor="#ffffff" />
+
+    <EditText
+        android:id="@+id/ipEdit"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/frame"
+        android:hint="ip" />
+
+    <EditText
+        android:id="@+id/subNetMaskEdit"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/frame"
+        android:hint="subNetMask" />
+
+    <EditText
+        android:id="@+id/defaultGateWayEdit"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/frame"
+        android:hint="defaultGateWay" />
+
+    <Button
+        android:id="@+id/openDeviceBt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/button_selector"
+        android:text="修改ip"
+        android:textColor="#ffffff" />
+
+
+    <include layout="@layout/item_logview"/>
+</LinearLayout>

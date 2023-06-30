@@ -1,0 +1,707 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>工业相机Android SDK开发指南V1.0.0（java）</title> 
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="custom-style.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+	<div style="overflow: hidden;">
+		<div style="height: 57px;min-width: 1039px;background-size: auto 100%;background:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABwgAAAABCAYAAADKO/rAAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAABRSURBVFhH7dUxCoBADEXB5LK5/w1iIaLIrsgWNs50Sf/4WVUd8HOZGd1nCqMbGNMPrNMPrJv1cvz0A3OjfuwPvDPrxf7A7t7IlX7gmX74VsQGguw4S6+UnSYAAAAASUVORK5CYII=');">
+			<img src="titleleft.png" style="float: left;"/>
+			<img src="titleright.png" alt="" style="float: right;" />
+		</div>
+	</div>
+<!-- 制作者 Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>声明</span></a></li>
+      <li><a href="_xE7_xAE_x80_xE4_xBB_x8B.html"><span>简介</span></a></li>
+      <li><a href="_xE6_x9B_xB4_xE6_x96_xB0_xE8_xAE_xB0_xE5_xBD_x95.html"><span>更新记录</span></a></li>
+      <li><a href="_xE7_xBC_x96_xE7_xA8_x8B_xE5_xBC_x95_xE5_xAF_xBC.html"><span>编程引导</span></a></li>
+      <li class="current"><a href="modules.html"><span>接口函数</span></a></li>
+      <li><a href="annotated.html"><span>结构体</span></a></li>
+      <li><a href="_xE7_x9B_xB8_xE6_x9C_xBA_xE5_x8F_x82_xE6_x95_xB0_xE8_x8A_x82_xE7_x82_xB9_xE8_xA1_xA8.html"><span>相机参数节点表</span></a></li>
+      <li><a href="examples.html"><span>示例</span></a></li>
+      <li><a href="_xE7_x8A_xB6_xE6_x80_x81_xE7_xA0_x81_xE5_xAE_x9A_xE4_xB9_x89.html"><span>状态码定义</span></a></li>
+      <li><a href="_xE5_xB8_xB8_xE8_xA7_x81_xE9_x97_xAE_xE9_xA2_x98.html"><span>常见问题</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#enum-members">枚举</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle">
+<div class="title">通用接口<div class="ingroups"><a class="el" href="group___xE6_x8E_xA5_xE5_x8F_xA3_xE5_x87_xBD_xE6_x95_xB0.html">接口函数</a> &raquo; <a class="el" href="group___xE7_x9B_xB8_xE6_x9C_xBA_xE5_x8A_x9F_xE8_x83_xBD_xE8_xAE_xBE_xE7_xBD_xAE_xE6_x8E_xA5_xE5_x8F_xA3.html">相机功能设置接口</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>包含SDK图像缓存节点设置、事件注册和相机属性导入导出等接口。  
+<a href="#details">更多...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+枚举</h2></td></tr>
+<tr class="memitem:gac5fe0d4a17e276647881ac53a9304be1"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___xE9_x80_x9A_xE7_x94_xA8_xE6_x8E_xA5_xE5_x8F_xA3.html#gac5fe0d4a17e276647881ac53a9304be1">MV_XML_InterfaceType</a> { <br />
+&#160;&#160;<a class="el" href="group___xE9_x80_x9A_xE7_x94_xA8_xE6_x8E_xA5_xE5_x8F_xA3.html#ggac5fe0d4a17e276647881ac53a9304be1a8942ce3e5bc163ff6d9a4476ccb7c1aa">IFT_IValue</a>, 
+<br />
+&#160;&#160;<a class="el" href="group___xE9_x80_x9A_xE7_x94_xA8_xE6_x8E_xA5_xE5_x8F_xA3.html#ggac5fe0d4a17e276647881ac53a9304be1a661e276103268356fbffa7561b0261b7">IFT_IBase</a>, 
+<br />
+&#160;&#160;<a class="el" href="group___xE9_x80_x9A_xE7_x94_xA8_xE6_x8E_xA5_xE5_x8F_xA3.html#ggac5fe0d4a17e276647881ac53a9304be1a11af4ed7397e2ba88466b4fef6efd81e">IFT_IInteger</a>, 
+<br />
+&#160;&#160;<a class="el" href="group___xE9_x80_x9A_xE7_x94_xA8_xE6_x8E_xA5_xE5_x8F_xA3.html#ggac5fe0d4a17e276647881ac53a9304be1ad7f3fd94736fd65e67daa67166ee7598">IFT_IBoolean</a>, 
+<br />
+&#160;&#160;<a class="el" href="group___xE9_x80_x9A_xE7_x94_xA8_xE6_x8E_xA5_xE5_x8F_xA3.html#ggac5fe0d4a17e276647881ac53a9304be1a50089d672a55bab2d2998a2dd6cbd83e">IFT_ICommand</a>, 
+<br />
+&#160;&#160;<a class="el" href="group___xE9_x80_x9A_xE7_x94_xA8_xE6_x8E_xA5_xE5_x8F_xA3.html#ggac5fe0d4a17e276647881ac53a9304be1a26689018ca41a56e4fe50c07dbd1e59e">IFT_IFloat</a>, 
+<br />
+&#160;&#160;<a class="el" href="group___xE9_x80_x9A_xE7_x94_xA8_xE6_x8E_xA5_xE5_x8F_xA3.html#ggac5fe0d4a17e276647881ac53a9304be1aeedd8c51cdb2c0a88b8bbec94281c932">IFT_IString</a>, 
+<br />
+&#160;&#160;<a class="el" href="group___xE9_x80_x9A_xE7_x94_xA8_xE6_x8E_xA5_xE5_x8F_xA3.html#ggac5fe0d4a17e276647881ac53a9304be1ace1d2f07e7d4034cec3f3fe4d68463c8">IFT_IRegister</a>, 
+<br />
+&#160;&#160;<a class="el" href="group___xE9_x80_x9A_xE7_x94_xA8_xE6_x8E_xA5_xE5_x8F_xA3.html#ggac5fe0d4a17e276647881ac53a9304be1a1da2c079038f8370db0d2083fe15469c">IFT_ICategory</a>, 
+<br />
+&#160;&#160;<a class="el" href="group___xE9_x80_x9A_xE7_x94_xA8_xE6_x8E_xA5_xE5_x8F_xA3.html#ggac5fe0d4a17e276647881ac53a9304be1a9fdfa597ddd736a86678ec282b943851">IFT_IEnumeration</a>, 
+<br />
+&#160;&#160;<a class="el" href="group___xE9_x80_x9A_xE7_x94_xA8_xE6_x8E_xA5_xE5_x8F_xA3.html#ggac5fe0d4a17e276647881ac53a9304be1a87dc966c3b98763e96197b77053df386">IFT_IEnumEntry</a>, 
+<br />
+&#160;&#160;<a class="el" href="group___xE9_x80_x9A_xE7_x94_xA8_xE6_x8E_xA5_xE5_x8F_xA3.html#ggac5fe0d4a17e276647881ac53a9304be1a3d095db5831bab1411169ac74fbf3739">IFT_IPort</a>
+<br />
+ }</td></tr>
+<tr class="separator:gac5fe0d4a17e276647881ac53a9304be1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:ga964429f691d21115eae8142f678c9615"><td class="memItemLeft" align="right" valign="top">public static native int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___xE9_x80_x9A_xE7_x94_xA8_xE6_x8E_xA5_xE5_x8F_xA3.html#ga964429f691d21115eae8142f678c9615">MV_CC_SetImageNodeNum</a> (Handle handle, int nNum)</td></tr>
+<tr class="memdesc:ga964429f691d21115eae8142f678c9615"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置图像节点数  <a href="#ga964429f691d21115eae8142f678c9615">更多...</a><br /></td></tr>
+<tr class="separator:ga964429f691d21115eae8142f678c9615"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae8d098b664632d4ccfb2b220ba351b90"><td class="memItemLeft" align="right" valign="top">public static native int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___xE9_x80_x9A_xE7_x94_xA8_xE6_x8E_xA5_xE5_x8F_xA3.html#gae8d098b664632d4ccfb2b220ba351b90">MV_CC_RegisterExceptionCallBack</a> (Handle handle, <a class="el" href="group___xE5_x9B_x9E_xE8_xB0_x83_xE5_x87_xBD_xE6_x95_xB0.html#ga50e74582c858f06989e7c1133a7be0e5">CameraExceptionCallBack</a> callBack)</td></tr>
+<tr class="memdesc:gae8d098b664632d4ccfb2b220ba351b90"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置异常回调函数  <a href="#gae8d098b664632d4ccfb2b220ba351b90">更多...</a><br /></td></tr>
+<tr class="separator:gae8d098b664632d4ccfb2b220ba351b90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga678d9394f893bc89bc3802b6cc17a4c4"><td class="memItemLeft" align="right" valign="top">public static native int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___xE9_x80_x9A_xE7_x94_xA8_xE6_x8E_xA5_xE5_x8F_xA3.html#ga678d9394f893bc89bc3802b6cc17a4c4">MV_CC_FileAccessWrite</a> (Handle handle, <a class="el" href="class_m_v___c_c___f_i_l_e___a_c_c_e_s_s.html">MV_CC_FILE_ACCESS</a> fileAccess)</td></tr>
+<tr class="memdesc:ga678d9394f893bc89bc3802b6cc17a4c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">将文件写入相机  <a href="#ga678d9394f893bc89bc3802b6cc17a4c4">更多...</a><br /></td></tr>
+<tr class="separator:ga678d9394f893bc89bc3802b6cc17a4c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac7aa565b6c89698554c762ad821f709a"><td class="memItemLeft" align="right" valign="top">public static native int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___xE9_x80_x9A_xE7_x94_xA8_xE6_x8E_xA5_xE5_x8F_xA3.html#gac7aa565b6c89698554c762ad821f709a">MV_CC_FileAccessRead</a> (Handle handle, <a class="el" href="class_m_v___c_c___f_i_l_e___a_c_c_e_s_s.html">MV_CC_FILE_ACCESS</a> fileAccess)</td></tr>
+<tr class="memdesc:gac7aa565b6c89698554c762ad821f709a"><td class="mdescLeft">&#160;</td><td class="mdescRight">从相机读取文件  <a href="#gac7aa565b6c89698554c762ad821f709a">更多...</a><br /></td></tr>
+<tr class="separator:gac7aa565b6c89698554c762ad821f709a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaaa0988e23491100d4c49903f7c107afe"><td class="memItemLeft" align="right" valign="top">public static native int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___xE9_x80_x9A_xE7_x94_xA8_xE6_x8E_xA5_xE5_x8F_xA3.html#gaaa0988e23491100d4c49903f7c107afe">MV_CC_GetFileAccessProgress</a> (Handle handle, <a class="el" href="class_m_v___c_c___f_i_l_e___a_c_c_e_s_s___p_r_o_g_r_e_s_s.html">MV_CC_FILE_ACCESS_PROGRESS</a> fileAccessProgress)</td></tr>
+<tr class="memdesc:gaaa0988e23491100d4c49903f7c107afe"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取文件存取的进度  <a href="#gaaa0988e23491100d4c49903f7c107afe">更多...</a><br /></td></tr>
+<tr class="separator:gaaa0988e23491100d4c49903f7c107afe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaefc9935a7ae3939ef6e982a4a95104c7"><td class="memItemLeft" align="right" valign="top">public static native int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___xE9_x80_x9A_xE7_x94_xA8_xE6_x8E_xA5_xE5_x8F_xA3.html#gaefc9935a7ae3939ef6e982a4a95104c7">MV_CC_RegisterEventCallBack</a> (Handle handle, <a class="el" href="group___xE5_x9B_x9E_xE8_xB0_x83_xE5_x87_xBD_xE6_x95_xB0.html#ga2a0fc9ec72d06852f0289150c4b94a54">CameraEventCallBack</a> callBack)</td></tr>
+<tr class="memdesc:gaefc9935a7ae3939ef6e982a4a95104c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">注册事件回调函数  <a href="#gaefc9935a7ae3939ef6e982a4a95104c7">更多...</a><br /></td></tr>
+<tr class="separator:gaefc9935a7ae3939ef6e982a4a95104c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga31ae3c1b37ac5878c6e838c1510cf449"><td class="memItemLeft" align="right" valign="top">public static native int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___xE9_x80_x9A_xE7_x94_xA8_xE6_x8E_xA5_xE5_x8F_xA3.html#ga31ae3c1b37ac5878c6e838c1510cf449">MV_CC_FeatureSave</a> (Handle handle, String fileName)</td></tr>
+<tr class="memdesc:ga31ae3c1b37ac5878c6e838c1510cf449"><td class="mdescLeft">&#160;</td><td class="mdescRight">保存相机属性  <a href="#ga31ae3c1b37ac5878c6e838c1510cf449">更多...</a><br /></td></tr>
+<tr class="separator:ga31ae3c1b37ac5878c6e838c1510cf449"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga113396ad4abbd9df507dd10fc5e27075"><td class="memItemLeft" align="right" valign="top">public static native int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___xE9_x80_x9A_xE7_x94_xA8_xE6_x8E_xA5_xE5_x8F_xA3.html#ga113396ad4abbd9df507dd10fc5e27075">MV_CC_FeatureLoad</a> (Handle handle, String fileName)</td></tr>
+<tr class="memdesc:ga113396ad4abbd9df507dd10fc5e27075"><td class="mdescLeft">&#160;</td><td class="mdescRight">导入相机属性  <a href="#ga113396ad4abbd9df507dd10fc5e27075">更多...</a><br /></td></tr>
+<tr class="separator:ga113396ad4abbd9df507dd10fc5e27075"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac311edb482bb14e0440fd927a3128f50"><td class="memItemLeft" align="right" valign="top">public static native int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___xE9_x80_x9A_xE7_x94_xA8_xE6_x8E_xA5_xE5_x8F_xA3.html#gac311edb482bb14e0440fd927a3128f50">MV_CC_GetAllMatchInfo</a> (Handle handle, <a class="el" href="class_m_v___a_l_l___m_a_t_c_h___i_n_f_o.html">MV_ALL_MATCH_INFO</a> info)</td></tr>
+<tr class="memdesc:gac311edb482bb14e0440fd927a3128f50"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取各种类型的信息  <a href="#gac311edb482bb14e0440fd927a3128f50">更多...</a><br /></td></tr>
+<tr class="separator:gac311edb482bb14e0440fd927a3128f50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab74db62e66730431312fb02daad6f3e0"><td class="memItemLeft" align="right" valign="top">public static native int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___xE9_x80_x9A_xE7_x94_xA8_xE6_x8E_xA5_xE5_x8F_xA3.html#gab74db62e66730431312fb02daad6f3e0">MV_XML_GetNodeInterfaceType</a> (Handle handle, String name, <a class="el" href="group___xE9_x80_x9A_xE7_x94_xA8_xE6_x8E_xA5_xE5_x8F_xA3.html#gac5fe0d4a17e276647881ac53a9304be1">MV_XML_InterfaceType</a> interfaceType)</td></tr>
+<tr class="memdesc:gab74db62e66730431312fb02daad6f3e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">获得当前节点的类型  <a href="#gab74db62e66730431312fb02daad6f3e0">更多...</a><br /></td></tr>
+<tr class="separator:gab74db62e66730431312fb02daad6f3e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<p>包含SDK图像缓存节点设置、事件注册和相机属性导入导出等接口。 </p>
+<p>每个节点对应的接口类型 </p>
+<h2 class="groupheader">枚举类型说明</h2>
+<a id="gac5fe0d4a17e276647881ac53a9304be1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac5fe0d4a17e276647881ac53a9304be1">&#9670;&nbsp;</a></span>MV_XML_InterfaceType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group___xE9_x80_x9A_xE7_x94_xA8_xE6_x8E_xA5_xE5_x8F_xA3.html#gac5fe0d4a17e276647881ac53a9304be1">MV_XML_InterfaceType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="ggac5fe0d4a17e276647881ac53a9304be1a8942ce3e5bc163ff6d9a4476ccb7c1aa"></a>IFT_IValue&#160;</td><td class="fielddoc"><p>Value </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggac5fe0d4a17e276647881ac53a9304be1a661e276103268356fbffa7561b0261b7"></a>IFT_IBase&#160;</td><td class="fielddoc"><p>Base </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggac5fe0d4a17e276647881ac53a9304be1a11af4ed7397e2ba88466b4fef6efd81e"></a>IFT_IInteger&#160;</td><td class="fielddoc"><p>Integer </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggac5fe0d4a17e276647881ac53a9304be1ad7f3fd94736fd65e67daa67166ee7598"></a>IFT_IBoolean&#160;</td><td class="fielddoc"><p>Boolean </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggac5fe0d4a17e276647881ac53a9304be1a50089d672a55bab2d2998a2dd6cbd83e"></a>IFT_ICommand&#160;</td><td class="fielddoc"><p>Command </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggac5fe0d4a17e276647881ac53a9304be1a26689018ca41a56e4fe50c07dbd1e59e"></a>IFT_IFloat&#160;</td><td class="fielddoc"><p>Float </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggac5fe0d4a17e276647881ac53a9304be1aeedd8c51cdb2c0a88b8bbec94281c932"></a>IFT_IString&#160;</td><td class="fielddoc"><p>String </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggac5fe0d4a17e276647881ac53a9304be1ace1d2f07e7d4034cec3f3fe4d68463c8"></a>IFT_IRegister&#160;</td><td class="fielddoc"><p>Register </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggac5fe0d4a17e276647881ac53a9304be1a1da2c079038f8370db0d2083fe15469c"></a>IFT_ICategory&#160;</td><td class="fielddoc"><p>Category </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggac5fe0d4a17e276647881ac53a9304be1a9fdfa597ddd736a86678ec282b943851"></a>IFT_IEnumeration&#160;</td><td class="fielddoc"><p>Enumeration </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggac5fe0d4a17e276647881ac53a9304be1a87dc966c3b98763e96197b77053df386"></a>IFT_IEnumEntry&#160;</td><td class="fielddoc"><p>EnumEntry </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggac5fe0d4a17e276647881ac53a9304be1a3d095db5831bab1411169ac74fbf3739"></a>IFT_IPort&#160;</td><td class="fielddoc"><p>Port </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a id="ga113396ad4abbd9df507dd10fc5e27075"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga113396ad4abbd9df507dd10fc5e27075">&#9670;&nbsp;</a></span>MV_CC_FeatureLoad()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">public static native int MV_CC_FeatureLoad </td>
+          <td>(</td>
+          <td class="paramtype">Handle&#160;</td>
+          <td class="paramname"><em>handle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>fileName</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>导入相机属性 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">handle</td><td>[IN] 设备句柄 </td></tr>
+    <tr><td class="paramname">fileName</td><td>[IN] 属性文件名 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功，返回<a class="el" href="_xE7_x8A_xB6_xE6_x80_x81_xE7_xA0_x81_xE5_xAE_x9A_xE4_xB9_x89.html">MV_OK</a>；失败，返回<a class="el" href="_xE7_x8A_xB6_xE6_x80_x81_xE7_xA0_x81_xE5_xAE_x9A_xE4_xB9_x89.html">错误码</a> 。 </dd></dl>
+<dl class="section remark"><dt>备注</dt><dd>接口所在类：MvCameraControl <br />
+</dd></dl>
+
+</div>
+</div>
+<a id="ga31ae3c1b37ac5878c6e838c1510cf449"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga31ae3c1b37ac5878c6e838c1510cf449">&#9670;&nbsp;</a></span>MV_CC_FeatureSave()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">public static native int MV_CC_FeatureSave </td>
+          <td>(</td>
+          <td class="paramtype">Handle&#160;</td>
+          <td class="paramname"><em>handle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>fileName</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>保存相机属性 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">handle</td><td>[IN] 设备句柄 </td></tr>
+    <tr><td class="paramname">fileName</td><td>[IN] 属性文件名 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功，返回<a class="el" href="_xE7_x8A_xB6_xE6_x80_x81_xE7_xA0_x81_xE5_xAE_x9A_xE4_xB9_x89.html">MV_OK</a>；失败，返回<a class="el" href="_xE7_x8A_xB6_xE6_x80_x81_xE7_xA0_x81_xE5_xAE_x9A_xE4_xB9_x89.html">错误码</a> 。 </dd></dl>
+<dl class="section remark"><dt>备注</dt><dd>接口所在类：MvCameraControl <br />
+</dd></dl>
+
+</div>
+</div>
+<a id="gac7aa565b6c89698554c762ad821f709a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac7aa565b6c89698554c762ad821f709a">&#9670;&nbsp;</a></span>MV_CC_FileAccessRead()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">public static native int MV_CC_FileAccessRead </td>
+          <td>(</td>
+          <td class="paramtype">Handle&#160;</td>
+          <td class="paramname"><em>handle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_m_v___c_c___f_i_l_e___a_c_c_e_s_s.html">MV_CC_FILE_ACCESS</a>&#160;</td>
+          <td class="paramname"><em>fileAccess</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>从相机读取文件 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">handle</td><td>[IN] 设备句柄 </td></tr>
+    <tr><td class="paramname">fileAccess</td><td>[IN] 文件存取结构体 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功，返回<a class="el" href="_xE7_x8A_xB6_xE6_x80_x81_xE7_xA0_x81_xE5_xAE_x9A_xE4_xB9_x89.html">MV_OK</a>；失败，返回<a class="el" href="_xE7_x8A_xB6_xE6_x80_x81_xE7_xA0_x81_xE5_xAE_x9A_xE4_xB9_x89.html">错误码</a> 。 </dd></dl>
+<dl class="section remark"><dt>备注</dt><dd>接口所在类：MvCameraControl <br />
+</dd></dl>
+
+</div>
+</div>
+<a id="ga678d9394f893bc89bc3802b6cc17a4c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga678d9394f893bc89bc3802b6cc17a4c4">&#9670;&nbsp;</a></span>MV_CC_FileAccessWrite()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">public static native int MV_CC_FileAccessWrite </td>
+          <td>(</td>
+          <td class="paramtype">Handle&#160;</td>
+          <td class="paramname"><em>handle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_m_v___c_c___f_i_l_e___a_c_c_e_s_s.html">MV_CC_FILE_ACCESS</a>&#160;</td>
+          <td class="paramname"><em>fileAccess</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>将文件写入相机 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">handle</td><td>[IN] 设备句柄 </td></tr>
+    <tr><td class="paramname">fileAccess</td><td>[IN] 文件存取结构体 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功，返回<a class="el" href="_xE7_x8A_xB6_xE6_x80_x81_xE7_xA0_x81_xE5_xAE_x9A_xE4_xB9_x89.html">MV_OK</a>；失败，返回<a class="el" href="_xE7_x8A_xB6_xE6_x80_x81_xE7_xA0_x81_xE5_xAE_x9A_xE4_xB9_x89.html">错误码</a> 。 </dd></dl>
+<dl class="section remark"><dt>备注</dt><dd>接口所在类：MvCameraControl <br />
+</dd></dl>
+
+</div>
+</div>
+<a id="gac311edb482bb14e0440fd927a3128f50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac311edb482bb14e0440fd927a3128f50">&#9670;&nbsp;</a></span>MV_CC_GetAllMatchInfo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">public static native int MV_CC_GetAllMatchInfo </td>
+          <td>(</td>
+          <td class="paramtype">Handle&#160;</td>
+          <td class="paramname"><em>handle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_m_v___a_l_l___m_a_t_c_h___i_n_f_o.html">MV_ALL_MATCH_INFO</a>&#160;</td>
+          <td class="paramname"><em>info</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取各种类型的信息 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">handle</td><td>[IN] 设备句柄 </td></tr>
+    <tr><td class="paramname">info</td><td>[IN] 返回给调用者有关相机各种类型的信息对象 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功，返回<a class="el" href="_xE7_x8A_xB6_xE6_x80_x81_xE7_xA0_x81_xE5_xAE_x9A_xE4_xB9_x89.html">MV_OK</a>；失败，返回<a class="el" href="_xE7_x8A_xB6_xE6_x80_x81_xE7_xA0_x81_xE5_xAE_x9A_xE4_xB9_x89.html">错误码</a> 。 </dd></dl>
+<dl class="section remark"><dt>备注</dt><dd>接口所在类：MvCameraControl <br />
+</dd></dl>
+
+</div>
+</div>
+<a id="gaaa0988e23491100d4c49903f7c107afe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaaa0988e23491100d4c49903f7c107afe">&#9670;&nbsp;</a></span>MV_CC_GetFileAccessProgress()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">public static native int MV_CC_GetFileAccessProgress </td>
+          <td>(</td>
+          <td class="paramtype">Handle&#160;</td>
+          <td class="paramname"><em>handle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_m_v___c_c___f_i_l_e___a_c_c_e_s_s___p_r_o_g_r_e_s_s.html">MV_CC_FILE_ACCESS_PROGRESS</a>&#160;</td>
+          <td class="paramname"><em>fileAccessProgress</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取文件存取的进度 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">handle</td><td>[IN] 设备句柄 </td></tr>
+    <tr><td class="paramname">fileAccessProgress</td><td>[IN] 进度内容 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功，返回<a class="el" href="_xE7_x8A_xB6_xE6_x80_x81_xE7_xA0_x81_xE5_xAE_x9A_xE4_xB9_x89.html">MV_OK</a>；失败，返回<a class="el" href="_xE7_x8A_xB6_xE6_x80_x81_xE7_xA0_x81_xE5_xAE_x9A_xE4_xB9_x89.html">错误码</a> 。 </dd></dl>
+<dl class="section remark"><dt>备注</dt><dd>接口所在类：MvCameraControl <br />
+</dd></dl>
+
+</div>
+</div>
+<a id="gaefc9935a7ae3939ef6e982a4a95104c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaefc9935a7ae3939ef6e982a4a95104c7">&#9670;&nbsp;</a></span>MV_CC_RegisterEventCallBack()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">public static native int MV_CC_RegisterEventCallBack </td>
+          <td>(</td>
+          <td class="paramtype">Handle&#160;</td>
+          <td class="paramname"><em>handle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___xE5_x9B_x9E_xE8_xB0_x83_xE5_x87_xBD_xE6_x95_xB0.html#ga2a0fc9ec72d06852f0289150c4b94a54">CameraEventCallBack</a>&#160;</td>
+          <td class="paramname"><em>callBack</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>注册事件回调函数 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">handle</td><td>[IN] 设备句柄 </td></tr>
+    <tr><td class="paramname">callBack</td><td>[OUT] 回调对象 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功，返回<a class="el" href="_xE7_x8A_xB6_xE6_x80_x81_xE7_xA0_x81_xE5_xAE_x9A_xE4_xB9_x89.html">MV_OK</a>；失败，返回<a class="el" href="_xE7_x8A_xB6_xE6_x80_x81_xE7_xA0_x81_xE5_xAE_x9A_xE4_xB9_x89.html">错误码</a> 。 </dd></dl>
+<dl class="section remark"><dt>备注</dt><dd><b>&#160;&bull;&#160;</b>该接口需要在 <a class="el" href="group___xE7_x9B_xB8_xE6_x9C_xBA_xE5_x88_x9D_xE5_xA7_x8B_xE5_x8C_x96_xE5_x8F_x8A_xE9_x94_x80_xE6_xAF_x81.html#ga4e982ac1afd05dec95710ac2adcb6c6a" title="打开设备">MV_CC_OpenDevice()</a> 打开设备之后调用。<br />
+ <b>&#160;&bull;&#160;</b>接口所在类：MvCameraControl <br />
+</dd></dl>
+<dl class="section examples"><dt>示例</dt><dd><a class="el" href="_event_activity_8java-example.html#a19">EventActivity.java</a>.</dd>
+</dl>
+
+</div>
+</div>
+<a id="gae8d098b664632d4ccfb2b220ba351b90"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae8d098b664632d4ccfb2b220ba351b90">&#9670;&nbsp;</a></span>MV_CC_RegisterExceptionCallBack()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">public static native int MV_CC_RegisterExceptionCallBack </td>
+          <td>(</td>
+          <td class="paramtype">Handle&#160;</td>
+          <td class="paramname"><em>handle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___xE5_x9B_x9E_xE8_xB0_x83_xE5_x87_xBD_xE6_x95_xB0.html#ga50e74582c858f06989e7c1133a7be0e5">CameraExceptionCallBack</a>&#160;</td>
+          <td class="paramname"><em>callBack</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>设置异常回调函数 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">handle</td><td>[IN] 设备句柄 </td></tr>
+    <tr><td class="paramname">callBack</td><td>[OUT] 异常回调对象 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功，返回<a class="el" href="_xE7_x8A_xB6_xE6_x80_x81_xE7_xA0_x81_xE5_xAE_x9A_xE4_xB9_x89.html">MV_OK</a>；失败，返回<a class="el" href="_xE7_x8A_xB6_xE6_x80_x81_xE7_xA0_x81_xE5_xAE_x9A_xE4_xB9_x89.html">错误码</a> 。 </dd></dl>
+<dl class="section remark"><dt>备注</dt><dd><b>&#160;&bull;&#160;</b>该接口需要在 <a class="el" href="group___xE7_x9B_xB8_xE6_x9C_xBA_xE5_x88_x9D_xE5_xA7_x8B_xE5_x8C_x96_xE5_x8F_x8A_xE9_x94_x80_xE6_xAF_x81.html#ga4e982ac1afd05dec95710ac2adcb6c6a" title="打开设备">MV_CC_OpenDevice()</a> 打开设备之后调用。设备异常断开连接后可以在回调里面获取到异常消息，GigE设备掉线之后需要先调用 <a class="el" href="group___xE7_x9B_xB8_xE6_x9C_xBA_xE5_x88_x9D_xE5_xA7_x8B_xE5_x8C_x96_xE5_x8F_x8A_xE9_x94_x80_xE6_xAF_x81.html#ga9200ad9b866b2fc9b8cae94fbba56fde" title="关闭设备">MV_CC_CloseDevice()</a> 接口关闭设备，再调用 <a class="el" href="group___xE7_x9B_xB8_xE6_x9C_xBA_xE5_x88_x9D_xE5_xA7_x8B_xE5_x8C_x96_xE5_x8F_x8A_xE9_x94_x80_xE6_xAF_x81.html#ga4e982ac1afd05dec95710ac2adcb6c6a" title="打开设备">MV_CC_OpenDevice()</a> 接口重新打开设备。 <table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadCenter">宏定义  </th><th class="markdownTableHeadCenter">宏定义值  </th><th class="markdownTableHeadCenter">含义   </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyCenter">MV_GIGE_EXCEPTION_DEV_DISCONNECT  </td><td class="markdownTableBodyCenter">0x00008001  </td><td class="markdownTableBodyCenter">设备断开连接   </td></tr>
+</table>
+<b>&#160;&bull;&#160;</b>接口所在类：MvCameraControl <br />
+</dd></dl>
+<dl class="section examples"><dt>示例</dt><dd><a class="el" href="_reconnect_activity_8java-example.html#a21">ReconnectActivity.java</a>.</dd>
+</dl>
+
+</div>
+</div>
+<a id="ga964429f691d21115eae8142f678c9615"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga964429f691d21115eae8142f678c9615">&#9670;&nbsp;</a></span>MV_CC_SetImageNodeNum()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">public static native int MV_CC_SetImageNodeNum </td>
+          <td>(</td>
+          <td class="paramtype">Handle&#160;</td>
+          <td class="paramname"><em>handle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nNum</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>设置图像节点数 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">handle</td><td>[IN] 设备句柄 </td></tr>
+    <tr><td class="paramname">num</td><td>[IN] 缓存节点个数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功，返回<a class="el" href="_xE7_x8A_xB6_xE6_x80_x81_xE7_xA0_x81_xE5_xAE_x9A_xE4_xB9_x89.html">MV_OK</a>；失败，返回<a class="el" href="_xE7_x8A_xB6_xE6_x80_x81_xE7_xA0_x81_xE5_xAE_x9A_xE4_xB9_x89.html">错误码</a> 。 </dd></dl>
+<dl class="section remark"><dt>备注</dt><dd><b>&#160;&bull;&#160;</b>调用该接口可以设置SDK内部图像缓存节点个数，在调用 <a class="el" href="group___xE5_x9B_xBE_xE5_x83_x8F_xE9_x87_x87_xE9_x9B_x86.html#ga5ee1c63aac34f3d8ea0ea5c2f5f734f2" title="开启抓图">MV_CC_StartGrabbing()</a> 开始抓图前调用。<br />
+ <b>&#160;&bull;&#160;</b>在SDK中默认是1个节点。<br />
+ <b>&#160;&bull;&#160;</b>接口所在类：MvCameraControl <br />
+</dd></dl>
+
+</div>
+</div>
+<a id="gab74db62e66730431312fb02daad6f3e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab74db62e66730431312fb02daad6f3e0">&#9670;&nbsp;</a></span>MV_XML_GetNodeInterfaceType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">public static native int MV_XML_GetNodeInterfaceType </td>
+          <td>(</td>
+          <td class="paramtype">Handle&#160;</td>
+          <td class="paramname"><em>handle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___xE9_x80_x9A_xE7_x94_xA8_xE6_x8E_xA5_xE5_x8F_xA3.html#gac5fe0d4a17e276647881ac53a9304be1">MV_XML_InterfaceType</a>&#160;</td>
+          <td class="paramname"><em>interfaceType</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获得当前节点的类型 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">handle</td><td>[IN] 设备句柄 </td></tr>
+    <tr><td class="paramname">name</td><td>[IN] 节点名称 </td></tr>
+    <tr><td class="paramname">interfaceType</td><td>[OUT] 节点的类型 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功，返回<a class="el" href="_xE7_x8A_xB6_xE6_x80_x81_xE7_xA0_x81_xE5_xAE_x9A_xE4_xB9_x89.html">MV_OK</a>；失败，返回<a class="el" href="_xE7_x8A_xB6_xE6_x80_x81_xE7_xA0_x81_xE5_xAE_x9A_xE4_xB9_x89.html">错误码</a> 。 </dd></dl>
+<dl class="section remark"><dt>备注</dt><dd>接口所在类：MvCameraControl <br />
+</dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<div class="footer" style="text-align: right;">
+	<hr/>
+	<small></small>
+</div>
+</body>
+</html>
